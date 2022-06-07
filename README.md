@@ -1,3 +1,7 @@
+# Mom Calculator
+
+## Life expenses budgeting for the whole family
+
 <img width="100%" alt="Calculator Scribble" src="https://github.com/annagabain/Some-Calculator/blob/main/Travel-costs-calc-scribble.png">
 
 ## Project Example Idea 1
