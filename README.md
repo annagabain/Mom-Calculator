@@ -1,4 +1,21 @@
+## Project Example Idea 1
+
+Build a Rock, Paper, Scissors, Lizard, Spock Game
+External user’s goal:
+
+The site’s users want to play an online game that has elements of chance.
+Site owner's goal:
+
+The site’s goal is to provide a challenging game with increasing levels of difficulty to entertain online users.
+Potential features to include:
+
+Pattern matching functionality
+A limited number of tries before the game is over
+A score tracking system
+The ability to play against the computer
+
 ## Project Example Idea 2
+
 Build an Online Quiz
 External user’s goal:
 
@@ -12,6 +29,20 @@ A score tracking system
 Images to support the correct/incorrect answers
 User can create a username
 Feedback
+
+## Project Example Idea 3
+
+Build a NaturalWorld/Sport/Finance/Geopolitical Trends Website
+External user’s goal:
+
+The site’s users are interested in gaining insights into data relationships representing particular events or activities.
+Site owner's goal:
+
+The site’s goal is to provide easily digestible data representations that lead to user actionable insights.
+Potential features to include:
+
+Charting functionality to represent the data easily digestible manner
+Supporting facts surrounding the data and any insights gleaned from the data
 
 ## Learning Outcomes
 
