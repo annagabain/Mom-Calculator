@@ -1,4 +1,4 @@
-Project Example Idea 2
+## Project Example Idea 2
 Build an Online Quiz
 External user’s goal:
 
@@ -13,7 +13,14 @@ Images to support the correct/incorrect answers
 User can create a username
 Feedback
 
+## Learning Outcomes
 
+LO1	Design an interactive Front-End web application using HTML and CSS and JavaScript based on the principles of user experience design, accessibility and responsivity
+LO2	Test a front-end web application through the development, implementation and deployment stages
+LO3	Deploy a Front-End web application to a Cloud platform
+LO4	Maximise future maintainability through documentation, code structure and organisation
+LO5	Demonstrate and document the development process through a version control system such as GitHub
+LO6	Implement Front-End interactivity, using core JavaScript, JavaScript libraries or frameworks
 
 ## Gitpod Reminders
 
