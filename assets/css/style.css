@@ -19,7 +19,12 @@
         font-family: 'Open Sans', sans-serif;
         font-weight: 400;
     }
+    header {
+        background-color: #455359;
+    }
 
     h1, h2 {
         font-family: Lemonada, Arial, sans-serif;
+        color: #FAF7F4;
+        text-align: center;
     }
