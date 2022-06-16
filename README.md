@@ -49,41 +49,44 @@ Potential features to include:
 
 ### Features
 
-Navigation
-About 
-Calculator
-Contact
-Thank you for Contacting Page
-Footer
-404 Error Page
-Potential Features left to Implement
+  -  Navigation
+  -  About 
+  -  Calculator
+  -  Contact
+  -  Thank you for Contacting Page
+  -  Footer
+  -  404 Error Page
+  -  Potential Features left to Implement
 
 ### Development Stages
 
-Planning
-Layout Creation
-User Experience and User Interface Design UX and UI
-User Analysis With 'Persona' Method
-Design Scope
-Mood Board
-Wireframes
-Colours
-Accessibility and responsivity
+  -  Planning
+  -  Layout Creation
+  -  User Experience and User Interface Design UX and UI
+  -  User Analysis With 'Persona' Method
+  -  Design Scope
+  -  Mood Board
+  -  Wireframes
+  -  Colours
 
-Accessibility
-Responsivity
-Testing
+### Accessibility and responsivity
 
-Validators
-Remaining Bugs
-Deployment to GitHub
+  -  Accessibility
+  -  Responsivity
 
-GitHub Pages
+### Testing
+
+  -  Validators
+  -  Remaining Bugs
+
+### Deployment to GitHub
+
+- GitHub Pages
 
 ### Sources & Credits
 
-Content Ideas
-Images
-Tools
+-   Content Ideas
+-   Images
+-   Tools
 
 ### Acknowledgemts
