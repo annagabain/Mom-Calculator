@@ -21,10 +21,33 @@
     }
     header {
         background-color: #455359;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 
     h1, h2 {
         font-family: Lemonada, Arial, sans-serif;
         color: #FAF7F4;
-        text-align: center;
+        line-height: 1;
+        letter-spacing: 2px;
+    }
+    h2 {
+        font-size: 1em;
+        font-weight: 300;
+    }
+
+    img{
+        border-radius: 50%;
+    }
+
+    #calculation-area {
+        padding: 70px;
+    }
+
+    button {
+        background-color: #6A4C39;
+        color: #FAF7F4;
+        letter-spacing: 2px;
     }

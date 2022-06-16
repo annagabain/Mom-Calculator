@@ -14,21 +14,25 @@
 
 <body>
     <header>
-        <h1>Mom Calculator</h1>
-        <h2>Life Expenses Budgeting Tool for the Whole Family</h2>
+            <h1>Mom Calculator</h1>
+            <h2>Life Expenses Budgeting Tool for the Whole Family</h2>
+            <div>
+             <img src="assets/images/web-pexels-karolina-grabowska-4959738.jpg" width=150>   
+            </div>
+            
     </header>
     <p></p>
-    <div>
+    <div id="calculation-area">
         <form>
 
-            <label for="username">Create a Username</label>
-            <input type="text" id="username" name="username" placeholder="Create a Username.." required>
+            <label for="username">*Create a Username: </label>
+            <input type="text" id="username" name="username" placeholder="Username" required>
             <button onclick="greetWithAlert()">Create</button>
 
             <br>
 
-            <label for="budget">Add your budget</label>
-            <input type="number" id="budget" name="budget" placeholder="Monthly budget in Euros.." required>
+            <label for="budget">*Add your Monthly Budget: </label>
+            <input type="number" id="budget" name="budget" placeholder="in Euros.." required>
             <button onclick="confirmBudget()">Submit</button>
 
 
