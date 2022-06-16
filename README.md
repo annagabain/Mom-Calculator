@@ -67,9 +67,8 @@ Potential features to include:
   -  Scribbles and Wireframes
 
   <img width="100%" alt="Calculator Scribble Desktop" src="assets/wireframes/Desktop.png">
-  
-  <img width="50%" alt="Calculator Scribble Tablet" src="assets/wireframes/Tablet.png">
 
+  <img width="50%" alt="Calculator Scribble Tablet" src="assets/wireframes/Tablet.png">
   <img width="25%" alt="Calculator Scribble Mobile" src="assets/wireframes/Mobile.png">
 
   -  Colours
