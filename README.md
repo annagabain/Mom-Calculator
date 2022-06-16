@@ -18,17 +18,15 @@ Site owner's goal:
 The site’s goal is to provide a easy-to-use tool to simplify budgeting tasks.
 - The site’s goal is to provide easily digestible data representations that lead to user actionable insights.
 
-(EDIT LATER ---> Potential features to include:
+Potential features to include:
 
-Pattern matching functionality
-A score tracking system
-The ability to play against the computer
-A score tracking system
-Images to support the correct/incorrect answers
-User can create a username
-Feedback
-Charting functionality to represent the data easily digestible manner
-Supporting facts surrounding the data and any insights gleaned from the data)
+- A score tracking system - balance green yellow red
+- The ability to manupulate numbers
+- Images to support the correct/incorrect answers 
+- User can create a username
+- Feedback - "You tend to overspend/save/manage just right this month"
+- Charting functionality to represent the data easily digestible manner - with google graphs
+- Supporting facts surrounding the data and any insights gleaned from the data - suggestions to optimise costs (e.g, you can buy baby clothes from the local second hand; cook more, take-out less)
 
 
 ## Project To Do List
@@ -44,4 +42,48 @@ Supporting facts surrounding the data and any insights gleaned from the data)
 - [ ] LO5	Demonstrate and document the development process through a version control system such as GitHub
 
 - [ ] LO6	Implement Front-End interactivity, using core JavaScript, JavaScript libraries or frameworks
-- [ ] 
+
+
+
+## Contents:
+
+### Features
+
+Navigation
+About 
+Calculator
+Contact
+Thank you for Contacting Page
+Footer
+404 Error Page
+Potential Features left to Implement
+
+### Development Stages
+
+Planning
+Layout Creation
+User Experience and User Interface Design UX and UI
+User Analysis With 'Persona' Method
+Design Scope
+Mood Board
+Wireframes
+Colours
+Accessibility and responsivity
+
+Accessibility
+Responsivity
+Testing
+
+Validators
+Remaining Bugs
+Deployment to GitHub
+
+GitHub Pages
+
+### Sources & Credits
+
+Content Ideas
+Images
+Tools
+
+### Acknowledgemts
