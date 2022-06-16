@@ -25,5 +25,5 @@ function categoryRemoved() {
 
 function submitResult() {
     let submitResult = document.getElementById("result").value;
-    alert(`The total costs this month are: 1500 Eur`)
+    alert(`The total costs this month are: ${submitResult} Eur`)
 }
