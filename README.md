@@ -2,8 +2,6 @@
 
 ## Life Expenses Budgeting Tool for the Whole Family
 
-Travel expenses as an initial example
-
 <img width="70%" alt="Calculator Scribble" src="assets/Mom-Calculator-wireframe-Website-UI-Prototype.png">
 
 ## Project Idea
@@ -66,7 +64,14 @@ Potential features to include:
   -  User Analysis With 'Persona' Method
   -  Design Scope
   -  Mood Board
-  -  Wireframes
+  -  Scribbles and Wireframes
+
+  <img width="100%" alt="Calculator Scribble Desktop" src="assets/wireframes/Desktop.png">
+  
+  <img width="50%" alt="Calculator Scribble Tablet" src="assets/wireframes/Tablet.png">
+
+  <img width="25%" alt="Calculator Scribble Mobile" src="assets/wireframes/Mobile.png">
+
   -  Colours
 
 ### Accessibility and responsivity
