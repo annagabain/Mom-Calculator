@@ -15,24 +15,32 @@
     /* This styling is set for the whole project as a deafault */
     body {
         color: #0D0D0D;
-        background-color: #D8CBC4;
+        background-color: #0D0D0D;
         font-family: 'Open Sans', sans-serif;
         font-weight: 400;
+        margin: 10% 20%;
     }
     header {
         background-color: #455359;
-        height: 200px;
         display: flex;
         flex-direction: column;
-        text-align: center;
+        justify-content: flex-end;
+        padding: 25px 25px;
+        height: 120px;
     }
 
     h1, h2 {
         font-family: Lemonada, Arial, sans-serif;
         color: #FAF7F4;
-        line-height: 1;
+        line-height: 2;
         letter-spacing: 2px;
+        position: absolute;
+        right: 32%
     }
+    h1 {
+        font-size: 3em;
+    }
+
     h2 {
         font-size: 1em;
         font-weight: 300;
@@ -40,10 +48,13 @@
 
     img{
         border-radius: 50%;
+        position: absolute;
+        left: 70%
     }
 
     #calculation-area {
         padding: 70px;
+        background-color: #D8CBC4;
     }
 
     button {
