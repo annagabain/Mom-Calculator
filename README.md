@@ -4,7 +4,7 @@
 
 Travel expenses as an initial example
 
-<img width="70%" alt="Calculator Scribble" src="https://github.com/annagabain/Some-Calculator/blob/main/Travel-costs-calc-scribble.png">
+<img width="70%" alt="Calculator Scribble" src="assets/Travel-costs-calc-scribble.png">
 
 ## Project Idea
 
