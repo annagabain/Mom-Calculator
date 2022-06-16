@@ -18,8 +18,8 @@
             <h2>Life Expenses Budgeting Tool for the Whole Family </h2>    
             <img src="assets/images/web-pexels-karolina-grabowska-4959738.jpg" width=120>
     </header>
-    <div id="calculation-area">
-        <form>
+    <section id="calculation-area">
+        <form name="form0" id="form0" action="#">
 
             <label for="username">*Create a Username: </label>
             <input type="text" id="username" name="username" placeholder="Username" required>
@@ -31,11 +31,75 @@
             <input type="number" id="budget" name="budget" placeholder="in Euros.." required>
             <button onclick="confirmBudget()">Submit</button>
 
-
+            <br>
+            <br>
+            <br>
         </form>
-    </div>
+    
+<!-- Code source: https://www.w3schools.com/howto/howto_js_cascading_dropdown.asp -->
+    <form name="form1" id="form1" action="#">
+        <label for="food">Select: </label>
+        <input type="checkbox" id="food" name="food" value="food">
 
+        Category: 
+        <select name="category" id="category">
+            <option value="" selected="selected">Food</option>
+        </select>
+        
+            <label for="cost">Cost in Eur: </label>
+            <input type="number" id="cost" name="cost" placeholder="in Euros.." required>
 
+            <label for="count">Count: </label>
+            <input type="number" id="count" name="count" placeholder="1" required>
+
+            <button class="round" onclick="categoryRemoved()"> - </button>
+
+  
+    </form>
+
+    <form name="form2" id="form2" action="#">
+        <label for="clothing">Select: </label>
+        <input type="checkbox" id="clothing" name="clothing" value="clothing">
+
+        Category: 
+        <select name="category" id="category">
+            <option value="" selected="selected">Clothing</option>
+        </select>
+        
+            <label for="cost">Cost in Eur: </label>
+            <input type="number" id="cost" name="cost" placeholder="in Euros.." required>
+
+            <label for="count">Count: </label>
+            <input type="number" id="count" name="count" placeholder="1" required>
+
+            <button class="round" onclick="categoryRemoved()"> - </button>
+
+  
+    </form>
+
+    <form name="form3" id="form3" action="#">
+        <label for="accomodation">Select: </label>
+        <input type="checkbox" id="accomodation" name="accomodation" value="accomodation">
+
+        Category: 
+        <select name="category" id="category">
+            <option value="" selected="selected">Accomodation</option>
+        </select>
+        
+            <label for="cost">Cost in Eur: </label>
+            <input type="number" id="cost" name="cost" placeholder="in Euros.." required>
+
+            <label for="count">Count: </label>
+            <input type="number" id="count" name="count" placeholder="1" required>
+
+            <button class="round" onclick="categoryRemoved()"> - </button>
+
+  
+    </form>
+
+    <button id="result" onclick="submitResult()"> TOTAL </button>
+
+    </section>
     <script src="assets/js/script.js"></script>
 </body>
 

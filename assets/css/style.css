@@ -57,8 +57,16 @@
         background-color: #D8CBC4;
     }
 
-    button {
+    .round {
         background-color: #6A4C39;
         color: #FAF7F4;
         letter-spacing: 2px;
+        border-radius: 50%;
     }
+
+   button {
+    background-color: #6A4C39;
+    color: #FAF7F4;
+    letter-spacing: 2px;
+    border-radius: 5%;
+}

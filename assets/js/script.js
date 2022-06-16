@@ -16,3 +16,14 @@ function confirmBudget(){
     let momBudget = document.getElementById("budget").value;
     alert(`Your budget of ${momBudget} Euros is confirmed`)
 }
+
+
+function categoryRemoved() {
+    let category = document.getElementById("category").value;
+    alert(`The category ${category} is removed`)
+}
+
+function submitResult() {
+    let submitResult = document.getElementById("result").value;
+    alert(`The total costs this month are: 1500 Eur`)
+}
