@@ -93,7 +93,10 @@ Potential features to include:
 
 ### Sources & Credits
 
--   Content Ideas
+-   Idea Inspiration
+https://www.brutto-netto-rechner.info/
+https://statsskuld.se/en/jobs/net-salary
+
 -   Images
 -   Tools
 
