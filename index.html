@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    <section id="innerbody">
+
+    
     <header>
             <h1>Mom Calculator  </h1>
             <h2>Life Expenses Budgeting Tool for the Whole Family </h2>    
@@ -50,9 +53,9 @@
             <input type="number" id="cost" name="cost" placeholder="€00.00.." required>
 
             <label for="count">Count: </label>
-            <input type="number" id="count" name="count" placeholder="1" required>
+            <input type="number" class="count" name="count" placeholder="1" required>
 
-            <button class="round" onclick="categoryRemoved()"> - </button>
+            Remove:  <button class="round" onclick="categoryRemoved()"> - </button>
 
   
     </form>
@@ -66,13 +69,13 @@
             <option value="" selected="selected">Clothing</option>
         </select>
         
-            <label for="cost">Cost in Eur: </label>
+            <label for="cost">Cost: </label>
             <input type="number" id="cost" name="cost" placeholder="€00.00.." required>
 
             <label for="count">Count: </label>
-            <input type="number" id="count" name="count" placeholder="1" required>
+            <input type="number" class="count" name="count" placeholder="1" required>
 
-            <button class="round" onclick="categoryRemoved()"> - </button>
+            Remove: <button class="round" onclick="categoryRemoved()"> - </button>
 
   
     </form>
@@ -86,21 +89,26 @@
             <option value="" selected="selected">Accomodation</option>
         </select>
         
-            <label for="cost">Cost in Eur: </label>
+            <label for="cost">Cost: </label>
             <input type="number" id="cost" name="cost" placeholder="€00.00.." required>
 
             <label for="count">Count: </label>
-            <input type="number" id="count" name="count" placeholder="1" required>
+            <input type="number" class="count" name="count" placeholder="1" required>
 
-            <button class="round" onclick="categoryRemoved()"> - </button>
+            Remove: <button class="round" onclick="categoryRemoved()"> - </button>
 
   
     </form>
+
+    <br>
 
     <button id="result" onclick="submitResult()"> TOTAL </button>
 
     </section>
     <script src="assets/js/script.js"></script>
+    <footer>©</footer>
+
+</section>
 </body>
 
 </html>

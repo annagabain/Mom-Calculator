@@ -1,4 +1,3 @@
-
 /* Colours of the Project
     #9C9FA6   - Grey
     #FAF7F4   - Off White
@@ -7,66 +6,100 @@
     #6A4C39(new)   - Brown
     #0D0D0D   - Black-Brown */
 
-    /* These fonts are imported from Google Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+/* These fonts are imported from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
 
-    /* This styling is set for the whole project as a deafault */
-    body {
-        color: #0D0D0D;
-        background-color: #0D0D0D;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 400;
-        margin: 10% 20%;
-    }
-    header {
-        background-color: #455359;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 25px 25px;
-        height: 120px;
-    }
+/* This styling is set for the whole project as a deafault */
+body {
+    color: #0D0D0D;
+    background-color: #0D0D0D;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: 10% 20%;
+}
 
-    h1, h2 {
-        font-family: Lemonada, Arial, sans-serif;
-        color: #FAF7F4;
-        line-height: 2;
-        letter-spacing: 2px;
-        position: absolute;
-        right: 32%
-    }
-    h1 {
-        font-size: 3em;
-    }
+#innerbody{
+    background-color: #455359;
+    padding: 25px 50px;
+}
 
-    h2 {
-        font-size: 1em;
-        font-weight: 300;
-    }
+header {
+    background-color: #455359;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    height: 120px;
+}
 
-    img{
-        border-radius: 50%;
-        position: absolute;
-        left: 70%
-    }
+h1,
+h2 {
+    font-family: Lemonada, Arial, sans-serif;
+    color: #FAF7F4;
+    line-height: 2;
+    letter-spacing: 2px;
+    position: absolute;
+    right: 32%
+}
 
-    #calculation-area {
-        padding: 70px;
-        background-color: #D8CBC4;
-    }
+h1 {
+    font-size: 3em;
+}
 
-    .round {
-        background-color: #6A4C39;
-        color: #FAF7F4;
-        letter-spacing: 2px;
-        border-radius: 50%;
-    }
+h2 {
+    font-size: 1em;
+    font-weight: 300;
+}
 
-   button {
+img {
+    border-radius: 50%;
+    position: absolute;
+    left: 70%
+}
+
+#calculation-area {
+    padding: 50px;
+    background-color: #D8CBC4;
+    /* margin: 30px; */
+}
+
+.round {
+    background-color: #6A4C39;
+    color: #FAF7F4;
+    letter-spacing: 2px;
+    border-radius: 50%;
+}
+
+button {
     background-color: #6A4C39;
     color: #FAF7F4;
     letter-spacing: 2px;
     border-radius: 5%;
+}
+
+#category {
+    width: 130px;
+    height: 30px;
+    text-align: center;
+}
+#cost {
+    width: 100px;
+    height: 25px;
+    text-align: right;
+}
+.count {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+}
+
+#result{
+    position: relative;
+    left: 40%
+}
+footer {
+    background-color: #455359;
+    color: #D8CBC4;
 }
