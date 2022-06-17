@@ -11,7 +11,7 @@ let formatter = new Intl.NumberFormat('en-DE', {
     style: 'currency',
     currency: 'EUR',
   });
-  formatter.format(2500); /* €2,500.00 */
+  formatter.format(1500); /* €1,500.00 */
 
 
    let toEuro = formatter.format(Number(document.getElementById("budget").value))
