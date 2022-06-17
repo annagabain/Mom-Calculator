@@ -30,7 +30,7 @@ function greetWithAlert(){
 let momBudget;
 function confirmBudget(){
     momBudget = document.getElementById("budget").value;
-    alert(`Your budget of ${toEuro} is confirmed`)
+    alert(`Your budget of ${formatter.format(Number(momBudget))}  is confirmed`)
 }
 
 
