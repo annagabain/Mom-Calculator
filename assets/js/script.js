@@ -4,6 +4,21 @@
 console.log('Hello Mom!')
 
 
+
+// Converting the number into currency
+// https://www.codegrepper.com/code-examples/javascript/javascript+currency+format+euro
+let formatter = new Intl.NumberFormat('en-DE', {
+    style: 'currency',
+    currency: 'EUR',
+  });
+  formatter.format(2500); /* €2,500.00 */
+
+
+   let toEuro = formatter.format(Number(document.getElementById("budget").value))
+   console.log(toEuro);
+
+
+
 // This code I took and modified from 
 // https://www.ceos3c.com/javascript/store-user-input-in-a-variable-with-javascript/#:~:text=The%20JavaScript%20File,-The%20JavaScript%20part&text=To%20be%20able%20to%20store,input%20from%20the%20input%20form.
 
@@ -12,9 +27,10 @@ function greetWithAlert(){
     alert(`Hello ${momName}`)
 }
 
+let momBudget;
 function confirmBudget(){
-    let momBudget = document.getElementById("budget").value;
-    alert(`Your budget of ${momBudget} Euros is confirmed`)
+    momBudget = document.getElementById("budget").value;
+    alert(`Your budget of ${toEuro} is confirmed`)
 }
 
 
@@ -27,3 +43,4 @@ function submitResult() {
     let submitResult = document.getElementById("result").value;
     alert(`The total costs this month are: ${submitResult} Eur`)
 }
+
