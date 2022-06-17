@@ -39,8 +39,10 @@ function categoryRemoved() {
     alert(`The category ${category} is removed`)
 }
 
+
 function submitResult() {
-    let submitResult = document.getElementById("result").value;
-    alert(`The total costs this month are: ${submitResult} Eur`)
+    let result = document.getElementById("result").value;
+    alert(`The total costs this month are: ${formatter.format(Number(result))}`)
 }
+
 
