@@ -47,21 +47,23 @@
     <form name="form1" id="form1" action="#">
 
        <!-- <p>Select:  Category: Cost: Count: Remove:</p>  -->
-        <label for="food">Select: </label>
-        <input type="checkbox" id="food" name="food" value="food">
+        <label for="select">Select: </label>
+        <input type="checkbox" id="select" name="select" value="select">
 
-        Category: 
+        <label for="category">Category: </label>
         <select name="category" id="category">
             <option value="" selected="selected">Food</option>
+            <option value="">Takeout</option>
+            <option value="">Supermarket</option>
         </select>
         
-            <label for="cost">Cost: </label>
-            <input type="number" id="cost" name="cost" placeholder="€00.00.." required>
+        <label for="cost">Cost: </label>
+        <input type="number" id="cost" name="cost" placeholder="€00.00.." required>
 
-            <label for="count">Count: </label>
-            <input type="number" class="count" name="count" placeholder="1" required>
+        <label for="count">Count: </label>
+        <input type="number" class="count" name="count" placeholder="1">
 
-            Remove:  <button class="round" onclick="categoryRemoved()"> - </button>
+        Remove:  <button class="round" onclick="categoryRemoved()"> - </button>
 
   
     </form>
