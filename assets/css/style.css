@@ -9,6 +9,7 @@
 /* These fonts are imported from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Share+Tech+Mono&display=swap');
 
 
 /* This styling is set for the whole project as a deafault */
@@ -36,7 +37,7 @@ header {
 
 h1,
 h2 {
-    font-family: Lemonada, Arial, sans-serif;
+    font-family: 'Share Tech Mono', monospace;
     color: #FAF7F4;
     line-height: 2;
     letter-spacing: 2px;
@@ -49,6 +50,7 @@ h1 {
 }
 
 h2 {
+    font-family: Lemonada, Arial, sans-serif;
     font-size: 1em;
     font-weight: 300;
 }
@@ -73,6 +75,7 @@ img {
 }
 
 button {
+    font-family: 'Share Tech Mono', monospace;
     background-color: #6A4C39;
     color: #FAF7F4;
     letter-spacing: 2px;
