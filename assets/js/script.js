@@ -46,10 +46,18 @@ function categoryRemoved() {
     alert(`The category ${category} is removed`)
 }
 
+/**
+ * This is the main function that calculates the sum of all the monthly costs
+ */
+function calculateTotal() {
+   let Total = (cost1 * count1) + (cost2 * count2) + (cost3* count3) + (cost4 * count4)
 
-function submitResult() {
-    let result = document.getElementById("result").value;
-    alert(`The total costs this month are: ${formatter.format(Number(result))}`)
+}
+
+// Combine this with the function that actually calculates the sum of all (see calculateTotal functiom)
+function submitTotal() {
+    let total = document.getElementById("total").value;
+    alert(`The total costs this month are: ${formatter.format(Number(total))}`)
 }
 
 
