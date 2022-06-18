@@ -34,8 +34,8 @@
             <br><br> -->
 
             <label for="budget">*Add your Monthly Budget: </label>
-            <br>
-            <input type="number" id="budget" class="currency" name="budget" placeholder="€00.00"  value="1500" required>
+            
+            <input type="number" id="budget" class="currency" name="budget" placeholder=""  value="1500" required> €
             <button onclick="confirmBudget()">Submit</button>
 
             <br>
@@ -44,9 +44,10 @@
         </form>
     
 <!-- Code source: https://www.w3schools.com/howto/howto_js_cascading_dropdown.asp -->
-    <form name="form1" id="form1" action="#">
+  
 
-       <!-- <p>Select:  Category: Cost: Count: Remove:</p>  -->
+      <!-- <p>Select:  Category: Cost: Count: Remove:</p>   -->
+
         <label for="select">Select: </label>
         <input type="checkbox" id="select" name="select" value="select">
 
@@ -58,7 +59,7 @@
         </select>
         
         <label for="cost">Cost: </label>
-        <input type="number" id="cost" name="cost" placeholder="€00.00.." required>
+        <input type="number" id="cost" name="cost" placeholder="0" required> €
 
         <label for="count">Count: </label>
         <input type="number" class="count" name="count" placeholder="1">
@@ -78,7 +79,7 @@
         </select>
         
             <label for="cost">Cost: </label>
-            <input type="number" id="cost" name="cost" placeholder="€00.00.." required>
+            <input type="number" id="cost" name="cost" placeholder="0" required> €
 
             <label for="count">Count: </label>
             <input type="number" class="count" name="count" placeholder="1" required>
@@ -98,7 +99,7 @@
         </select>
         
             <label for="cost">Cost: </label>
-            <input type="number" id="cost" name="cost" placeholder="€00.00.." required>
+            <input type="number" id="cost" name="cost" placeholder="0" required> € 
 
             <label for="count">Count: </label>
             <input type="number" class="count" name="count" placeholder="1" required>
@@ -111,7 +112,12 @@
     <br>
 
     <!-- Connect this button to calculateTotal() function as well -->
-    <button id="total" onclick="submitTotal()" value = "2500"> TOTAL: 2500 </button> 
+   
+    <button id="total" onclick="submitTotal()" value = "2500"> CALCULATE</button> 
+    <p>Costs TOTAL : 2500 € </p>
+    <br>
+    <p>Your Budget: 1500 €</p>
+    <p>This month's balance: - 1000 € (overspent)</p>
 
 
     </section>

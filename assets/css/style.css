@@ -72,6 +72,10 @@ img {
     color: #FAF7F4;
     letter-spacing: 2px;
     border-radius: 50%;
+
+    width: 30px;
+    height: 30px;
+    text-align: center;
 }
 
 button {
@@ -79,7 +83,19 @@ button {
     background-color: #6A4C39;
     color: #FAF7F4;
     letter-spacing: 2px;
+    font-size: 1em;
     border-radius: 5%;
+
+    width: 120px;
+    height: 35px;
+    text-align: center;
+}
+
+
+#budget {
+    width: 80px;
+    height: 30px;
+    text-align: right;
 }
 
 #category {
@@ -87,8 +103,9 @@ button {
     height: 30px;
     text-align: center;
 }
+
 #cost {
-    width: 100px;
+    width: 80px;
     height: 25px;
     text-align: right;
 }
