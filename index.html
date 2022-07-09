@@ -17,11 +17,13 @@
 
 
         <header>
+            <img src="assets/images/web-pexels-karolina-grabowska-4959738.jpg" width=120>
             <h1>Mom Calculator </h1>
             <h2>Life Expenses Budgeting Tool for the Whole Family </h2>
-            <img src="assets/images/web-pexels-karolina-grabowska-4959738.jpg" width=120>
+            
         </header>
         <section id="calculation-area">
+
             <form name="form0" id="form0" action="#">
 
                 <!-- WORK WITH USERNAME LATER -->
@@ -42,76 +44,59 @@
                 <br>
                 <br>
             </form>
+            
+            
+            <!-- Basic source code for the grid: https://www.w3schools.com/css/css_grid.asp -->
 
-            <!-- Code source: https://www.w3schools.com/howto/howto_js_cascading_dropdown.asp -->
+            <div class="grid-container">
+                <!-- ROW 1 Labels-->
+                <div class="grid-item">Select</div>
+                <div class="grid-item"> Category</div>
+                <div class="grid-item">Cost</div>  
+                <div class="grid-item">Count</div>
+                <div class="grid-item">Remove</div>
+                
+                <!-- ROW 2 -->
+                <div class="grid-item"><input type="checkbox" id="select" name="select" value="select"></div>  
+                <div class="grid-item"> <select name="category" id="category">
+                    <option value="" selected="selected">Food</option>
+                    <option value="">Takeout</option>
+                    <option value="">Supermarket</option>
+                </select></div>
+                <div class="grid-item"><input type="number" id="cost" name="cost" placeholder="0" required></div>
+                <div class="grid-item"><input type="number" class="count" name="count" placeholder="1"></div>  
+                <div class="grid-item"><button class="round" onclick="categoryRemoved()"> - </button></div>  
 
+                <!-- ROW 3 -->
+                <div class="grid-item"><input type="checkbox" id="select" name="select" value="select"></div>  
+                <div class="grid-item"> <select name="category" id="category">
+                    <option value="" selected="selected">Clothing</option> <!-- Code source: https://www.w3schools.com/howto/howto_js_cascading_dropdown.asp -->
+                    <option value=""></option>
+                    <option value=""></option>
+                </select></div>
+                <div class="grid-item"><input type="number" id="cost" name="cost" placeholder="0" required></div>
+                <div class="grid-item"><input type="number" class="count" name="count" placeholder="1"></div>  
+                <div class="grid-item"><button class="round" onclick="categoryRemoved()"> - </button></div>  
 
-            <!-- <p>Select:  Category: Cost: Count: Remove:</p>   -->
-
-            <label for="select">Select: </label>
-            <input type="checkbox" id="select" name="select" value="select">
-
-            <label for="category">Category: </label>
-            <select name="category" id="category">
-                <option value="" selected="selected">Food</option>
-                <option value="">Takeout</option>
-                <option value="">Supermarket</option>
-            </select>
-
-            <label for="cost">Cost: </label>
-            <input type="number" id="cost" name="cost" placeholder="0" required> €
-
-            <label for="count">Count: </label>
-            <input type="number" class="count" name="count" placeholder="1">
-
-            Remove: <button class="round" onclick="categoryRemoved()"> - </button>
-
-
-            </form>
-
-            <form name="form2" id="form2" action="#">
-                <label for="clothing">Select: </label>
-                <input type="checkbox" id="clothing" name="clothing" value="clothing">
-
-                Category:
-                <select name="category" id="category">
-                    <option value="" selected="selected">Clothing</option>
-                </select>
-
-                <label for="cost">Cost: </label>
-                <input type="number" id="cost" name="cost" placeholder="0" required> €
-
-                <label for="count">Count: </label>
-                <input type="number" class="count" name="count" placeholder="1" required>
-
-                Remove: <button class="round" onclick="categoryRemoved()"> - </button>
-
-
-            </form>
-
-            <form name="form3" id="form3" action="#">
-                <label for="accomodation">Select: </label>
-                <input type="checkbox" id="accomodation" name="accomodation" value="accomodation">
-
-                Category:
-                <select name="category" id="category">
+                <!-- ROW 4 -->
+                <div class="grid-item"><input type="checkbox" id="select" name="select" value="select"></div>  
+                <div class="grid-item"> <select name="category" id="category">
                     <option value="" selected="selected">Accomodation</option>
-                </select>
-
-                <label for="cost">Cost: </label>
-                <input type="number" id="cost" name="cost" placeholder="0" required> €
-
-                <label for="count">Count: </label>
-                <input type="number" class="count" name="count" placeholder="1" required>
-
-                Remove: <button class="round" onclick="categoryRemoved()"> - </button>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select></div>
+                <div class="grid-item"><input type="number" id="cost" name="cost" placeholder="0" required></div>
+                <div class="grid-item"><input type="number" class="count" name="count" placeholder="1"></div>  
+                <div class="grid-item"><button class="round" onclick="categoryRemoved()"> - </button></div>  
 
 
-            </form>
+
+              </div>
+
 
             <br>
 
-            <!-- Connect this button to calculateTotal() function as well -->
+            <!-- Connects this button to submitTotal function -->
 
             <button id="total" onclick="submitTotal()" value="xxx"> CALCULATE</button>
             <br>
