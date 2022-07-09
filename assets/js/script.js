@@ -57,7 +57,12 @@ function calculateTotal() {
 // Combine this with the function that actually calculates the sum of all (see calculateTotal functiom)
 function submitTotal() {
     let total = document.getElementById("total").value;
-    alert(`The total costs this month are: ${formatter.format(Number(total))}`)
-}
+    total = (100 * 3) + (1500 * 1) + (200 * 1) + (1450 * 1)
+    //total = (cost1 * count1) + (cost2 * count2) + (cost3* count3) + (cost4 * count4)
+    console.log(`The total costs this month are: ${formatter.format(Number(total))}`)
+    document.getElementById('totalCosts').innerHTML = ('Costs TOTAL : ') + total + (' €')
 
+    return total
+
+}
 
