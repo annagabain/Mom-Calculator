@@ -20,7 +20,7 @@
             <img src="assets/images/web-pexels-karolina-grabowska-4959738.jpg" width=120>
             <h1>Mom Calculator </h1>
             <h2>Life Expenses Budgeting Tool for the Whole Family </h2>
-            
+
         </header>
         <section id="calculation-area">
 
@@ -36,72 +36,74 @@
             <br><br> -->
 
                 <label for="budget">*Add your Monthly Budget: </label>
-
+                <br>
+                <br>
                 <input type="number" id="budget" class="currency" name="budget" placeholder="" value="1500" required> €
                 <button onclick="confirmBudget()">Submit</button>
 
-                <br>
-                <br>
-                <br>
             </form>
-            
-            
+
+
             <!-- Basic source code for the grid: https://www.w3schools.com/css/css_grid.asp -->
 
             <div class="grid-container">
                 <!-- ROW 1 Labels-->
-                <div class="grid-item">Select</div>
-                <div class="grid-item"> Category</div>
-                <div class="grid-item">Cost</div>  
+                <div class="grid-item">De-select</div>
+                <div class="grid-item">Expenses on:</div>
+                <div class="grid-item">Cost in €</div>
                 <div class="grid-item">Count</div>
                 <div class="grid-item">Remove</div>
-                
+
                 <!-- ROW 2 -->
-                <div class="grid-item"><input type="checkbox" id="select" name="select" value="select"></div>  
+                <div class="grid-item"><input type="checkbox" id="select" name="select" value="select" checked></div>
                 <div class="grid-item"> <select name="category" id="category">
-                    <option value="" selected="selected">Food</option>
-                    <option value="">Takeout</option>
-                    <option value="">Supermarket</option>
-                </select></div>
+                        <option value="" selected="selected">Food</option>
+                        <option value="">Takeout</option>
+                        <option value="">Supermarket</option>
+                    </select></div>
                 <div class="grid-item"><input type="number" id="cost" name="cost" placeholder="0" required></div>
-                <div class="grid-item"><input type="number" class="count" name="count" placeholder="1"></div>  
-                <div class="grid-item"><button class="round" onclick="categoryRemoved()"> - </button></div>  
+                <div class="grid-item"><input type="number" class="count" name="count" placeholder="1"></div>
+                <div class="grid-item"><button class="round" onclick="categoryRemoved()"> - </button></div>
 
                 <!-- ROW 3 -->
-                <div class="grid-item"><input type="checkbox" id="select" name="select" value="select"></div>  
+                <div class="grid-item"><input type="checkbox" id="select" name="select" value="select" checked></div>
                 <div class="grid-item"> <select name="category" id="category">
-                    <option value="" selected="selected">Clothing</option> <!-- Code source: https://www.w3schools.com/howto/howto_js_cascading_dropdown.asp -->
-                    <option value=""></option>
-                    <option value=""></option>
-                </select></div>
+                        <option value="" selected="selected">Clothing</option>
+                        <!-- Code source: https://www.w3schools.com/howto/howto_js_cascading_dropdown.asp -->
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select></div>
                 <div class="grid-item"><input type="number" id="cost" name="cost" placeholder="0" required></div>
-                <div class="grid-item"><input type="number" class="count" name="count" placeholder="1"></div>  
-                <div class="grid-item"><button class="round" onclick="categoryRemoved()"> - </button></div>  
+                <div class="grid-item"><input type="number" class="count" name="count" placeholder="1"></div>
+                <div class="grid-item"><button class="round" onclick="categoryRemoved()"> - </button></div>
 
                 <!-- ROW 4 -->
-                <div class="grid-item"><input type="checkbox" id="select" name="select" value="select"></div>  
+                <div class="grid-item"><input type="checkbox" id="select" name="select" value="select" checked></div>
                 <div class="grid-item"> <select name="category" id="category">
-                    <option value="" selected="selected">Accomodation</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select></div>
+                        <option value="" selected="selected">Accomodation</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select></div>
                 <div class="grid-item"><input type="number" id="cost" name="cost" placeholder="0" required></div>
-                <div class="grid-item"><input type="number" class="count" name="count" placeholder="1"></div>  
-                <div class="grid-item"><button class="round" onclick="categoryRemoved()"> - </button></div>  
+                <div class="grid-item"><input type="number" class="count" name="count" placeholder="1"></div>
+                <div class="grid-item"><button class="round" onclick="categoryRemoved()"> - </button></div>
 
+                <!-- ROW 5-->
+                <div class="grid-item"></div>
+                <div class="grid-item"> </div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
 
+            </div>
 
-              </div>
-
-
-            <br>
 
             <!-- Connects this button to submitTotal function -->
 
             <button id="total" onclick="submitTotal()" value="xxx"> CALCULATE</button>
             <br>
             <div id="totalCosts">
-            <!-- Costs TOTAL : xxx € -->
+                <!-- Costs TOTAL : xxx € -->
             </div>
             <div id="budget">
                 <!-- Your Budget: 1500 € -->
@@ -112,9 +114,12 @@
 
         </section>
 
-        <section id="visualization-area">
+
+<!-- Work on visualization-area later -->
+        <!-- <section id="visualization-area">
             <button id="visualize" onclick="" value=""> Visualize</button>
-        </section>
+        </section> -->
+
         <script src="assets/js/script.js"></script>
         <noscript>Your browser does not support JavaScript!</noscript>
         <footer>©</footer>
