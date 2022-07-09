@@ -30,10 +30,13 @@ let formatter = new Intl.NumberFormat('en-DE', {
 //     alert(`Hello ${momName}`)
 // }
 
-let momBudget;
+
 function confirmBudget(){
-    momBudget = document.getElementById("budget").value;
-    alert(`Your budget of ${formatter.format(Number(momBudget))}  is confirmed`)
+    
+    let momBudget = document.getElementById("budget").value;
+    //alert(`Your budget of ${formatter.format(Number(momBudget))}  is confirmed`)
+    document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`)
+    return momBudget
 }
 
 function addCost() {
@@ -56,13 +59,20 @@ function calculateTotal() {
 
 // Combine this with the function that actually calculates the sum of all (see calculateTotal functiom)
 function submitTotal() {
+
     let total = document.getElementById("total").value;
     total = (100 * 3) + (1500 * 1) + (200 * 1) + (1450 * 1)
     //total = (cost1 * count1) + (cost2 * count2) + (cost3* count3) + (cost4 * count4)
-    console.log(`The total costs this month are: ${formatter.format(Number(total))}`)
-    document.getElementById('totalCosts').innerHTML = ('Costs TOTAL : ') + total + (' €')
+    // console.log(`The total costs this month are: ${formatter.format(Number(total))}`)
+    document.getElementById('totalCosts').innerHTML = ('Costs TOTAL : ') + formatter.format(Number(total)) + (' €')
+
+    let balance = confirmBudget() - total 
+    document.getElementById('yourBalance').innerHTML = ('This month\'s balance: : ') + formatter.format(Number(balance)) + (' €')
+  
 
     return total
 
 }
+
+
 
