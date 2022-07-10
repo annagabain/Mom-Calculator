@@ -32,6 +32,7 @@ let formatter = new Intl.NumberFormat('en-DE', {
 
 
 
+
 function confirmBudget(){
 
     let momBudget = document.getElementById("budget").value;
