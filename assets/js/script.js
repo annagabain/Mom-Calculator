@@ -31,11 +31,13 @@ let formatter = new Intl.NumberFormat('en-DE', {
 // }
 
 
+
 function confirmBudget(){
-    
+
     let momBudget = document.getElementById("budget").value;
-    //alert(`Your budget of ${formatter.format(Number(momBudget))}  is confirmed`)
+    // alert(`Your budget of ${formatter.format(Number(momBudget))}  is confirmed`)
     document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`)
+   
     return momBudget
 }
 
