@@ -24,8 +24,6 @@
         </header>
         <section id="calculation-area">
 
-            <form name="form0" id="form0" action="#">
-
                 <!-- WORK WITH USERNAME LATER -->
                 <!-- 
             <label for="username">*Create a Username: </label>
@@ -35,16 +33,12 @@
 
             <br><br> -->
 
+
                 <label for="budget">*Add your Monthly Budget: </label>
                 <br>
                 <br>
-                <!-- <input type="number" id="budget" class="currency" name="budget" placeholder="eg. 2500" value=""  required> € -->
-                <!-- <form><input type="number" id="budget" value="" required> € <button id="budget" onclick="confirmBudget()"> SUBMIT</button></form> -->
-
-                <form><input type="number" id="budget" placeholder="eg. 2500" value="" required> € <button onclick="confirmBudget()"> SUBMIT</button></form>
-                
-
-            </form>
+                <input type="number" id="budget" placeholder="eg. 2500" value="" required> € <button
+                    onclick="confirmBudget()"> SUBMIT</button>
 
 
             <!-- Basic source code for the grid: https://www.w3schools.com/css/css_grid.asp -->
@@ -69,12 +63,15 @@
                 <div class="grid-item"><input type="number" class="count" name="count" placeholder="1"></div>
                 <div class="grid-item"><button class="round" onclick="categoryRemoved()"> - </button></div>
 
-                    <!-- ROW 2.1-->
-                    <div class="grid-item" class="sub-category"><input type="checkbox" name="select" value="select" checked></div>
-                    <div class="grid-item" class="sub-category"> <input type="text"  name="text" value="Takeout"></div>
-                    <div class="grid-item" class="sub-category"><input type="number" name="cost" placeholder="0" required></div>
-                    <div class="grid-item" class="sub-category"><input type="number"  name="count" placeholder="1"></div>
-                    <div class="grid-item" class="sub-category"><button class="round" onclick="categoryRemoved()"> - </button></div>
+                <!-- ROW 2.1-->
+                <div class="grid-item" class="sub-category"><input type="checkbox" name="select" value="select" checked>
+                </div>
+                <div class="grid-item" class="sub-category"> <input type="text" name="text" value="Takeout"></div>
+                <div class="grid-item" class="sub-category"><input type="number" name="cost" placeholder="0" required>
+                </div>
+                <div class="grid-item" class="sub-category"><input type="number" name="count" placeholder="1"></div>
+                <div class="grid-item" class="sub-category"><button class="round" onclick="categoryRemoved()"> -
+                    </button></div>
 
                 <!-- ROW 3 -->
                 <div class="grid-item"><input type="checkbox" class="select" name="select" value="select" checked></div>
@@ -98,7 +95,7 @@
                 <div class="grid-item"><button class="round" onclick="categoryRemoved()"> - </button></div>
 
 
-           
+
 
             </div>
 
@@ -114,7 +111,7 @@
                 <!-- Your Budget: 1500 € -->
             </div>
             <div id="yourBalance">
-            <!-- <p>This month's balance: - 1000 € (overspent)</p> -->
+                <!-- <p>This month's balance: - 1000 € (overspent)</p> -->
             </div>
 
 
@@ -122,7 +119,7 @@
         </section>
 
 
-<!-- Work on visualization-area later -->
+        <!-- Work on visualization-area later -->
         <!-- <section id="visualization-area">
             <button id="visualize" onclick="" value=""> Visualize</button>
         </section> -->
