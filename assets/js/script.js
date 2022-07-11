@@ -107,7 +107,8 @@ let data = google.visualization.arrayToDataTable([
 ]);
 
 let options = {
-  title:'Life Expenses Budgeting Pie Chart'
+  title:'Life Expenses Budgeting Pie Chart',
+  slices: {0: {color: '#9C9FA6'}, 1:{color: '#0D0D0D'}, 2:{color: '#455359'}, 3: {color: '#6A4C39'}, 4:{color: 'grey'}}
 };
 
 let chart = new google.visualization.PieChart(document.getElementById('myChart'));
