@@ -65,13 +65,17 @@ img {
     padding: 50px;
     background-color: #D8CBC4;
     /* margin: 30px; */
+   
 
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    padding: 40px;
+    padding: 40px 40px 40px 0px;
+    width: 600px;
+   display: flexbox;
+   justify-content: space-evenly;
 
   }
 
@@ -81,16 +85,6 @@ img {
     text-align: center;
   }
 
-  .sub-category {
-        /* border: 1px solid rgba(0, 0, 0, 0.8); */
-        padding: 1px;
-        text-align: center;
-        width: 100px;
-        height: 20px;
-        text-align: center;
-        border: 1px solid rgba(0, 0, 0, 0.8);
-
-  }
 
 .round {
     background-color: #6A4C39;
@@ -130,10 +124,15 @@ button {
     border: 1.5px solid rgba(0, 0, 0, 0.8);
 }
 
+.sub-category {
+    width: 60px;
+    height: 15px;
+}
+
 .select {
     width: 80px;
     height: 25px;
-    text-align: right;
+    text-align: center;
 }
 
 .cost {
@@ -146,7 +145,6 @@ button {
     width: 60px;
     height: 25px;
     text-align: center;
-    border-radius: 40%;
     border: 1.5px solid rgba(0, 0, 0, 0.8);
 }
 

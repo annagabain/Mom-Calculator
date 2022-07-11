@@ -56,9 +56,20 @@ function categoryRemoved() {
  * This is the main function that calculates the sum of all the monthly costs
  */
 function calculateTotal() {
-   let Total = (cost1 * count1) + (cost2 * count2) + (cost3* count3) + (cost4 * count4)
-
+//    let Total = (cost1 * count1) + (cost2 * count2) + (cost3* count3) + (cost4 * count4)
+   let costs = document.getElementsByClassName('cost')
+   let sum = 0
+   for (let cost of costs) {
+    console.log(sum += parseInt(cost.value ))
+   }
+   return sum
 }
+
+
+// WRITE ONE MORE function inside calculateTotal that takes the counts to multiply by the each cost
+console.log(calculateTotal()  * 2)  //expenses time counts
+
+
 
 // Combine this with the function that actually calculates the sum of all (see calculateTotal functiom)
 function submitTotal() {
@@ -68,6 +79,7 @@ function submitTotal() {
     //total = (cost1 * count1) + (cost2 * count2) + (cost3* count3) + (cost4 * count4)
     // console.log(`The total costs this month are: ${formatter.format(Number(total))}`)
     document.getElementById('totalCosts').innerHTML = ('Costs TOTAL : ') + formatter.format(Number(total)) + (' €')
+
 
     let balance = confirmBudget() - total 
     document.getElementById('yourBalance').innerHTML = ('This month\'s balance: : ') + formatter.format(Number(balance)) + (' €')
