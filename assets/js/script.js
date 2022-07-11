@@ -1,10 +1,6 @@
 // Javascript for the calculator goes here
 
 
-console.log('Hello Mom!')
-
-
-
 // Converting the number into currency
 // https://www.codegrepper.com/code-examples/javascript/javascript+currency+format+euro
 let formatter = new Intl.NumberFormat('en-DE', {
@@ -36,7 +32,7 @@ console.log(toEuro);
 function confirmBudget() {
 
     let momBudget = document.getElementById("budget").value;
-    // alert(`Your budget of ${formatter.format(Number(momBudget))}  is confirmed`)
+ 
     document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`)
 
     return momBudget
@@ -52,54 +48,39 @@ function categoryRemoved() {
     alert(`The category ${category} is removed`)
 }
 
+
 /**
  * This is the main function that calculates the sum of all the monthly costs
  */
-function calculateTotal() {
-    //    let Total = (cost1 * count1) + (cost2 * count2) + (cost3* count3) + (cost4 * count4)
-    let costs = document.getElementsByClassName('cost')
-    let sum = 0
-    for (let cost of costs) {
-        console.log(sum += parseInt(cost.value))
-    }
-    return sum
-}
-
-
-//Calculates the costs multiplied by counts in the same row
+//Calculates the costs multiplied by counts in the same row and adds all the rows
 function costsTimesCounts() {
     //    let Total = (cost1 * count1) + (cost2 * count2) + (cost3* count3) + (cost4 * count4)
-
+    let total = 0
     let costs = document.getElementsByClassName('cost')
     let counts = document.getElementsByClassName('count')
 
-    for (let index in costs) {
+    for (let row = 0; row < costs.length; row++) {
 
-        let cost = costs[index].value
-        console.log('cost ' + cost)
+        let cost = costs[row].value
+        // console.log('cost ' + cost)
 
-        let count = counts[index].value
-        console.log('count ' + count)
+        let count = counts[row].value
+        // console.log('count ' + count)
 
-        console.log('cost * count ' + cost * count)
+        console.log(total += cost * count)
+      
+        console.log('TOTAL ' + total)
         
     }
+
+    return total
 }
 
-costsTimesCounts()
 
+// Combined with the costsTimesCounts functiom shos the total expenses calculation
+function calculateTotal() {
 
-
-
-
-
-// Combine this with the function that actually calculates the sum of all (see calculateTotal functiom)
-function submitTotal() {
-
-    let total = document.getElementById("total").value;
-    total = (100 * 3) + (1500 * 1) + (200 * 1) + (1450 * 1)
-    //total = (cost1 * count1) + (cost2 * count2) + (cost3* count3) + (cost4 * count4)
-    // console.log(`The total costs this month are: ${formatter.format(Number(total))}`)
+    let total = costsTimesCounts()
     document.getElementById('totalCosts').innerHTML = ('Costs TOTAL : ') + formatter.format(Number(total)) + (' €')
 
 
