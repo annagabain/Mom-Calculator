@@ -91,3 +91,25 @@ function calculateTotal() {
     return total
 
 }
+
+// VISUALIZATION TEST
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+let data = google.visualization.arrayToDataTable([
+  ['Category', 'Mhl'],
+  ['Food', 1200],
+  ['Takeout', 500],
+  ['Clothing', 500],
+  ['Accomodation', 700],
+]);
+
+let options = {
+  title:'Life Expenses Budgeting Pie Chart'
+};
+
+let chart = new google.visualization.PieChart(document.getElementById('myChart'));
+  chart.draw(data, options);
+}

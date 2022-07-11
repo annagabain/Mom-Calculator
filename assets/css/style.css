@@ -155,14 +155,24 @@ button {
 
 #visualization-area {
     padding: 50px;
-    background-color: #0D0D0D;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: right;
 
 }
 
 #visualize {
     position: relative;
-    left: 40%
+    left: 40%;
+    padding: 5px;
 }
+
+#myChart {
+    display: flex;
+   justify-content: center;
+   padding-top: 60px;
+}
+
 
 footer {
     background-color: #455359;

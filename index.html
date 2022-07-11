@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <section id="innerbody">
 
 
@@ -24,8 +25,8 @@
         </header>
         <section id="calculation-area">
 
-                <!-- WORK WITH USERNAME LATER -->
-                <!-- 
+            <!-- WORK WITH USERNAME LATER -->
+            <!-- 
             <label for="username">*Create a Username: </label>
             <br>
             <input type="text" id="username" name="username" placeholder="Username" required>
@@ -34,13 +35,13 @@
             <br><br> -->
 
 
-                <label for="budget">*Add your Monthly Budget: </label>
-                <br>
-                <br>
-                <input type="number" id="budget" placeholder="eg. 2500" value="" required> € 
-                <br>
-                <br>
-                <button onclick="confirmBudget()"> SUBMIT</button>
+            <label for="budget">*Add your Monthly Budget: </label>
+            <br>
+            <br>
+            <input type="number" id="budget" placeholder="eg. 2500" value="" required> €
+            <br>
+            <br>
+            <button onclick="confirmBudget()"> SUBMIT</button>
 
 
             <!-- Basic source code for the grid: https://www.w3schools.com/css/css_grid.asp -->
@@ -61,16 +62,20 @@
                         <option value="">Supermarket</option>
                         <option value="">Add Sub-category...</option>
                     </select></div>
-                <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 1200" value="" required></div>
+                <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 1200" value=""
+                        required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1"></div>
                 <div class="grid-item"><button class="round" onclick="categoryRemoved()"> - </button></div>
 
                 <!-- ROW 2.1 index-1-->
                 <div class="grid-item"><input type="checkbox" name="select" value="select" checked></div>
                 <div class="grid-item"> <input type="text" name="text" class="sub-category" value="Takeout"></div>
-                <div class="grid-item"><input type="number" name="cost" class="cost" class="sub-category" placeholder="eg. 500" value="" required></div>
-                <div class="grid-item"><input type="number" class="count" name="count" class="sub-category" placeholder="1" value="1"></div>
-                <div class="grid-item"><button class="round" class="sub-category" onclick="categoryRemoved()"> - </button></div>
+                <div class="grid-item"><input type="number" name="cost" class="cost" class="sub-category"
+                        placeholder="eg. 500" value="" required></div>
+                <div class="grid-item"><input type="number" class="count" name="count" class="sub-category"
+                        placeholder="1" value="1"></div>
+                <div class="grid-item"><button class="round" class="sub-category" onclick="categoryRemoved()"> -
+                    </button></div>
 
                 <!-- ROW 3 index-2 -->
                 <div class="grid-item"><input type="checkbox" class="select" name="select" value="select" checked></div>
@@ -79,7 +84,8 @@
                         <!-- Code source: https://www.w3schools.com/howto/howto_js_cascading_dropdown.asp -->
                         <option value="300">Add Sub-category...</option>
                     </select></div>
-                <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 500" value="" required></div>
+                <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 500" value=""
+                        required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1"></div>
                 <div class="grid-item"><button class="round" onclick="categoryRemoved()"> - </button></div>
 
@@ -89,7 +95,8 @@
                         <option value="" selected="selected">Accomodation</option>
                         <option value="">Add Sub-category...</option>
                     </select></div>
-                <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 700" value="" required></div>
+                <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 700" value=""
+                        required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1"></div>
                 <div class="grid-item"><button class="round" onclick="categoryRemoved()"> - </button></div>
 
@@ -119,9 +126,18 @@
 
 
         <!-- Work on visualization-area later -->
-        <!-- <section id="visualization-area">
+        <section id="visualization-area">
             <button id="visualize" onclick="" value=""> Visualize</button>
-        </section> -->
+            <br>
+            <br>
+
+            <!--Source code: https://www.w3schools.com/js/tryit.asp?filename=tryai_google_chart_pie -->
+
+            <div id="myChart" style="width:100%; max-width:600px; height:500px;">
+            </div>
+
+
+        </section>
 
         <script src="assets/js/script.js"></script>
         <noscript>Your browser does not support JavaScript!</noscript>
