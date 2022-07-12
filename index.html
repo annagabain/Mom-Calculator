@@ -47,102 +47,79 @@
             <div class="grid-container">
 
                 <!-- ROW 1 Labels-->
-                <div class="grid-item">De-select</div>
                 <div class="grid-item">Expenses on:</div>
                 <div class="grid-item">Cost in €</div>
                 <div class="grid-item">Count</div>
-                <div class="grid-item">Add</div>
                 <div class="grid-item">Remove</div>
 
                 <!-- ROW 2 index-0 -->
-                <div class="grid-item"><input type="checkbox" class="select" name="select" value="select" checked>
-                </div>
-                <div class="grid-item"> <select name="category" class="category">
-                        <option value="" selected="selected">Food</option>
-                        <option value="">Takeout</option>
-                        <option value="">Supermarket</option>
-                        <option value="">Add Sub-category...</option>
-                    </select></div>
+
+                <div class="grid-item"> <input type="text" name="text" class="category" value="Food"></div>
                 <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 1200" value=""
                         required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1">
                 </div>
-                <div class="grid-item"><button class="round" onclick="categoryAdded()"> + </button>
-                </div>
+                
                 <div class="grid-item">
                     <button class="round" class="category" onclick="categoryRemoved()"> - </button>
                 </div>
 
                 <!-- ROW 2.1 index-1-->
-                <div class="grid-item"><input type="checkbox" name="select" value="select" checked></div>
-                <div class="grid-item"> <input type="text" name="text" class="sub-category" value="Takeout">
+
+                <div class="grid-item"> <input type="text" name="text" class="category" value="Transport"></div>
+                <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 1200" value=""
+                        required></div>
+                <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1">
                 </div>
-                <div class="grid-item"><input type="number" name="cost" class="cost" class="sub-category"
-                        placeholder="eg. 500" value="" required></div>
-                <div class="grid-item"><input type="number" class="count" name="count" class="sub-category"
-                        placeholder="1" value="1"></div>
-                <div class="grid-item"><button class="round" onclick="categoryAdded()"> + </button>
-                </div>
+                
                 <div class="grid-item">
                     <button class="round" class="category" onclick="categoryRemoved()"> - </button>
                 </div>
 
 
-
                 <!-- ROW 3 index-2 -->
-                <div class="grid-item"><input type="checkbox" class="select" name="select" value="select" checked>
-                </div>
-                <div class="grid-item"> <select name="category" class="category">
-                        <option value="" selected="selected">Clothing</option>
-                        <!-- Code source: https://www.w3schools.com/howto/howto_js_cascading_dropdown.asp -->
-                        <option value="300">Add Sub-category...</option>
-                    </select></div>
+
+                <div class="grid-item"> <input type="text" name="text" class="category" value="Accommodation"></div>
                 <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 500" value=""
                         required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1">
                 </div>
-                <div class="grid-item"><button class="round" onclick="categoryAdded()"> + </button>
-                </div>
+                
                 <div class="grid-item">
                     <button class="round" class="category" onclick="categoryRemoved()"> - </button>
                 </div>
 
 
                 <!-- ROW 4 index-3 -->
-                <div class="grid-item"><input type="checkbox" class="select" name="select" value="select" checked>
-                </div>
-                <div class="grid-item"> <select name="category" class="category">
-                        <option value="" selected="selected">Accomodation</option>
-                        <option id="newCategory" value="">Add Sub-category...</option>
-                    </select></div>
+                
+                <div class="grid-item"> <input type="text" name="text" class="category" value="Clothing"></div>
                 <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 700" value=""
                         required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1"></div>
-                <div class="grid-item"><button class="round" onclick="categoryAdded()"> + </button>
-                </div>
+                
                 <div class="grid-item">
                     <button class="round" class="category" onclick="categoryRemoved()"> - </button>
                 </div>
 
                 <!-- ROW 5 Add Category-->
-                <div class="grid-item"><input type="checkbox" class="select" name="select" value="select" checked></div>
-                <div class="grid-item" onclick="categoryAdded()"> <input type="text" name="text" id="add-category"
-                        class="category" value="Add Category..."></div>
+                
+                <div class="grid-item"> <input type="text" name="text" class="category" placeholder="Anything else?..." value=""></div>
                 <div class="grid-item"><input type="number" name="cost" class="cost" placeholder="eg. 500" value=""
                         required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" class="sub-category"
                         placeholder="1" value="1"></div>
-                <div class="grid-item"><button class="round" onclick="categoryAdded()"> + </button>
-                </div>
                 <div class="grid-item">
                     <button class="round" class="category" onclick="categoryRemoved()"> - </button>
                 </div>
 
             </div>
+            <div><button id="more-rows-button" onclick="categoryAdded()"> More Rows</button></div>
+
 
             <div id="grid-container-new">
-
+                <!-- The new Category row is appended here with -->
             </div>
+
             <br>
             <br>
 

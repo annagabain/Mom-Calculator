@@ -48,36 +48,22 @@ function categoryRemoved() {
     alert(`The category ${category} is removed`)
 }
 
-// function categoryAdded() {
-//     let category = document.getElementsByClassName('category').value;
 
-//     alert(`The category ${category} is added`)
-// }
-
-
-
-
+/**
+ * New Category row is appended
+ */
 function categoryAdded() {
 
-
-    // Create element:
     let newDiv = document.createElement("div");
-    newDiv.innerHTML = `
-<div class="grid-item"><input type="checkbox" class="select" name="select" value="select" checked></div>
-<div class="grid-item"> <input type="text" name="text" id="add-category" class="category" value="Add Category..."></div>
-<div class="grid-item"><input type="number" name="cost" class="cost" placeholder="eg. 500" value="" required></div>
-<div class="grid-item"><input type="number" class="count" name="count" class="sub-category" placeholder="1" value="1"></div>
-<div class="grid-item"><button class="round" onclick="categoryAdded()"> + </button> </div>
-<div class="grid-item"><button class="round" class="category" onclick="categoryRemoved()"> - </button> </div>
+        newDiv.innerHTML = `
+        <div class="grid-item"> <input type="text" name="text" class="category" placeholder="Anything else?..." value=""></div>
+        <div class="grid-item"><input type="number" name="cost" class="cost" placeholder="eg. 500" value="" required></div>
+        <div class="grid-item"><input type="number" class="count" name="count" class="sub-category" placeholder="1" value="1"></div>
+        <div class="grid-item"><button class="round" class="category" onclick="categoryRemoved()"> - </button> </div>
+        <div><button id="more-rows-button" onclick="categoryAdded()"> More Rows</button></div>
         `;
 
-    // Append to another element:
-    // document.getElementById("newCategory").appendChild(newDiv);
     document.getElementById("grid-container-new").appendChild(newDiv);
-
-
-
-    // alert(`The category ${category} is added`)
 }
 
 

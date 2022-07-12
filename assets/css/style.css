@@ -68,7 +68,7 @@ img {
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
     padding: 40px 40px 0px 0px;
     width: 600px;
    display: flexbox;
@@ -84,7 +84,7 @@ img {
 
   #grid-container-new > div {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
 
     width: 600px;
    display: flexbox;
@@ -152,6 +152,12 @@ button {
     height: 25px;
     text-align: center;
     border: 1.5px solid rgba(0, 0, 0, 0.8);
+}
+
+#more-rows-button {
+    position: relative;
+    left: 5%;
+    width: 160px;
 }
 
 #total{
