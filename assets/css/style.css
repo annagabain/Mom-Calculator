@@ -71,7 +71,7 @@ img {
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
     padding: 40px 40px 40px 0px;
     width: 600px;
    display: flexbox;

@@ -44,8 +44,14 @@ function addCost() {
 
 
 function categoryRemoved() {
-    let category = document.getElementById("category").value;
+    let category = document.getElementsByClassName('category').value;
     alert(`The category ${category} is removed`)
+}
+
+function categoryAdded() {
+    let category = document.getElementsByClassName('category').value;
+
+    alert(`The category ${category} is added`)
 }
 
 
