@@ -69,10 +69,11 @@ img {
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
-    padding: 40px 40px 40px 0px;
+    padding: 40px 40px 0px 0px;
     width: 600px;
    display: flexbox;
    justify-content: space-evenly;
+   text-align: center;
 
   }
 
@@ -84,10 +85,11 @@ img {
   #grid-container-new > div {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
-    padding: 40px 40px 40px 0px;
+
     width: 600px;
    display: flexbox;
    justify-content: space-evenly;
+   text-align: center;
   }
 
 .round {
