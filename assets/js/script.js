@@ -43,10 +43,21 @@ function addCost() {
 }
 
 
-function categoryRemoved() {
-    let category = document.getElementsByClassName('category').value;
-    alert(`The category ${category} is removed`)
-}
+    function categoryRemoved() {
+        
+    // let category = document.getElementsByClassName('category');
+        // alert(`The category ${category} is removed`)
+
+
+
+        // Doesnt work as expected just yet
+        let new_button = document.querySelector("#grid-container-new  #newRow")
+        new_button.parentNode.removeChild(new_button)
+
+
+    }
+ 
+
 
 
 /**
@@ -54,19 +65,22 @@ function categoryRemoved() {
  */
 function categoryAdded() {
 
+    // let moreRowsButton = document.getElementById("more-rows-button")
+    // moreRowsButton.style.display = 'none';
+
     let newDiv = document.createElement("div");
-        newDiv.innerHTML = `
-        <div class="grid-item"> <input type="text" name="text" class="category" placeholder="Anything else?..." value=""></div>
-        <div class="grid-item"><input type="number" name="cost" class="cost" placeholder="eg. 500" value="" required></div>
-        <div class="grid-item"><input type="number" class="count" name="count" class="sub-category" placeholder="1" value="1"></div>
-        <div class="grid-item"><button class="round" class="category" onclick="categoryRemoved()"> - </button> </div>
-        <div><button id="more-rows-button" onclick="categoryAdded()"> More Rows</button></div>
-        `;
+    newDiv.innerHTML = `
+    <div id= "newRow">
+    <div class="grid-item class="grid-item-new"><input type="text" name="text" class="category" placeholder="Anything else?..." value=""></div>
+    <div  class="grid-item class="grid-item-new"><input type="number" name="cost" class="cost" placeholder="eg. 500" value="" required></div>
+    <div " class="grid-item class="grid-item-new"><input type="number" class="count" name="count" class="sub-category" placeholder="1" value="1"></div>   
+    
+    </div>`;
 
-    document.getElementById("grid-container-new").appendChild(newDiv);
+    let gridContainerNew = document.getElementById("grid-container-new")
+    gridContainerNew.appendChild(newDiv);
+
 }
-
-
 
 /**
  * This is the main function that calculates the sum of all the monthly costs

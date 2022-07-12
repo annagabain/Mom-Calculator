@@ -50,19 +50,16 @@
                 <div class="grid-item">Expenses on:</div>
                 <div class="grid-item">Cost in €</div>
                 <div class="grid-item">Count</div>
-                <div class="grid-item">Remove</div>
+
+
 
                 <!-- ROW 2 index-0 -->
-
                 <div class="grid-item"> <input type="text" name="text" class="category" value="Food"></div>
                 <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 1200" value=""
                         required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1">
                 </div>
-                
-                <div class="grid-item">
-                    <button class="round" class="category" onclick="categoryRemoved()"> - </button>
-                </div>
+
 
                 <!-- ROW 2.1 index-1-->
 
@@ -70,10 +67,6 @@
                 <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 1200" value=""
                         required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1">
-                </div>
-                
-                <div class="grid-item">
-                    <button class="round" class="category" onclick="categoryRemoved()"> - </button>
                 </div>
 
 
@@ -84,40 +77,37 @@
                         required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1">
                 </div>
-                
-                <div class="grid-item">
-                    <button class="round" class="category" onclick="categoryRemoved()"> - </button>
-                </div>
 
 
                 <!-- ROW 4 index-3 -->
-                
+
                 <div class="grid-item"> <input type="text" name="text" class="category" value="Clothing"></div>
                 <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 700" value=""
                         required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1"></div>
-                
-                <div class="grid-item">
-                    <button class="round" class="category" onclick="categoryRemoved()"> - </button>
-                </div>
+
+
 
                 <!-- ROW 5 Add Category-->
-                
-                <div class="grid-item"> <input type="text" name="text" class="category" placeholder="Anything else?..." value=""></div>
+
+                <div class="grid-item"> <input type="text" name="text" class="category" placeholder="Anything else?..."
+                        value=""></div>
                 <div class="grid-item"><input type="number" name="cost" class="cost" placeholder="eg. 500" value=""
                         required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" class="sub-category"
                         placeholder="1" value="1"></div>
-                <div class="grid-item">
-                    <button class="round" class="category" onclick="categoryRemoved()"> - </button>
-                </div>
 
             </div>
-            <div><button id="more-rows-button" onclick="categoryAdded()"> More Rows</button></div>
-
 
             <div id="grid-container-new">
                 <!-- The new Category row is appended here with -->
+            </div>
+
+            <div>
+                <button class="more-rows-button" onclick="categoryAdded()"> MORE ROWS</button>
+            </div>
+            <div>
+                <button class="more-rows-button" onclick="categoryRemoved()"> Less Rows </button>
             </div>
 
             <br>
