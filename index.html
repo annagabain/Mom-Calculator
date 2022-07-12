@@ -113,7 +113,7 @@
                 </div>
                 <div class="grid-item"> <select name="category" class="category">
                         <option value="" selected="selected">Accomodation</option>
-                        <option value="">Add Sub-category...</option>
+                        <option id="newCategory" value="">Add Sub-category...</option>
                     </select></div>
                 <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 700" value=""
                         required></div>
@@ -126,7 +126,7 @@
 
                 <!-- ROW 5 Add Category-->
                 <div class="grid-item"><input type="checkbox" class="select" name="select" value="select" checked></div>
-                <div class="grid-item"> <input type="text" name="text" class="category" value="Add Category..."></div>
+                <div class="grid-item" onclick="categoryAdded()"> <input type="text" name="text" id="add-category" class="category" value="Add Category..." ></div>
                 <div class="grid-item"><input type="number" name="cost" class="cost" placeholder="eg. 500" value=""
                         required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" class="sub-category"
@@ -137,8 +137,13 @@
                             <button class="round" class="category" onclick="categoryRemoved()"> - </button>
                         </div>
 
-
             </div>
+
+            
+
+            <div id="grid-container-new">
+                         
+            </div>   
 
 
             <!-- Connects this button to calculateTotal function -->

@@ -32,7 +32,7 @@ console.log(toEuro);
 function confirmBudget() {
 
     let momBudget = document.getElementById("budget").value;
- 
+
     document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`)
 
     return momBudget
@@ -48,11 +48,38 @@ function categoryRemoved() {
     alert(`The category ${category} is removed`)
 }
 
-function categoryAdded() {
-    let category = document.getElementsByClassName('category').value;
+// function categoryAdded() {
+//     let category = document.getElementsByClassName('category').value;
 
-    alert(`The category ${category} is added`)
+//     alert(`The category ${category} is added`)
+// }
+
+
+
+
+function categoryAdded() {
+
+
+    // Create element:
+    let newDiv = document.createElement("div");
+    newDiv.innerHTML = `
+<div class="grid-item"><input type="checkbox" class="select" name="select" value="select" checked></div>
+<div class="grid-item"> <input type="text" name="text" id="add-category" class="category" value="Add Category..."></div>
+<div class="grid-item"><input type="number" name="cost" class="cost" placeholder="eg. 500" value="" required></div>
+<div class="grid-item"><input type="number" class="count" name="count" class="sub-category" placeholder="1" value="1"></div>
+<div class="grid-item"><button class="round" onclick="categoryAdded()"> + </button> </div>
+<div class="grid-item"><button class="round" class="category" onclick="categoryRemoved()"> - </button> </div>
+        `;
+
+    // Append to another element:
+    // document.getElementById("newCategory").appendChild(newDiv);
+    document.getElementById("grid-container-new").appendChild(newDiv);
+
+
+
+    // alert(`The category ${category} is added`)
 }
+
 
 
 /**
@@ -74,9 +101,9 @@ function costsTimesCounts() {
         // console.log('count ' + count)
 
         console.log(total += cost * count)
-      
+
         console.log('TOTAL ' + total)
-        
+
     }
 
     return total
@@ -100,23 +127,41 @@ function calculateTotal() {
 
 // VISUALIZATION TEST
 
-google.charts.load('current', {'packages':['corechart']});
+google.charts.load('current', {
+    'packages': ['corechart']
+});
 google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
-let data = google.visualization.arrayToDataTable([
-  ['Category', 'Mhl'],
-  ['Food', 1200],
-  ['Takeout', 500],
-  ['Clothing', 500],
-  ['Accomodation', 700],
-]);
+    let data = google.visualization.arrayToDataTable([
+        ['Category', 'Mhl'],
+        ['Food', 1200],
+        ['Takeout', 500],
+        ['Clothing', 500],
+        ['Accomodation', 700],
+    ]);
 
-let options = {
-  title:'Life Expenses Budgeting Pie Chart',
-  slices: {0: {color: '#9C9FA6'}, 1:{color: '#0D0D0D'}, 2:{color: '#455359'}, 3: {color: '#6A4C39'}, 4:{color: 'grey'}}
-};
+    let options = {
+        title: 'Life Expenses Budgeting Pie Chart',
+        slices: {
+            0: {
+                color: '#9C9FA6'
+            },
+            1: {
+                color: '#0D0D0D'
+            },
+            2: {
+                color: '#455359'
+            },
+            3: {
+                color: '#6A4C39'
+            },
+            4: {
+                color: 'grey'
+            }
+        }
+    };
 
-let chart = new google.visualization.PieChart(document.getElementById('myChart'));
-  chart.draw(data, options);
+    let chart = new google.visualization.PieChart(document.getElementById('myChart'));
+    chart.draw(data, options);
 }
