@@ -135,11 +135,6 @@ function calculateTotal() {
 
 }
 
-function balanceStatusRemoved() {
-
-    let newBalanceStatus = document.querySelector("#balanceStatus  #newBalanceStatus")
-    newBalanceStatus.parentNode.removeChild(newBalanceStatus)
-}
 
 /**
  * Evaluates if the balance is positive or negative
