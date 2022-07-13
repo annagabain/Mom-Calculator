@@ -36,10 +36,10 @@
             <br><br> -->
 
             <div id="submitMomBudget">
-                <label for="budget">*Add your Monthly Budget: </label>
+                <label for="budget">* Add your Monthly Budget in € ... </label>
 
-                <input type="number" id="budget" placeholder="eg. 2500" value="" required> <span> € </span>
-                <button onclick="confirmBudget()"> SUBMIT</button>
+                <input type="number" id="budget" placeholder="eg. 2500" value="" required>
+                <!-- <button onclick="confirmBudget()"> SUBMIT</button> -->
             </div>
 
 
@@ -119,7 +119,7 @@
 
             <!-- Connects this button to calculateTotal function -->
 
-            <button id="total-button" onclick="calculateTotal()"> CALCULATE</button>
+            <button id="calculate-total-button" onclick="calculateTotal()"> CALCULATE</button>
             <br>
             <div id="totalCosts">
                 <!-- Costs TOTAL : xxx € -->
@@ -130,7 +130,27 @@
             </div>
             <br>
             <div id="yourBalance">
-                <!-- <p>This month's balance: - 1000 € (overspent)</p> -->
+                <!-- <p>e.g. This month's balance: - 1000 €</p> -->
+            </div>
+            <br>
+            <div id="balanceStatus">
+
+            <!-- 
+
+                <div id="balanceStatusRed">
+                    Overspent.... 
+                </div>
+
+                <div id="balanceStatusGreen">
+                     Saved... 
+                </div>
+
+                <div id="balanceStatusBlue">
+                   No savings this month 
+                </div>
+
+            -->
+
             </div>
 
 

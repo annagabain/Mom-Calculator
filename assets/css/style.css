@@ -120,9 +120,9 @@ button {
 
 
 #budget {
-    width: 80px;
+    width: 100px;
     height: 30px;
-    text-align: right;
+    text-align: center;
 }
 
 .category {
@@ -171,7 +171,7 @@ button {
    margin: 10px;
 }
 
-#total-button{
+#calculate-total-button{
     position: relative;
     left: 40%
 }
@@ -180,6 +180,23 @@ button {
     font-size: 2em;
 }
 
+
+#balanceStatus {
+   width: 300px;  
+}
+
+#balanceStatusRed{
+   color:red;
+}
+
+#balanceStatusGreen{
+    color:green;
+}
+
+
+#balanceStatusBlue{
+    color: blue;
+}
 
 
 

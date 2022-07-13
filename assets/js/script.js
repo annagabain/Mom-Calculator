@@ -30,9 +30,9 @@ console.log(toEuro);
 
 
 function confirmBudget() {
-    // clears the submit budget area after the budget has been given
-    let momBudgetButton = document.getElementById("submitMomBudget")
-    momBudgetButton.style.display = 'none';
+    // // clears the submit budget area after the budget has been given
+    // let momBudgetButton = document.getElementById("submitMomBudget")
+    // momBudgetButton.style.display = 'none';
 
     // writes the budget to the document for further evaluation
 
@@ -84,7 +84,7 @@ function categoryRemoved() {
  */
 //Calculates the costs multiplied by counts in the same row and adds all the rows
 function costsTimesCounts() {
-    //    let Total = (cost1 * count1) + (cost2 * count2) + (cost3* count3) + (cost4 * count4)
+
     let total = 0
     let costs = document.getElementsByClassName('cost')
     let counts = document.getElementsByClassName('count')
@@ -110,6 +110,13 @@ function costsTimesCounts() {
 // Combined with the costsTimesCounts functiom shos the total expenses calculation
 function calculateTotal() {
 
+
+
+    // writes the budget to the document for further evaluation
+    let momBudget = document.getElementById("budget").value;
+    document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`)
+
+
     let total = costsTimesCounts()
     document.getElementById('totalCosts').innerHTML = ('Costs TOTAL : ').bold() + formatter.format(Number(total)).bold()
 
@@ -118,6 +125,7 @@ function calculateTotal() {
     document.getElementById('yourBalance').innerHTML = ('This month\'s balance: : ') + formatter.format(Number(balance))
 
     balanceStatus()
+
     return total
 
 }
@@ -131,17 +139,36 @@ function calculateTotal() {
  */
 function balanceStatus() {
 
+    let newDiv = document.createElement("div");
+    newDiv.innerHTML = `
+    <div id="balanceStatusRed"></div>
+    <div id="balanceStatusGreen"></div>
+    <div id="balanceStatusBlue"></div>
+    `;
+
+    let balanceStatusNew = document.getElementById("balanceStatus")
+    balanceStatusNew.appendChild(newDiv);
+
+
+
     let budget = confirmBudget()
     let total = costsTimesCounts()
+    let balanceStatus = budget - total
 
     if (budget < total) {
-        alert('overspent this much per month') //red
+
+        //red
+        document.getElementById('balanceStatusRed').innerHTML = (`Overspent € ${Math.abs(balanceStatus)}.00 this month`)
+
     } else if (budget > total) {
-        alert('saved this much this month') //green
+        //green
+        document.getElementById('balanceStatusGreen').innerHTML = (`Saved € ${balanceStatus}.00 this month`)
     } else if (budget == total) {
-        alert('no savings this month') //yellow
+        //yellow
+        document.getElementById('balanceStatusBlue').innerHTML = (`No savings this month`)
     } else {
-        alert('cant calcualate the balance status')
+        //error
+        document.getElementById('balanceStatus').innerHTML = (`Can't calcualate the balance status`)
     }
 
 
