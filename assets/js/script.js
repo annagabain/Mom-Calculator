@@ -30,9 +30,13 @@ console.log(toEuro);
 
 
 function confirmBudget() {
+// clears the submit budget area after the budget has been given
+    let momBudgetButton = document.getElementById("submitMomBudget")
+    momBudgetButton.style.display = 'none';
+
+    // writes the budget to the document for further evaluation
 
     let momBudget = document.getElementById("budget").value;
-
     document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`)
 
     return momBudget
@@ -114,11 +118,11 @@ function costsTimesCounts() {
 function calculateTotal() {
 
     let total = costsTimesCounts()
-    document.getElementById('totalCosts').innerHTML = ('Costs TOTAL : ') + formatter.format(Number(total)) + (' €')
+    document.getElementById('totalCosts').innerHTML = ('Costs TOTAL : ').bold()  + formatter.format(Number(total)).bold() 
 
 
     let balance = confirmBudget() - total
-    document.getElementById('yourBalance').innerHTML = ('This month\'s balance: : ') + formatter.format(Number(balance)) + (' €')
+    document.getElementById('yourBalance').innerHTML = ('This month\'s balance: : ') + formatter.format(Number(balance))
 
 
     return total

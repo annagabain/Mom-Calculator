@@ -171,10 +171,17 @@ button {
    margin: 10px;
 }
 
-#total{
+#total-button{
     position: relative;
     left: 40%
 }
+
+#totalCosts {
+    font-size: 2em;
+}
+
+
+
 
 #visualization-area {
     padding: 50px;

@@ -35,11 +35,13 @@
 
             <br><br> -->
 
+            <div id="submitMomBudget">
+                <label for="budget">*Add your Monthly Budget: </label>
 
-            <label for="budget">*Add your Monthly Budget: </label>
+                <input type="number" id="budget" placeholder="eg. 2500" value="" required> <span> € </span>
+                <button onclick="confirmBudget()"> SUBMIT</button>
+            </div>
 
-            <input type="number" id="budget" placeholder="eg. 2500" value="" required> <span> € </span>
-            <button onclick="confirmBudget()"> SUBMIT</button>
 
 
             <!-- Basic source code for the grid: https://www.w3schools.com/css/css_grid.asp -->
@@ -117,14 +119,16 @@
 
             <!-- Connects this button to calculateTotal function -->
 
-            <button id="total" onclick="calculateTotal()"> CALCULATE</button>
+            <button id="total-button" onclick="calculateTotal()"> CALCULATE</button>
             <br>
             <div id="totalCosts">
                 <!-- Costs TOTAL : xxx € -->
             </div>
+            <br>
             <div id="yourBudget">
                 <!-- Your Budget: 1500 € -->
             </div>
+            <br>
             <div id="yourBalance">
                 <!-- <p>This month's balance: - 1000 € (overspent)</p> -->
             </div>
