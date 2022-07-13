@@ -44,7 +44,91 @@
     ##Screen = B/w 481px to 767px
   */
 @media (min-width: 481px) and (max-width: 767px) {
+    body {
+        margin: 0;
+    }
 
+#innerbody{
+
+    padding: 5px;
+    width: 100%;
+}
+
+header {
+    background-color: #455359;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5px;
+    height: 100px;
+}
+
+h1,
+h2 {
+
+    letter-spacing: 2px;
+    position: absolute;
+    left: 15%
+}
+
+h1 {
+    line-height: 6;
+    font-size: 1.2em;
+}
+
+h2 {
+    line-height: 1.5;
+    font-size: 0.6em;
+    font-weight: 300;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    left: 75%;
+}
+
+#calculation-area {
+    padding: 10px;
+    background-color: #D8CBC4;
+}
+
+.grid-container {
+
+    padding: 0px 10px 0px 0px;
+    width: 300px;
+
+  }
+
+  .grid-item {
+    padding: 5px;
+    text-align: center;
+  }
+
+  #grid-container-new > div > div {
+    width: 300px;
+
+  }
+
+#totalCosts {
+    font-size: 1.2em;
+}
+
+
+#visualization-area {
+    justify-content: center;
+
+}
+
+#visualize {
+    left: 40%;
+    padding: 5px;
+}
+
+#myChart {
+    display: flex;
+   justify-content: center;
+}
 }
 
 
