@@ -30,7 +30,7 @@ console.log(toEuro);
 
 
 function confirmBudget() {
-// clears the submit budget area after the budget has been given
+    // clears the submit budget area after the budget has been given
     let momBudgetButton = document.getElementById("submitMomBudget")
     momBudgetButton.style.display = 'none';
 
@@ -41,27 +41,6 @@ function confirmBudget() {
 
     return momBudget
 }
-
-function addCost() {
-    alert(`Cost ${x}  added`)
-}
-
-
-    function categoryRemoved() {
-        
-    // let category = document.getElementsByClassName('category');
-        // alert(`The category ${category} is removed`)
-
-
-
-        // Doesnt work as expected just yet
-        let new_button = document.querySelector("#grid-container-new  #newRow")
-        new_button.parentNode.removeChild(new_button)
-
-
-    }
- 
-
 
 
 /**
@@ -85,6 +64,20 @@ function categoryAdded() {
     gridContainerNew.appendChild(newDiv);
 
 }
+
+
+/**
+ * Removes the created extra rows
+ */
+function categoryRemoved() {
+
+    let new_button = document.querySelector("#grid-container-new  #newRow")
+    new_button.parentNode.removeChild(new_button)
+
+
+}
+
+
 
 /**
  * This is the main function that calculates the sum of all the monthly costs
@@ -118,16 +111,46 @@ function costsTimesCounts() {
 function calculateTotal() {
 
     let total = costsTimesCounts()
-    document.getElementById('totalCosts').innerHTML = ('Costs TOTAL : ').bold()  + formatter.format(Number(total)).bold() 
+    document.getElementById('totalCosts').innerHTML = ('Costs TOTAL : ').bold() + formatter.format(Number(total)).bold()
 
 
     let balance = confirmBudget() - total
     document.getElementById('yourBalance').innerHTML = ('This month\'s balance: : ') + formatter.format(Number(balance))
 
-
+    balanceStatus()
     return total
 
 }
+
+
+
+/**
+ * Evaluates if the balance is positive or negative
+ * 
+ * This function is called inside the calculateTotal function along with the calculation of the total budget
+ */
+function balanceStatus() {
+
+    let budget = confirmBudget()
+    let total = costsTimesCounts()
+
+    if (budget < total) {
+        alert('overspent this much per month') //red
+    } else if (budget > total) {
+        alert('saved this much this month') //green
+    } else if (budget == total) {
+        alert('no savings this month') //yellow
+    } else {
+        alert('cant calcualate the balance status')
+    }
+
+
+}
+
+
+
+
+
 
 // VISUALIZATION TEST
 
