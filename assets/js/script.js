@@ -71,8 +71,8 @@ function categoryAdded() {
  */
 function categoryRemoved() {
 
-    let new_button = document.querySelector("#grid-container-new  #newRow")
-    new_button.parentNode.removeChild(new_button)
+    let newRow = document.querySelector("#grid-container-new  #newRow")
+    newRow.parentNode.removeChild(newRow)
 
 
 }
@@ -110,6 +110,9 @@ function costsTimesCounts() {
 // Combined with the costsTimesCounts functiom shos the total expenses calculation
 function calculateTotal() {
 
+    // if (document.getElementById("balanceStatus").childNodes.length == 0) {
+    //     document.getElementById("balanceStatus").style.display = 'none';
+    // }
 
 
     // writes the budget to the document for further evaluation
@@ -124,13 +127,19 @@ function calculateTotal() {
     let balance = confirmBudget() - total
     document.getElementById('yourBalance').innerHTML = ('This month\'s balance: : ') + formatter.format(Number(balance))
 
+
     balanceStatus()
+
 
     return total
 
 }
 
+function balanceStatusRemoved() {
 
+    let newBalanceStatus = document.querySelector("#balanceStatus  #newBalanceStatus")
+    newBalanceStatus.parentNode.removeChild(newBalanceStatus)
+}
 
 /**
  * Evaluates if the balance is positive or negative
@@ -138,6 +147,15 @@ function calculateTotal() {
  * This function is called inside the calculateTotal function along with the calculation of the total budget
  */
 function balanceStatus() {
+
+    // Removes old balance Status first before displaying the new
+    // Source code found on:
+    // https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
+    let oldBalanceStatus = document.querySelector("#balanceStatus")
+    while (oldBalanceStatus.firstChild) {
+        oldBalanceStatus.removeChild(oldBalanceStatus.lastChild);
+    }
+
 
     let newDiv = document.createElement("div");
     newDiv.innerHTML = `
@@ -155,17 +173,18 @@ function balanceStatus() {
     let total = costsTimesCounts()
     let balanceStatus = budget - total
 
+
     if (budget < total) {
-
         //red
-        document.getElementById('balanceStatusRed').innerHTML = (`Overspent € ${Math.abs(balanceStatus)}.00 this month`)
-
+        document.getElementById('balanceStatusRed').innerHTML = (`Overspent € ${Math.abs(balanceStatus)}.00 this month`);
     } else if (budget > total) {
         //green
         document.getElementById('balanceStatusGreen').innerHTML = (`Saved € ${balanceStatus}.00 this month`)
+
     } else if (budget == total) {
-        //yellow
+        //blue
         document.getElementById('balanceStatusBlue').innerHTML = (`No savings this month`)
+
     } else {
         //error
         document.getElementById('balanceStatus').innerHTML = (`Can't calcualate the balance status`)
