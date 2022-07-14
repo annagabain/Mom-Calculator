@@ -193,24 +193,47 @@ function balanceStatus() {
 
 
 
-// VISUALIZATION TEST
+// VISUALIZATION through Google charts
+
 
 google.charts.load('current', {
     'packages': ['corechart']
 });
 google.charts.setOnLoadCallback(drawChart);
 
+
 function drawChart() {
+
+    let food = document.getElementById("food").value
+    let foodCost = document.getElementById("food-cost").value
+
+    let transport = document.getElementById("transport").value
+    let transportCost = document.getElementById("transport-cost").value
+
+    let accommodation = document.getElementById("accommodation").value
+    let accommodationCost = document.getElementById("accommodation-cost").value
+
+    let clothing = document.getElementById("clothing").value
+    let clothingCost = document.getElementById("clothing-cost").value
+
+
+
+
     let data = google.visualization.arrayToDataTable([
         ['Category', 'Mhl'],
-        ['Food', 1200],
-        ['Takeout', 500],
-        ['Clothing', 500],
-        ['Accomodation', 700],
+        [food, parseInt(foodCost)],
+        [transport, parseInt(transportCost)],
+        [accommodation, parseInt(accommodationCost)],
+        [clothing, parseInt(clothingCost)],
     ]);
 
     let options = {
         title: 'Life Expenses Budgeting Pie Chart',
+
+        // change piechart size here
+        width: 700,
+        height: 600,
+
         slices: {
             0: {
                 color: '#9C9FA6'

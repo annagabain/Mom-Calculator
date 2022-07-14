@@ -216,7 +216,7 @@ button {
 
 #myChart {
     display: flex;
-   justify-content: center;
+   justify-content: right;
    padding-top: 60px;
 }
 

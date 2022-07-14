@@ -58,27 +58,18 @@
 
 
 
-                <!-- ROW 2 index-0 -->
-                <div class="grid-item"> <input type="text" name="text" class="category" value="Food"></div>
-                <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 1200" value=""
+                <!-- ROW 2 index-1 -->
+                <div class="grid-item"> <input type="text" id="food" name="text" class="category" value="Food"></div>
+                <div class="grid-item"><input type="number" id="food-cost" class="cost" name="cost" placeholder="eg. 1200" value=""
                         required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1">
                 </div>
 
 
-                <!-- ROW 2.1 index-1-->
+                <!-- ROW 3 index-2-->
 
-                <div class="grid-item"> <input type="text" name="text" class="category" value="Transport"></div>
-                <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 1200" value=""
-                        required></div>
-                <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1">
-                </div>
-
-
-                <!-- ROW 3 index-2 -->
-
-                <div class="grid-item"> <input type="text" name="text" class="category" value="Accommodation"></div>
-                <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 500" value=""
+                <div class="grid-item"> <input type="text" id="transport" name="text" class="category" value="Transport"></div>
+                <div class="grid-item"><input type="number" id="transport-cost" class="cost" name="cost" placeholder="eg. 1200" value=""
                         required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1">
                 </div>
@@ -86,14 +77,23 @@
 
                 <!-- ROW 4 index-3 -->
 
-                <div class="grid-item"> <input type="text" name="text" class="category" value="Clothing"></div>
-                <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 700" value=""
+                <div class="grid-item"> <input type="text" id="accommodation" name="text" class="category" value="Accommodation"></div>
+                <div class="grid-item"><input type="number" id="accommodation-cost" class="cost" name="cost" placeholder="eg. 500" value=""
+                        required></div>
+                <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1">
+                </div>
+
+
+                <!-- ROW 5 index-4 -->
+
+                <div class="grid-item"> <input type="text" id="clothing" name="text" class="category" value="Clothing"></div>
+                <div class="grid-item"><input type="number" id="clothing-cost" class="cost" name="cost" placeholder="eg. 700" value=""
                         required></div>
                 <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1"></div>
 
 
 
-                <!-- ROW 5 Add Category-->
+                <!-- ROW 6 Add Category-->
 
                 <div class="grid-item"> <input type="text" name="text" class="category" placeholder="Anything else?..."
                         value=""></div>
@@ -155,20 +155,20 @@
             </div>
 
 
-
+            <button id="visualize" onclick="drawChart()" value=""> Visualize</button>
         </section>
 
 
         <!-- Work on visualization-area later -->
         <section id="visualization-area">
-            <button id="visualize" onclick="" value=""> Visualize</button>
-            <br>
-            <br>
+            <!-- <button id="visualize" onclick="drawChart()" value=""> Visualize</button> -->
 
             <!--Source code: https://www.w3schools.com/js/tryit.asp?filename=tryai_google_chart_pie -->
 
-            <div id="myChart" style="width:100%; max-width:600px; height:400px;">
+            <div id="myChart">
             </div>
+            <!-- <div id="myChart" style="width:100%; max-width:600px; height:400px;"> -->
+
 
 
         </section>
