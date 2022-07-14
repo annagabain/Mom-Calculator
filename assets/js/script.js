@@ -110,9 +110,15 @@ function costsTimesCounts() {
 // Combined with the costsTimesCounts functiom shos the total expenses calculation
 function calculateTotal() {
 
-    // if (document.getElementById("balanceStatus").childNodes.length == 0) {
-    //     document.getElementById("balanceStatus").style.display = 'none';
-    // }
+    
+        let x = document.getElementById("hide-calculation-area");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+    
+
 
 
     // writes the budget to the document for further evaluation
@@ -184,6 +190,8 @@ function balanceStatus() {
         //error
         document.getElementById('balanceStatus').innerHTML = (`Can't calcualate the balance status`)
     }
+
+    
 
 
 }
