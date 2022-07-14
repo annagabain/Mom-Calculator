@@ -62,7 +62,7 @@ img {
 }
 
 #calculation-area {
-    padding: 50px;
+    /* padding: 50px; */
     background-color: #D8CBC4;
 
    display: flexbox;

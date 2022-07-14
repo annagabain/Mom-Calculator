@@ -110,15 +110,13 @@ function costsTimesCounts() {
 // Combined with the costsTimesCounts functiom shos the total expenses calculation
 function calculateTotal() {
 
-    
-        let x = document.getElementById("hide-calculation-area");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-    
 
+    let x = document.getElementById("hide-calculation-area");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
 
 
     // writes the budget to the document for further evaluation
@@ -191,14 +189,25 @@ function balanceStatus() {
         document.getElementById('balanceStatus').innerHTML = (`Can't calcualate the balance status`)
     }
 
-    
-
-
 }
 
+/**
+ Prepare the category values function to use inside the visualisation data Array
+ */
+function allCategoryInputValues() {
+
+    let allCategories = document.getElementsByClassName('category')
 
 
+    for (let row = 0; row < allCategories.length; row++) {
 
+        let categoryValue = allCategories[row].value
+        console.log('Category: ' + categoryValue)
+
+    }
+
+}
+allCategoryInputValues()
 
 
 // VISUALIZATION through Google charts
@@ -212,14 +221,14 @@ google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
 
- //Source for toggle and hide: https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
-        let visualizationArea = document.getElementById("visualization-area");
-        if (visualizationArea.style.display === "none") {
-            visualizationArea.style.display = "block";
-        } else {
-            visualizationArea.style.display = "none";
-        }
-      
+    //Source for toggle and hide: https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+    let visualizationArea = document.getElementById("visualization-area");
+    if (visualizationArea.style.display === "none") {
+        visualizationArea.style.display = "block";
+    } else {
+        visualizationArea.style.display = "none";
+    }
+
 
     let food = document.getElementById("food").value
     let foodCost = document.getElementById("food-cost").value
