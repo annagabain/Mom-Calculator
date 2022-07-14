@@ -248,8 +248,8 @@ function drawChart() {
         title: 'Life Expenses Budgeting Pie Chart',
 
         // change piechart size here
-        width: 700,
-        height: 600,
+        width: 500,
+        height: 500,
 
         slices: {
             0: {
