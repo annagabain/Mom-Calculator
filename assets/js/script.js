@@ -204,6 +204,15 @@ google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
 
+ //Source for toggle and hide: https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+        let visualizationArea = document.getElementById("visualization-area");
+        if (visualizationArea.style.display === "none") {
+            visualizationArea.style.display = "block";
+        } else {
+            visualizationArea.style.display = "none";
+        }
+      
+
     let food = document.getElementById("food").value
     let foodCost = document.getElementById("food-cost").value
 
