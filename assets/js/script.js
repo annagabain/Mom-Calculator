@@ -192,104 +192,23 @@ function balanceStatus() {
 }
 
 /**
- Prepare the category and cost values functions to use inside the visualisation data Array
-//create two arrays
-//category -- allCategoryInputValues
-//cost -- allCOSTInputValues
-//combine them and push into drawChart function 
+Is creating a data Array for visualisation and is called upon calling the drawChart function 
  */
-
-
-
-// //category 
-// function allCategoryInputValues() {
-
-//     let allCategoryInputValues = 0
-
-//     let allCategories = document.getElementsByClassName('category')
-
-
-//     for (let row = 0; row < allCategories.length; row++) {
-
-//         let categoryValue = allCategories[row].value
-//         // console.log('Category: '+ categoryValue)
-
-//         allCategoryInputValues += categoryValue + ','
-
-//         // let allCategoriesArray = []
-//         // allCategoriesArray.push(allCategoryInputValues)
-//         // console.log(allCategoriesArray)
-//         // console.log(allCategoryInputValues)
-
-//          return categoryValue
-//     }
-
-//     // return allCategoryInputValues
-// }
-
-// allCategoryInputValues()
-
-
-// //cost allCOSTInputValues
-// function allCOSTInputValues() {
-
-//     let allCOSTInputValues = 0
-
-//     let allCosts = document.getElementsByClassName('cost')
-
-
-//     for (let row = 0; row < allCosts.length; row++) {
-
-//         let costValue = allCosts[row].value
-//         // console.log('Cost: '+ costValue)
-
-//         allCOSTInputValues += costValue + ','
-
-//         let allCostsArray = []
-//         allCostsArray.push(allCOSTInputValues)
-//         // console.log(allCostsArray)
-//         // console.log(allCOSTInputValues)
-
-//         // return costValue
-//     }
-
-//     return allCOSTInputValues
-// }
-// allCOSTInputValues()
-
-
 
 function visArrayData() {
 
-    let ArrayData = []
+    let ActualArrayData = []
     let categories = document.getElementsByClassName('category')
     let costs = document.getElementsByClassName('cost')
 
     for (let row = 0; row < categories.length; row++) {
-
         let category = categories[row].value
-        // console.log('cost ' + cost)
-
-
         let cost = costs[row].value
-        // console.log('count ' + count)
 
-
-
-        console.log(ArrayData += `['${category}', ${cost}],`)
-        console.log(ArrayData)
-
-        console.log([ArrayData][0])
-
-
-        // let string = ArrayData
-        // let array = [string];
-        // console.log('m' + array);
-        
-        
+        ActualArrayData.push([category, parseInt(cost)])
     }
-return ArrayData
 
+    return ActualArrayData
 }
 
 
@@ -314,37 +233,16 @@ function drawChart() {
     }
 
 
-    // let food = document.getElementById("food").value
-    // let foodCost = document.getElementById("food-cost").value
 
-    // let transport = document.getElementById("transport").value
-    // let transportCost = document.getElementById("transport-cost").value
-
-    // let accommodation = document.getElementById("accommodation").value
-    // let accommodationCost = document.getElementById("accommodation-cost").value
-
-    // let clothing = document.getElementById("clothing").value
-    // let clothingCost = document.getElementById("clothing-cost").value
-
-    console.log(visArrayData())
-
-    let data = google.visualization.arrayToDataTable([
-        ['Category', 'Cost'], 
-        // [food, parseInt(foodCost)],
-        // [transport, parseInt(transportCost)],
-        // [accommodation, parseInt(accommodationCost)],
-        // [clothing, parseInt(clothingCost)],
-
-        // testing...
-        // [allCategoryInputValues(), parseInt(allCOSTInputValues())],
+    // console.log(visArrayData())
 
 
-        // by calling the visArrayData function an array with the following data should appear here
-        // ['Food', 1],['Transport', 1],['Accommodation', 1],['Clothing', 1],['Candy', 1],
-        // visArrayData()
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Country');
+    data.addColumn('number', 'Population');
+    data.addRows(visArrayData());
 
 
-    ]);
 
     let options = {
         title: 'Life Expenses Budgeting Pie Chart',
