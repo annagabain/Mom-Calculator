@@ -107,7 +107,7 @@ function costsTimesCounts() {
 }
 
 
-// Combined with the costsTimesCounts functiom shos the total expenses calculation
+// Combined with the costsTimesCounts functiom shows the total expenses calculation
 function calculateTotal() {
 
 
@@ -192,9 +192,19 @@ function balanceStatus() {
 }
 
 /**
- Prepare the category values function to use inside the visualisation data Array
+ Prepare the category and cost values functions to use inside the visualisation data Array
+//create two arrays
+//category -- allCategoryInputValues
+//cost -- allCOSTInputValues
+//combine them and push into drawChart function 
  */
+
+
+
+//category 
 function allCategoryInputValues() {
+
+    let allCategoryInputValues = 0
 
     let allCategories = document.getElementsByClassName('category')
 
@@ -202,12 +212,50 @@ function allCategoryInputValues() {
     for (let row = 0; row < allCategories.length; row++) {
 
         let categoryValue = allCategories[row].value
-        console.log('Category: ' + categoryValue)
+        // console.log('Category: '+ categoryValue)
 
+        allCategoryInputValues += categoryValue + ','
+
+        let allCategoriesArray = []
+        allCategoriesArray.push(allCategoryInputValues)
+        console.log(allCategoriesArray)
+        console.log(allCategoryInputValues)
+
+        return categoryValue
     }
 
+    return allCategoryInputValues
 }
+
 allCategoryInputValues()
+
+
+//cost allCOSTInputValues
+function allCOSTInputValues() {
+
+    let allCOSTInputValues = 0
+
+    let allCosts = document.getElementsByClassName('cost')
+
+
+    for (let row = 0; row < allCosts.length; row++) {
+
+        let costValue = allCosts[row].value
+        // console.log('Cost: '+ costValue)
+
+        allCOSTInputValues += costValue + ','
+
+        let allCostsArray = []
+        allCostsArray.push(allCOSTInputValues)
+        console.log(allCostsArray)
+        console.log(allCOSTInputValues)
+
+        return costValue
+    }
+    
+    return allCOSTInputValues
+}
+allCOSTInputValues()
 
 
 // VISUALIZATION through Google charts
@@ -245,8 +293,15 @@ function drawChart() {
 
 
 
+
+
     let data = google.visualization.arrayToDataTable([
-        ['Category', 'Mhl'],
+        ['Category', 'Cost'],
+
+        // testing...
+        [allCategoryInputValues(), parseInt(allCOSTInputValues())],
+
+
         [food, parseInt(foodCost)],
         [transport, parseInt(transportCost)],
         [accommodation, parseInt(accommodationCost)],
