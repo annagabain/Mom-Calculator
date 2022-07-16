@@ -17,17 +17,39 @@
 </head>
 
 <body>
+    <section></section>
 
     <section id="innerbody">
 
 
         <header>
-            <img src="assets/images/web-pexels-karolina-grabowska-4959738.jpg" width=120>
-            <h1>Mom Calculator </h1>
-            <h2>Life Expenses Budgeting Tool</h2>
+            <div>
+                <h1>Mom Calculator </h1>
+                <h2>Life Expenses Budgeting Tool</h2>
+            </div>
 
+            <img src="assets/images/web-pexels-karolina-grabowska-4959738.jpg" width=120>
         </header>
+
+        <section id="description">
+            <p>
+
+                Calculate your monthly/yearly expenses for the Whole Family.
+                <br>
+                This calculator is aimed to provide an easy-to-use tool to simplify budgeting tasks:
+                <br>
+                1) Add your monthly budget. 
+                2) Edit or add your expense categories and costs, as well as how many items were
+                purchased.
+                3) Click Calculate
+                4) Toggle the Visualization pie-chart
+            </p>
+
+
+        </section>
+
         <section id="calculation-area">
+
 
             <!-- WORK WITH USERNAME LATER -->
             <!-- 
@@ -44,9 +66,10 @@
                     <label for="budget">* Add your Monthly Budget in € ... </label>
                     <input type="number" id="budget" placeholder="eg. 2500" value="" required>
                     <!-- <button onclick="confirmBudget()"> SUBMIT</button> -->
+
                 </div>
 
-
+                <br>
 
                 <!-- Basic source code for the grid: https://www.w3schools.com/css/css_grid.asp -->
 
@@ -113,13 +136,13 @@
 
                     <!-- ROW 6 Add Category-->
                     <div id="row5">
-                    <div class="grid-item"> <input type="text" name="text" class="category"
-                            placeholder="Anything else?..." value=""></div>
-                    <div class="grid-item"><input type="number" name="cost" class="cost" placeholder="eg. 500" value=""
-                            required></div>
-                    <div class="grid-item"><input type="number" class="count" name="count" class="sub-category"
-                            placeholder="1" value="1"></div>
-                    <button class="round" onclick="rowFiveRemoved()"> - </button>
+                        <div class="grid-item"> <input type="text" name="text" class="category"
+                                placeholder="Anything else?..." value=""></div>
+                        <div class="grid-item"><input type="number" name="cost" class="cost" placeholder="eg. 500"
+                                value="" required></div>
+                        <div class="grid-item"><input type="number" class="count" name="count" class="sub-category"
+                                placeholder="1" value="1"></div>
+                        <button class="round" onclick="rowFiveRemoved()"> - </button>
                     </div>
 
                 </div>

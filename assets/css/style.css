@@ -19,30 +19,38 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     margin: 10% 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr  1fr;
+
 }
 
-#innerbody{
+#innerbody {
     background-color: #455359;
     padding: 25px 15px;
+    width: 700px;
+
 }
 
 header {
     background-color: #455359;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-end; */
     padding: 25px;
     height: 120px;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 
 h1,
 h2 {
     font-family: 'Share Tech Mono', monospace;
     color: #FAF7F4;
-    line-height: 2;
+    line-height: 0.5;
     letter-spacing: 2px;
-    position: absolute;
-    right: 27%
+    /* position: absolute;
+    right: 27% */
 }
 
 h1 {
@@ -57,45 +65,37 @@ h2 {
 
 img {
     border-radius: 50%;
-    position: absolute;
-    left: 75%
+    /* position: absolute;
+    left: 45% */
+}
+#description {
+    padding: 20px;
+text-align: center;
 }
 
 #calculation-area {
-    /* padding: 50px; */
+    padding: 50px;
     background-color: #D8CBC4;
-
-   display: flexbox;
-   justify-content: space-evenly;
-   text-align: center;
-}
-#row1 {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-}
-
-#grid-container-new > div > div, .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    /* grid-template-rows: auto auto auto auto; */
-
-    padding: 0 20% 0% 20%;
-    width: 500px;
-   display: flexbox;
-   justify-content: space-evenly;
-   text-align: center;
-  }
-
-.grid-container > div, #grid-container-new > div > div{
-    padding: 0 20% 0% 20%;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-  }
-
-  .grid-item {
-    padding: 5px;
+    display: flexbox;
+    justify-content: space-evenly;
     text-align: center;
-  }
+}
+
+
+.grid-container>div,
+#grid-container-new>div>div {
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto auto auto auto;
+    width: 500px;
+    display: flexbox;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.grid-item {
+    padding: 5px;
+}
 
 .round {
     background-color: #6A4C39;
@@ -121,7 +121,9 @@ button {
     text-align: center;
 }
 
-
+#submitMomBudget {
+    text-align: left;
+}
 #budget {
     width: 100px;
     height: 30px;
@@ -152,6 +154,7 @@ button {
     text-align: right;
     border: 1.5px solid rgba(0, 0, 0, 0.8);
 }
+
 .count {
     width: 60px;
     height: 25px;
@@ -163,7 +166,7 @@ button {
 
 .more-rows-button {
     position: relative;
-    right: 25%;
+    right: 30%;
     width: 140px;
     background-color: #FAF7F4;
     color: #6A4C39;
@@ -171,7 +174,7 @@ button {
     font-size: 1em;
     border-radius: 0;
     border-width: 1px;
-   margin: 10px;
+    margin: 10px;
 }
 
 /* #calculate-total-button{
@@ -191,28 +194,29 @@ button {
 
 
 #balanceStatus {
-   /* width: 300px;   */
+    /* width: 300px;   */
 }
 
-#balanceStatusRed{
-   color:red;
+#balanceStatusRed {
+    color: red;
 }
 
-#balanceStatusGreen{
-    color:green;
+#balanceStatusGreen {
+    color: green;
 }
 
 
-#balanceStatusBlue{
+#balanceStatusBlue {
     color: blue;
 }
 
 
 
-#visualization-area {
+#visualization-area,
+#description {
     /* padding: 50px; */
     background-color: #ffffff;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
 
 }
@@ -221,8 +225,8 @@ button {
 
 #myChart {
     display: flex;
-   justify-content: center;
-   padding-top: 50px;
+    justify-content: center;
+    padding-top: 50px;
 }
 
 
