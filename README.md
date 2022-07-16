@@ -22,9 +22,8 @@ The site’s goal is to provide a easy-to-use tool to simplify budgeting tasks.
 
 Potential features to include:
 
-- A score tracking system - balance green yellow red
 - The ability to manupulate numbers
-- Images to support the correct/incorrect answers 
+- Images to support the correct/incorrect answers - balance green yellow red 
 - User can create a username
 - Feedback - "You tend to overspend/save/manage just right this month"
 - Charting functionality to represent the data easily digestible manner - with google graphs
@@ -41,7 +40,7 @@ Potential features to include:
 
 - [ ] LO4	Maximise future maintainability through documentation, code structure and organisation
 
-- [ ] LO5	Demonstrate and document the development process through a version control system such as GitHub
+- [x] LO5	Demonstrate and document the development process through a version control system such as GitHub
 
 - [ ] LO6	Implement Front-End interactivity, using core JavaScript, JavaScript libraries or frameworks
 
@@ -94,8 +93,14 @@ Potential features to include:
 ### Sources & Credits
 
 -   Idea Inspiration
+
 https://www.brutto-netto-rechner.info/
+
 https://statsskuld.se/en/jobs/net-salary
+
+- Tutorials
+
+https://www.youtube.com/watch?v=jV8B24rSN5o
 
 -   Images
 -   Tools
