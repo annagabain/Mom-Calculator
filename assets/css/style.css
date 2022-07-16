@@ -41,6 +41,7 @@ header {
 
     display: grid;
     grid-template-columns: 3fr 1fr;
+    text-align: right;
 }
 
 h1,
@@ -233,4 +234,5 @@ button {
 footer {
     background-color: #455359;
     color: #D8CBC4;
+    font-size: small;
 }
