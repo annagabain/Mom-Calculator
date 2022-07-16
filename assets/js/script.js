@@ -74,7 +74,18 @@ function categoryRemoved() {
     let newRow = document.querySelector("#grid-container-new  #newRow")
     newRow.parentNode.removeChild(newRow)
 
+}
+/**
+ * Removes rows
+ */
+function rowRemoved() {
+    alert('row removed')
 
+    // let row = document.querySelector("#grid-container")
+    // row.parentNode.removeChild(row)[1]
+
+    // let row = document.getElementById("row1")
+    // row.remove()
 }
 
 
