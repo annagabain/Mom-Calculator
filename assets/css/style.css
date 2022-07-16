@@ -76,7 +76,7 @@ img {
 
 #grid-container-new > div > div, .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto;
     /* grid-template-rows: auto auto auto auto; */
 
     padding: 0 20% 0% 20%;
@@ -86,11 +86,10 @@ img {
    text-align: center;
   }
 
-.grid-container {
-
-
-    padding: 5% 20% 0% 20%;
-
+.grid-container > div, #grid-container-new > div > div{
+    padding: 0 20% 0% 20%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
   }
 
   .grid-item {

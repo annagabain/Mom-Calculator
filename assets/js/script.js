@@ -78,16 +78,26 @@ function categoryRemoved() {
 /**
  * Removes rows
  */
-function rowRemoved() {
-    alert('row removed')
-
-    // let row = document.querySelector("#grid-container")
-    // row.parentNode.removeChild(row)[1]
-
-    // let row = document.getElementById("row1")
-    // row.remove()
+function rowOneRemoved() {
+    let row = document.querySelector("#grid-container #row1")
+    row.parentNode.removeChild(row)[1]
 }
-
+function rowTwoRemoved() {
+    let row = document.querySelector("#grid-container #row2")
+    row.parentNode.removeChild(row)[2]
+}
+function rowThreeRemoved() {
+    let row = document.querySelector("#grid-container #row3")
+    row.parentNode.removeChild(row)[3]
+}
+function rowFourRemoved() {
+    let row = document.querySelector("#grid-container #row4")
+    row.parentNode.removeChild(row)[4]
+}
+function rowFiveRemoved() {
+    let row = document.querySelector("#grid-container #row5")
+    row.parentNode.removeChild(row)[5]
+}
 
 
 /**
