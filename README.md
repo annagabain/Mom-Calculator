@@ -84,11 +84,16 @@ Potential features to include:
 ### Testing
 
   -  Validators
+
+<img width="100%" alt="Calculator Scribble Mobile" src="assets/md-images/jshint1.jpg">
+
   -  Remaining Bugs
 
 ### Deployment to GitHub
 
 - GitHub Pages
+
+https://annagabain.github.io/Mom-Calculator/index.html
 
 ### Sources & Credits
 
@@ -103,6 +108,19 @@ https://statsskuld.se/en/jobs/net-salary
 https://www.youtube.com/watch?v=jV8B24rSN5o
 
 -   Images
+
+Baby hands on kewboard: pexels-karolina-grabowska-4959738
+
 -   Tools
 
 ### Acknowledgemts
+
+Jakob Lövhall - for guiding to detect the query selectors necessary for the main functions
+
+Richard Wells - course mentor for feedback on the project
+
+Jamie King - course collegue for helping with the project idea discussions and technical details such as activating es6 in JSHint
+
+David Reynolds - course collegue to check up on the project progress and share similar experiences with JS learning
+
+Fran Boyle - course collegue to inspire and discuss progress
