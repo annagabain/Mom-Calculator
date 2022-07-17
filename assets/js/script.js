@@ -293,4 +293,4 @@ function drawChart() {
     };
 
     let chart = new google.visualization.PieChart(document.getElementById('myChart'));
-    chart.draw(data, options);
+    chart.draw(data, options);}
