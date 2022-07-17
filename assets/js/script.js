@@ -10,7 +10,7 @@ let formatter = new Intl.NumberFormat('en-DE', {
 formatter.format(1500); /* €1,500.00 */
 
 
-let toEuro = formatter.format(Number(document.getElementById("budget").value))
+let toEuro = formatter.format(Number(document.getElementById("budget").value));
 console.log(toEuro);
 
 
@@ -37,9 +37,9 @@ function confirmBudget() {
     // writes the budget to the document for further evaluation
 
     let momBudget = document.getElementById("budget").value;
-    document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`)
+    document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`);
 
-    return momBudget
+    return momBudget;
 }
 
 
@@ -60,7 +60,7 @@ function categoryAdded() {
     
     </div>`;
 
-    let gridContainerNew = document.getElementById("grid-container-new")
+    let gridContainerNew = document.getElementById("grid-container-new");
     gridContainerNew.appendChild(newDiv);
 
 }
@@ -71,32 +71,32 @@ function categoryAdded() {
  */
 function categoryRemoved() {
 
-    let newRow = document.querySelector("#grid-container-new  #newRow")
-    newRow.parentNode.removeChild(newRow)
+    let newRow = document.querySelector("#grid-container-new  #newRow");
+    newRow.parentNode.removeChild(newRow);
 
 }
 /**
  * Removes rows
  */
 function rowOneRemoved() {
-    let row = document.querySelector("#grid-container #row1")
-    row.parentNode.removeChild(row)[1]
+    let row = document.querySelector("#grid-container #row1");
+    row.parentNode.removeChild(row)[1];
 }
 function rowTwoRemoved() {
-    let row = document.querySelector("#grid-container #row2")
-    row.parentNode.removeChild(row)[2]
+    let row = document.querySelector("#grid-container #row2");
+    row.parentNode.removeChild(row)[2];
 }
 function rowThreeRemoved() {
-    let row = document.querySelector("#grid-container #row3")
-    row.parentNode.removeChild(row)[3]
+    let row = document.querySelector("#grid-container #row3");
+    row.parentNode.removeChild(row)[3];
 }
 function rowFourRemoved() {
-    let row = document.querySelector("#grid-container #row4")
-    row.parentNode.removeChild(row)[4]
+    let row = document.querySelector("#grid-container #row4");
+    row.parentNode.removeChild(row)[4];
 }
 function rowFiveRemoved() {
-    let row = document.querySelector("#grid-container #row5")
-    row.parentNode.removeChild(row)[5]
+    let row = document.querySelector("#grid-container #row5");
+    row.parentNode.removeChild(row)[5];
 }
 
 
@@ -106,25 +106,25 @@ function rowFiveRemoved() {
 //Calculates the costs multiplied by counts in the same row and adds all the rows
 function costsTimesCounts() {
 
-    let total = 0
-    let costs = document.getElementsByClassName('cost')
-    let counts = document.getElementsByClassName('count')
+    let total = 0;
+    let costs = document.getElementsByClassName('cost');
+    let counts = document.getElementsByClassName('count');
 
     for (let row = 0; row < costs.length; row++) {
 
-        let cost = costs[row].value
+        let cost = costs[row].value;
         // console.log('cost ' + cost)
 
-        let count = counts[row].value
+        let count = counts[row].value;
         // console.log('count ' + count)
 
-        console.log(total += cost * count)
+        console.log(total += cost * count);
 
-        console.log('TOTAL ' + total)
+        console.log('TOTAL ' + total);
 
     }
 
-    return total
+    return total;
 }
 
 
@@ -142,21 +142,21 @@ function calculateTotal() {
 
     // writes the budget to the document for further evaluation
     let momBudget = document.getElementById("budget").value;
-    document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`)
+    document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`);
 
 
-    let total = costsTimesCounts()
-    document.getElementById('totalCosts').innerHTML = ('Costs TOTAL : ').bold() + formatter.format(Number(total)).bold()
+    let total = costsTimesCounts();
+    document.getElementById('totalCosts').innerHTML = ('Costs TOTAL : ').bold() + formatter.format(Number(total)).bold();
 
 
-    let balance = confirmBudget() - total
-    document.getElementById('yourBalance').innerHTML = ('This month\'s balance: : ') + formatter.format(Number(balance))
+    let balance = confirmBudget() - total;
+    document.getElementById('yourBalance').innerHTML = ('This month\'s balance: : ') + formatter.format(Number(balance));
 
 
-    balanceStatus()
+    balanceStatus();
 
 
-    return total
+    return total;
 
 }
 
@@ -171,7 +171,7 @@ function balanceStatus() {
     // Removes old balance Status first before displaying the new
     // Source code found on:
     // https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
-    let oldBalanceStatus = document.querySelector("#balanceStatus")
+    let oldBalanceStatus = document.querySelector("#balanceStatus");
     while (oldBalanceStatus.firstChild) {
         oldBalanceStatus.removeChild(oldBalanceStatus.lastChild);
     }
@@ -184,14 +184,14 @@ function balanceStatus() {
     <div id="balanceStatusBlue"></div>
     `;
 
-    let balanceStatusNew = document.getElementById("balanceStatus")
+    let balanceStatusNew = document.getElementById("balanceStatus");
     balanceStatusNew.appendChild(newDiv);
 
 
 
-    let budget = confirmBudget()
-    let total = costsTimesCounts()
-    let balanceStatus = budget - total
+    let budget = confirmBudget();
+    let total = costsTimesCounts();
+    let balanceStatus = budget - total;
 
 
     if (budget < total) {
@@ -199,15 +199,15 @@ function balanceStatus() {
         document.getElementById('balanceStatusRed').innerHTML = (`Overspent € ${Math.abs(balanceStatus)}.00 this month`);
     } else if (budget > total) {
         //green
-        document.getElementById('balanceStatusGreen').innerHTML = (`Saved € ${balanceStatus}.00 this month`)
+        document.getElementById('balanceStatusGreen').innerHTML = (`Saved € ${balanceStatus}.00 this month`);
 
     } else if (budget == total) {
         //blue
-        document.getElementById('balanceStatusBlue').innerHTML = (`No savings this month`)
+        document.getElementById('balanceStatusBlue').innerHTML = (`No savings this month`);
 
     } else {
         //error
-        document.getElementById('balanceStatus').innerHTML = (`Can't calcualate the balance status`)
+        document.getElementById('balanceStatus').innerHTML = (`Can't calcualate the balance status`);
     }
 
 }
@@ -218,18 +218,18 @@ Is creating a data Array for visualisation and is called upon calling the drawCh
 
 function visArrayData() {
 
-    let ActualArrayData = []
-    let categories = document.getElementsByClassName('category')
-    let costs = document.getElementsByClassName('cost')
+    let ActualArrayData = [];
+    let categories = document.getElementsByClassName('category');
+    let costs = document.getElementsByClassName('cost');
 
     for (let row = 0; row < categories.length; row++) {
-        let category = categories[row].value
-        let cost = costs[row].value
+        let category = categories[row].value;
+        let cost = costs[row].value;
 
-        ActualArrayData.push([category, parseInt(cost)])
+        ActualArrayData.push([category, parseInt(cost)]);
     }
 
-    return ActualArrayData
+    return ActualArrayData;
 }
 
 
@@ -252,6 +252,7 @@ function drawChart() {
     } else {
         visualizationArea.style.display = "none";
     }
+
 
 
 
@@ -293,4 +294,3 @@ function drawChart() {
 
     let chart = new google.visualization.PieChart(document.getElementById('myChart'));
     chart.draw(data, options);
-}
