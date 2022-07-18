@@ -46,24 +46,26 @@ function confirmBudget() {
 /**
  * New Category row is appended
  */
-function categoryAdded() {
+// function categoryAdded() {
 
-    // let moreRowsButton = document.getElementById("more-rows-button")
-    // moreRowsButton.style.display = 'none';
+//     // let moreRowsButton = document.getElementById("more-rows-button")
+//     // moreRowsButton.style.display = 'none';
 
-    let newDiv = document.createElement("div");
-    newDiv.innerHTML = `
-    <div id= "newRow">
-    <div class="grid-item class="grid-item-new"><input type="text" name="text" class="category" placeholder="Anything else?..." value=""></div>
-    <div  class="grid-item class="grid-item-new"><input type="number" name="cost" class="cost" placeholder="eg. 500" value="" required></div>
-    <div " class="grid-item class="grid-item-new"><input type="number" class="count" name="count" class="sub-category" placeholder="1" value="1"></div>   
+//     let newDiv = document.createElement("div");
+//     newDiv.innerHTML = `
+//     <div id= "newRow">
+//     <div class="grid-item class="grid-item-new"><input type="text" name="text" class="category" placeholder="Anything else?..." value=""></div>
+//     <div  class="grid-item class="grid-item-new"><input type="number" name="cost" class="cost" placeholder="eg. 500" value="" required></div>
+//     <div " class="grid-item class="grid-item-new"><input type="number" class="count" name="count" class="sub-category" placeholder="1" value="1"></div>   
     
-    </div>`;
+//     </div>`;
 
-    let gridContainerNew = document.getElementById("grid-container-new");
-    gridContainerNew.appendChild(newDiv);
+//     let gridContainerNew = document.getElementById("grid-container-new");
+//     gridContainerNew.appendChild(newDiv);
 
-}
+
+
+// }
 
 
 /**
@@ -82,22 +84,70 @@ function rowOneRemoved() {
     let row = document.querySelector("#grid-container #row1");
     row.parentNode.removeChild(row)[1];
 }
+
 function rowTwoRemoved() {
     let row = document.querySelector("#grid-container #row2");
     row.parentNode.removeChild(row)[2];
 }
+
 function rowThreeRemoved() {
     let row = document.querySelector("#grid-container #row3");
     row.parentNode.removeChild(row)[3];
 }
+
 function rowFourRemoved() {
     let row = document.querySelector("#grid-container #row4");
     row.parentNode.removeChild(row)[4];
 }
+
 function rowFiveRemoved() {
     let row = document.querySelector("#grid-container #row5");
     row.parentNode.removeChild(row)[5];
 }
+
+function categoryAdded(){
+    let addNewRowsButton = document.getElementById('addNewRows');
+
+    // let toDoContainer = document.getElementById('toDoContainer');
+    let gridContainerNew = document.getElementById("grid-container-new");
+    
+    // let inputField = document.getElementById('inputField');
+    
+    addNewRowsButton.addEventListener('click', function () {
+        // let paragraph = document.createElement('p')
+        let newDiv = document.createElement("div");
+    
+        // paragraph.classList.add('paragraph-styling')
+    
+    
+        // paragraph.innerText = inputField.value;
+        newDiv.innerHTML = `
+        <div id= "newRow">
+        <div class="grid-item class="grid-item-new"><input type="text" name="text" class="category" placeholder="Anything else?..." value=""></div>
+        <div  class="grid-item class="grid-item-new"><input type="number" name="cost" class="cost" placeholder="eg. 500" value="" required></div>
+        <div " class="grid-item class="grid-item-new"><input type="number" class="count" name="count" class="sub-category" placeholder="1" value="1"></div>   
+        </div>`;
+        //<button id="removeNewRow" class="round"> - </button>
+    
+    
+        gridContainerNew.appendChild(newDiv);
+    
+    
+        let b = document.createElement("button");
+        b.classList.add('round')
+        b.innerText = '-';
+        newDiv.appendChild(b);
+    
+    
+        b.addEventListener('click', function () {
+            gridContainerNew.removeChild(newDiv)
+        });
+    
+    
+    })
+};
+
+
 
 
 /**
@@ -293,4 +343,5 @@ function drawChart() {
     };
 
     let chart = new google.visualization.PieChart(document.getElementById('myChart'));
-    chart.draw(data, options);}
+    chart.draw(data, options);
+}
