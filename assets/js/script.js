@@ -77,46 +77,46 @@ function rowFiveRemoved() {
 /**
  * New Category row is appended
  */
-function categoryAdded() {
-    let addNewRowsButton = document.getElementById('addNewRows');
 
-    // let toDoContainer = document.getElementById('toDoContainer');
+
+// Code source: https://github.com/learn-webdevYT/Javascript-Beginner-Tutorials To-Do LIst
+function categoryAdded() {
+    
+    // let addNewRowsButton = document.getElementById('addNewRows');
     let gridContainerNew = document.getElementById("grid-container-new");
 
-    // let inputField = document.getElementById('inputField');
+    // addNewRowsButton.addEventListener('click', function () {
 
-    addNewRowsButton.addEventListener('click', function () {
-        // let paragraph = document.createElement('p')
         let newDiv = document.createElement("div");
-
-        // paragraph.classList.add('paragraph-styling')
-
-
-        // paragraph.innerText = inputField.value;
         newDiv.innerHTML = `
         <div id= "newRow">
-        <div class="grid-item class="grid-item-new"><input type="text" name="text" class="category" placeholder="Anything else?..." value=""></div>
-        <div  class="grid-item class="grid-item-new"><input type="number" name="cost" class="cost" placeholder="eg. 500" value="" required></div>
-        <div " class="grid-item class="grid-item-new"><input type="number" class="count" name="count" class="sub-category" placeholder="1" value="1"></div>   
+        <div class="grid-item grid-item-new"><input type="text" name="text" class="category" placeholder="Anything else?..." value=""></div>
+        <div class="grid-item grid-item-new"><input type="number" name="cost" class="cost" placeholder="eg. 500" value="" required></div>
+        <div class="grid-item grid-item-new"><input type="number" class="count" name="count" class="sub-category" placeholder="1" value="1"></div>  
+         
         </div>`;
-        //<button id="removeNewRow" class="round"> - </button>
-
 
         gridContainerNew.appendChild(newDiv);
 
 
-        let b = document.createElement("button");
-        b.classList.add('round')
-        b.innerText = '-';
-        newDiv.appendChild(b);
+        let newRoundButton = document.createElement("button");
+        newRoundButton.classList.add('round')
+        newRoundButton.innerText = '-';
+        // newDiv.appendChild(b);
+
+        //find the last row and add a button to it
+        let all_rows = document.querySelectorAll("#newRow")
+        let last_row = all_rows[all_rows.length - 1]
+        last_row.appendChild(newRoundButton);
 
 
-        b.addEventListener('click', function () {
+
+        newRoundButton.addEventListener('click', function () {
             gridContainerNew.removeChild(newDiv)
         });
 
 
-    })
+    // });
 };
 
 
@@ -318,4 +318,4 @@ function drawChart() {
 
     let chart = new google.visualization.PieChart(document.getElementById('myChart'));
     chart.draw(data, options);
-}
+};
