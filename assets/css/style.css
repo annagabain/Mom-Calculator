@@ -18,17 +18,14 @@ body {
     background-color: #0D0D0D;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    /* margin: 10% 10%; */
     display: grid;
-    grid-template-columns: 1fr 2fr  1fr;
+    grid-template-columns: 1fr 2fr 1fr;
 
 }
 
 #innerbody {
     background-color: #455359;
     padding: 25px 15px;
-    /* width: 700px; */
-
 }
 
 header {
@@ -50,8 +47,6 @@ h2 {
     color: #FAF7F4;
     line-height: 0.5;
     letter-spacing: 2px;
-    /* position: absolute;
-    right: 27% */
 }
 
 h1 {
@@ -65,10 +60,9 @@ h2 {
 }
 
 
-img, .medalions {
+img,
+.medalions {
     border-radius: 50%;
-    /* position: absolute;
-    left: 45% */
 }
 
 /* Style the button that is used to open and close the showAboutInfo content */
@@ -80,19 +74,19 @@ img, .medalions {
     text-align: right;
     outline: none;
     padding-right: 50px;
-  }
-  
+}
 
-  /* Style the showAboutInfo content. Note: hidden by default */
-  .content {
+
+/* Style the showAboutInfo content. Note: hidden by default */
+.content {
     padding: 18px;
     display: none;
     line-height: 1.5;
-  }
+}
 
 #description {
     /* padding: 20px; */
-text-align: center;
+    text-align: center;
 }
 
 
@@ -103,24 +97,41 @@ text-align: center;
     justify-content: space-evenly;
     text-align: center;
 }
+#hide-calculation-area{
+    border-radius: 5px;
+    padding: 20px;
+    background-color:#d3cdc9;
+    border: 1px solid #ada8a5;
 
+}
 
 .grid-container>div,
 #grid-container-new>div>div {
     display: grid;
     text-align: center;
     grid-template-columns: auto auto auto auto;
-    grid-template-columns: 1.5fr 1fr  1fr 0.5fr;
+    grid-template-columns: 1.5fr 1fr 1fr 0.5fr;
 
     /* width: 500px; */
     display: flexbox;
     justify-content: space-evenly;
     text-align: center;
+
+
 }
 
 
 .grid-item {
     padding: 5px;
+}
+input[type=text], input[type=number] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+
+  }
+#deleteLabel {
+    text-align: left;
 }
 
 .round {
@@ -147,40 +158,45 @@ button {
     text-align: center;
 }
 
-#submitMomBudget {
-    text-align: left;
+
+::placeholder {
+    color: #bdbdbe;
 }
 
 #budget {
-    width: 100px;
+    width: 180px;
     height: 30px;
-    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .category {
     width: 120px;
     height: 30px;
-    text-align: center;
     border: 1.5px solid rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    color: #6A4C39;
+    font-weight: 600;
 }
 
 .select {
     width: 80px;
     height: 25px;
-    text-align: center;
 }
 
 .cost {
-    width: 80px;
+    width: 100px;
     height: 25px;
     text-align: right;
     border: 1.5px solid rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    color: #6A4C39;
+    font-weight: 600;
 }
 
 .count {
     width: 60px;
     height: 25px;
-    text-align: center;
     border: 1.5px solid rgba(0, 0, 0, 0.8);
 }
 
@@ -205,8 +221,13 @@ button {
 }
 
 
-#balanceStatus {
-    /* width: 300px;   */
+
+#balanceStatusRed,
+#balanceStatusGreen,
+#balanceStatusBlue {
+
+    font-weight: 600;
+    font-size: 18px;
 }
 
 #balanceStatusRed {
@@ -216,7 +237,6 @@ button {
 #balanceStatusGreen {
     color: green;
 }
-
 
 #balanceStatusBlue {
     color: blue;

@@ -39,26 +39,28 @@
 
         <section id="description">
 
-            <button type="button" class="showAboutInfo">About</button>
+            <button type="button" class="showAboutInfo">How To Use ↓</button>
             <div class="content">
                 <p>
                     <h3>Hello and Welcome to Mom Calculator</h3>
                     <h4>Here you can calculate your monthly/yearly expenses for the Whole Family.</h4>
-                    This calculator provides an easy-to-use tool to simplify budgeting tasks:
+                    This calculator is an easy-to-use tool to simplify budgeting tasks:
                     <br>
                     1. Add your monthly budget.
                     <br>
-                    2. Edit or add:
+                    2. Edit:
                     <br>
                     -your expense categories and costs
                     <br>
-                    -how many items were purchased.
+                    -how many items were purchased (count)
                     <br>
-                    3. Click Calculate (Caculation results are shown)
+                    3. Add or remove categories, if you like
                     <br>
-                    4. Toggle the Visualization pie-chart (optional)
+                    4. Click Calculate for caculation results summary
                     <br>
-                    5. Start over with a new calculation
+                    5. Toggle the Visualization pie-chart (optional)
+                    <br>
+                    6. Start over with a new calculation
                 </p>
 
             </div>
@@ -82,7 +84,10 @@
             <div id="hide-calculation-area">
 
                 <div id="submitMomBudget">
-                    <label for="budget">* Add your Monthly Budget in € ... </label>
+                    <label for="budget">* (Monthly) Budget in € </label>
+                    <br>
+                    <br>
+
                     <input type="number" id="budget" placeholder="eg. 2500" value="" required>
                     <!-- <button onclick="confirmBudget()"> SUBMIT</button> -->
 
@@ -99,7 +104,7 @@
                         <div class="grid-item">Expenses on:</div>
                         <div class="grid-item">Cost in €</div>
                         <div class="grid-item">Count</div>
-                        <div class="grid-item">Remove</div>
+                        <div class="grid-item" id="deleteLabel">Delete</div>
                     </div>
 
 
@@ -121,7 +126,7 @@
                         <div class="grid-item"> <input type="text" id="transport" name="text" class="category"
                                 value="Transport"></div>
                         <div class="grid-item"><input type="number" id="transport-cost" class="cost" name="cost"
-                                placeholder="eg. 1200" value="" required></div>
+                                placeholder="eg.200" value="" required></div>
                         <div class="grid-item"><input type="number" class="count" name="count" placeholder="1"
                                 value="1">
                         </div>
@@ -171,26 +176,14 @@
 
                 </div>
 
-
-
-                <!-- <div>
-                    <button class="more-rows-button" onclick="categoryAdded()"> MORE ROWS ></button>
-                </div>
-                <div>
-                    <button class="more-rows-button" onclick="categoryRemoved()"> Less Rows </button>
-                </div> -->
-
-
                 <!-- <input id="inputField" type="text"> -->
                 <!-- <button id="addNewRows" class="more-rows-button">More Rows</button> -->
-                <button id="addNewRows" class="more-rows-button" onclick="categoryAdded()">More Rows</button>
+                <button id="addNewRows" class="more-rows-button" onclick="categoryAdded()">More Rows →</button>
 
                 <!-- <div class="to-dos" id="toDoContainer"></div> -->
 
                 <br>
                 <br>
-
-
 
                 <!-- Connects this button to calculateTotal function -->
 
