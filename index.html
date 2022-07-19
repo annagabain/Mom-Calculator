@@ -50,11 +50,13 @@
                     <br>
                     2. Edit:
                     <br>
-                    -your expense categories and costs
+                    -your expense categories
+                    <br>
+                    -and costs
                     <br>
                     -how many items were purchased (count)
                     <br>
-                    3. Add or remove categories, if you like
+                    3. Add or delete categories, if you like
                     <br>
                     4. Click Calculate for caculation results summary
                     <br>
@@ -87,10 +89,7 @@
                     <label for="budget">* (Monthly) Budget in € </label>
                     <br>
                     <br>
-
                     <input type="number" id="budget" placeholder="eg. 2500" value="" required>
-                    <!-- <button onclick="confirmBudget()"> SUBMIT</button> -->
-
                 </div>
 
                 <br>
@@ -98,16 +97,13 @@
                 <!-- Basic source code for the grid: https://www.w3schools.com/css/css_grid.asp -->
 
                 <div id="grid-container" class="grid-container">
-
+                    <!-- ROW 1 Labels-->
                     <div id="row">
-                        <!-- ROW 1 Labels-->
                         <div class="grid-item">Expenses on:</div>
                         <div class="grid-item">Cost in €</div>
                         <div class="grid-item">Count</div>
                         <div class="grid-item" id="deleteLabel">Delete</div>
                     </div>
-
-
                     <!-- ROW 2 index-1 -->
                     <div id="row1">
                         <div class="grid-item" class="food"> <input type="text" id="food" name="text" class="category"
@@ -120,7 +116,6 @@
                         </div>
                         <button class="round" class="food" onclick="rowOneRemoved()"> - </button>
                     </div>
-
                     <!-- ROW 3 index-2-->
                     <div id="row2">
                         <div class="grid-item"> <input type="text" id="transport" name="text" class="category"
@@ -132,7 +127,6 @@
                         </div>
                         <button class="round" onclick="rowTwoRemoved()"> - </button>
                     </div>
-
                     <!-- ROW 4 index-3 -->
                     <div id="row3">
                         <div class="grid-item"> <input type="text" id="accommodation" name="text" class="category"
@@ -144,7 +138,6 @@
                         </div>
                         <button class="round" onclick="rowThreeRemoved()"> - </button>
                     </div>
-
                     <!-- ROW 5 index-4 -->
                     <div id="row4">
                         <div class="grid-item"> <input type="text" id="clothing" name="text" class="category"
@@ -156,8 +149,6 @@
                         </div>
                         <button class="round" onclick="rowFourRemoved()"> - </button>
                     </div>
-
-
                     <!-- ROW 6 Add Category-->
                     <div id="row5">
                         <div class="grid-item"> <input type="text" name="text" class="category"
@@ -172,35 +163,22 @@
                 </div>
 
                 <div id="grid-container-new">
-                    <!-- The new Category row is appended here with -->
-
+                    <!-- The new Category row is appended here -->
                 </div>
 
-                <!-- <input id="inputField" type="text"> -->
-                <!-- <button id="addNewRows" class="more-rows-button">More Rows</button> -->
                 <button id="addNewRows" class="more-rows-button" onclick="categoryAdded()">More Rows →</button>
-
-                <!-- <div class="to-dos" id="toDoContainer"></div> -->
-
                 <br>
                 <br>
-
-                <!-- Connects this button to calculateTotal function -->
-
                 <button id="calculate-total-button" onclick="calculateTotal()"> CALCULATE</button>
-
-
             </div>
-
             <br>
-
 
             <div id="totalCosts">
                 <!-- Costs TOTAL : xxx € -->
             </div>
             <br>
             <div id="yourBudget">
-                <!-- Your Budget: 1500 € -->
+                <!-- Your Budget: xxx € -->
             </div>
             <br>
             <div id="yourBalance">
@@ -208,47 +186,24 @@
             </div>
             <br>
             <div id="balanceStatus">
-                <!-- 
-
-                <div id="balanceStatusRed">
-                    Overspent.... 
-                </div>
-
-                <div id="balanceStatusGreen">
-                     Saved... 
-                </div>
-
-                <div id="balanceStatusBlue">
-                   No savings this month 
-                </div>
-
-            -->
+                <!-- Red
+                    Green
+                    Blue -->
             </div>
             <br>
 
             <button id="calculate-total-button" onclick="location.reload()"> StartOver</button>
 
-            <!-- make this as mouse hover over the Visualize button -->
             <!-- Toggle Visualization Area: -->
-
             <button id="visualize-button" onclick="drawChart()"> Visualize</button>
-
-
         </section>
 
-
-        <!-- Work on visualization-area later -->
         <section id="visualization-area">
-            <!-- <button id="visualize" onclick="drawChart()" value=""> Visualize</button> -->
-
             <!--Source code: https://www.w3schools.com/js/tryit.asp?filename=tryai_google_chart_pie -->
 
             <div id="myChart">
             </div>
             <!-- <div id="myChart" style="width:100%; max-width:600px; height:400px;"> -->
-
-
-
         </section>
 
         <script src="assets/js/script.js"></script>
