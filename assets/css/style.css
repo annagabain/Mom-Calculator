@@ -64,15 +64,37 @@ h2 {
     font-weight: 300;
 }
 
+
 img, .medalions {
     border-radius: 50%;
     /* position: absolute;
     left: 45% */
 }
+
+/* Style the button that is used to open and close the showAboutInfo content */
+.showAboutInfo {
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 0%;
+    text-align: right;
+    outline: none;
+
+  }
+  
+
+  /* Style the showAboutInfo content. Note: hidden by default */
+  .content {
+    padding: 18px;
+    display: none;
+    line-height: 1.5;
+  }
+
 #description {
-    padding: 20px;
+    /* padding: 20px; */
 text-align: center;
 }
+
 
 #calculation-area {
     padding: 50px;
@@ -88,7 +110,9 @@ text-align: center;
     display: grid;
     text-align: center;
     grid-template-columns: auto auto auto auto;
-    width: 500px;
+    grid-template-columns: 2fr 1fr  1fr 1fr;
+
+    /* width: 500px; */
     display: flexbox;
     justify-content: space-evenly;
     text-align: center;
@@ -126,6 +150,7 @@ button {
 #submitMomBudget {
     text-align: left;
 }
+
 #budget {
     width: 100px;
     height: 30px;
@@ -133,15 +158,10 @@ button {
 }
 
 .category {
-    width: 130px;
+    width: 120px;
     height: 30px;
     text-align: center;
     border: 1.5px solid rgba(0, 0, 0, 0.8);
-}
-
-.sub-category {
-    width: 60px;
-    height: 15px;
 }
 
 .select {
@@ -169,7 +189,7 @@ button {
 .more-rows-button {
     position: relative;
     right: 30%;
-    width: 140px;
+    width: 160px;
     background-color: #FAF7F4;
     color: #6A4C39;
     letter-spacing: 2px;
@@ -179,16 +199,6 @@ button {
     margin: 10px;
 }
 
-/* #calculate-total-button{
-    position: relative;
-    left: 40%
-} */
-
-/* #visualize-button {
-    position: relative;
-    left: 20%;
-    padding: 5px;
-} */
 
 #totalCosts {
     font-size: 2em;

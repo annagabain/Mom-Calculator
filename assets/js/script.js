@@ -13,7 +13,22 @@ formatter.format(1500); /* €1,500.00 */
 let toEuro = formatter.format(Number(document.getElementById("budget").value));
 console.log(toEuro);
 
+// Show About section
 
+    let showAboutInfo = document.getElementsByClassName("showAboutInfo");
+    let index;
+
+    for (index = 0; index < showAboutInfo.length; i++) {
+        showAboutInfo[index].addEventListener("click", function () {
+            this.classList.toggle("active");
+            let content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    };
 
 
 
@@ -25,7 +40,6 @@ console.log(toEuro);
 //     let momName = document.getElementById("username").value;
 //     alert(`Hello ${momName}`)
 // }
-
 
 
 
@@ -46,7 +60,7 @@ function confirmBudget() {
 /**
  * 
  *  Removes specific rows
- */ 
+ */
 
 function rowOneRemoved() {
     let row = document.querySelector("#grid-container #row1");
@@ -81,14 +95,14 @@ function rowFiveRemoved() {
 
 // Code source: https://github.com/learn-webdevYT/Javascript-Beginner-Tutorials To-Do LIst
 function categoryAdded() {
-    
+
     // let addNewRowsButton = document.getElementById('addNewRows');
     let gridContainerNew = document.getElementById("grid-container-new");
 
     // addNewRowsButton.addEventListener('click', function () {
 
-        let newDiv = document.createElement("div");
-        newDiv.innerHTML = `
+    let newDiv = document.createElement("div");
+    newDiv.innerHTML = `
         <div id= "newRow">
         <div class="grid-item grid-item-new"><input type="text" name="text" class="category" placeholder="Anything else?..." value=""></div>
         <div class="grid-item grid-item-new"><input type="number" name="cost" class="cost" placeholder="eg. 500" value="" required></div>
@@ -96,24 +110,24 @@ function categoryAdded() {
          
         </div>`;
 
-        gridContainerNew.appendChild(newDiv);
+    gridContainerNew.appendChild(newDiv);
 
 
-        let newRoundButton = document.createElement("button");
-        newRoundButton.classList.add('round')
-        newRoundButton.innerText = '-';
-        // newDiv.appendChild(b);
+    let newRoundButton = document.createElement("button");
+    newRoundButton.classList.add('round')
+    newRoundButton.innerText = '-';
+    // newDiv.appendChild(b);
 
-        //find the last row and add a button to it
-        let all_rows = document.querySelectorAll("#newRow")
-        let last_row = all_rows[all_rows.length - 1]
-        last_row.appendChild(newRoundButton);
+    //find the last row and add a button to it
+    let all_rows = document.querySelectorAll("#newRow")
+    let last_row = all_rows[all_rows.length - 1]
+    last_row.appendChild(newRoundButton);
 
 
 
-        newRoundButton.addEventListener('click', function () {
-            gridContainerNew.removeChild(newDiv)
-        });
+    newRoundButton.addEventListener('click', function () {
+        gridContainerNew.removeChild(newDiv)
+    });
 
 
     // });
@@ -250,7 +264,7 @@ function visArrayData() {
         let cost = costs[row].value;
         let count = counts[row].value;
 
-        ActualArrayData.push([category, parseInt(cost*count)]);
+        ActualArrayData.push([category, parseInt(cost * count)]);
     }
 
     return ActualArrayData;
