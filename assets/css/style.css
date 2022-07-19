@@ -112,13 +112,9 @@ img,
     text-align: center;
     grid-template-columns: auto auto auto auto;
     grid-template-columns: 1.5fr 1fr 1fr 0.5fr;
-
-    /* width: 500px; */
     display: flexbox;
     justify-content: space-evenly;
     text-align: center;
-
-
 }
 
 
@@ -127,9 +123,8 @@ img,
 }
 input[type=text], input[type=number] {
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 20px;
     text-align: center;
-
   }
 #deleteLabel {
     text-align: left;
@@ -140,7 +135,6 @@ input[type=text], input[type=number] {
     color: #FAF7F4;
     letter-spacing: 2px;
     border-radius: 50%;
-
     width: 30px;
     height: 30px;
     text-align: center;
@@ -153,7 +147,6 @@ button {
     letter-spacing: 2px;
     font-size: 1em;
     border-radius: 5%;
-
     width: 120px;
     height: 35px;
     text-align: center;
@@ -201,8 +194,6 @@ button {
     border: 1.5px solid rgba(0, 0, 0, 0.8);
 }
 
-
-
 .more-rows-button {
     position: relative;
     right: 30%;
@@ -220,8 +211,6 @@ button {
 #totalCosts {
     font-size: 2em;
 }
-
-
 
 #balanceStatusRed,
 #balanceStatusGreen,
@@ -251,7 +240,6 @@ button {
     background-color: #ffffff;
     /* display: flex; */
     justify-content: center;
-
 }
 
 
