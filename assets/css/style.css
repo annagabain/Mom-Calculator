@@ -10,13 +10,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Open+Sans:wght@300;400&family=Share+Tech+Mono&display=swap');
 
 
 /* This styling is set for the whole project as a deafault */
 body {
     color: #0D0D0D;
     background-color: #0D0D0D;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Mulish', sans-serif;
     font-weight: 400;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
