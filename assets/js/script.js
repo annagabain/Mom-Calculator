@@ -18,7 +18,7 @@ console.log(toEuro);
     let showAboutInfo = document.getElementsByClassName("showAboutInfo");
     let index;
 
-    for (index = 0; index < showAboutInfo.length; i++) {
+    for (index = 0; index < showAboutInfo.length; index++) {
         showAboutInfo[index].addEventListener("click", function () {
             this.classList.toggle("active");
             let content = this.nextElementSibling;

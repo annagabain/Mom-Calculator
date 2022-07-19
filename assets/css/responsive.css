@@ -5,37 +5,84 @@
     (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
     (min-width: 481px) and (max-width: 767px) small tablets and mobile landscape
     (min-width: 320px) and (max-width: 480px) mobile portrait */
+ 
 
-
-/* 
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-@media (min-width: 1281px) {}
 
 /* 
     ##Device = Laptops, Desktops
     ##Screen = B/w 1025px to 1280px
   */
-@media (min-width: 1025px) and (max-width: 1280px) {}
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    header {
+        height: 100px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 0.8em;
+        line-height: 9;
+    }
+    h1,
+    h2 {
+        position: absolute;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+        left: 75%;
+    }
+  }
 
 /* 
-    ##Device = Tablets, Ipads (portrait)
+    ##Device = Tablets, Ipads
     ##Screen = B/w 768px to 1024px
   */
-@media (min-width: 768px) and (max-width: 1024px) {}
+  @media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        margin: 0;
+    }
 
-/* 
-    ##Device = Tablets, Ipads (landscape)
-    ##Screen = B/w 768px to 1024px
-  */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+    #innerbody {
+
+        padding: 5px;
+        width: 100%;
+    }
+
+    header {
+        height: 100px;
+    }
+
+    h1,
+    h2 {
+        position: absolute;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        line-height: 9;
+        font-size: 0.8em;
+        font-weight: 300;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        left: 75%;
+    }
+}
 
 /* 
     ##Device = Low Resolution Tablets, Mobiles (Landscape)
     ##Screen = B/w 481px to 767px
   */
-@media (min-width: 481px) and (max-width: 767px) {
+
+  @media (min-width: 481px) and (max-width: 767px) {
+    
     body {
         margin: 0;
     }
@@ -57,19 +104,15 @@
 
     h1,
     h2 {
-
-        letter-spacing: 2px;
         position: absolute;
-        left: 15%
     }
 
     h1 {
-        line-height: 1;
-        font-size: 2em;
+        font-size: 1.4em;
     }
 
     h2 {
-        line-height: 1.5;
+        line-height: 9;
         font-size: 0.6em;
         font-weight: 300;
     }
@@ -80,10 +123,9 @@
         left: 75%;
     }
 
-    #submitMomBudget {
-        padding-bottom: 20px;
-        width: 300px;
-        line-height: 2.5;
+    #calculation-area {
+        padding: 25px;
+        background-color: #D8CBC4;
     }
 
 
@@ -92,16 +134,14 @@
         width: 300px;
         padding: 5px;
         text-align: center;
-
     }
 
     .grid-container {
-        padding: 0px 10px 0px 0px;
-
+        padding: 10px;
     }
 
     .grid-item {
-        padding: 5px;
+        padding: 3px;
         text-align: center;
     }
 
@@ -109,13 +149,17 @@
         font-size: 1.2em;
     }
 
-
     #visualization-area {
         justify-content: center;
+    }
 
+    #myChart{
+        width: 300px;
     }
 
 }
+
+
 
 
 /* 
@@ -144,19 +188,15 @@
 
     h1,
     h2 {
-
-        letter-spacing: 2px;
         position: absolute;
-        left: 15%
     }
 
     h1 {
-        line-height: 6;
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
 
     h2 {
-        line-height: 1.5;
+        line-height: 9;
         font-size: 0.6em;
         font-weight: 300;
     }
@@ -175,7 +215,7 @@
 
     #grid-container-new>div>div,
     .grid-container {
-        width: 250px;
+        width: 300px;
         padding: 5px;
         text-align: center;
     }
@@ -195,6 +235,10 @@
 
     #visualization-area {
         justify-content: center;
+    }
+
+    #myChart{
+        width: 300px;
     }
 
 }
