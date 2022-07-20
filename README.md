@@ -56,7 +56,7 @@ Features include:
 
   -  How to Use
 
-    <img width="100%" alt="How to use screenshot" src="assets/md-images/howToUse.jpg">
+  <img width="100%" alt="How to use screenshot" src="assets/md-images/howToUse.jpg">
 
   -  Username
 
