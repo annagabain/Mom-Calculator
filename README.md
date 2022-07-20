@@ -50,11 +50,39 @@ Features include:
 ## Contents:
 
 ### Features
+  -  Title
+
+  <img width="100%" alt="Title screenshot" src="assets/md-images/title.jpg">
 
   -  How to Use
+
+    <img width="100%" alt="How to use screenshot" src="assets/md-images/howToUse.jpg">
+
+  -  Username
+
+  <img width="100%" alt="Submit username screenshot" src="assets/md-images/ask-name.jpg">
+  
+  <img width="100%" alt="Username screenshot" src="assets/md-images/address-by-name.jpg">
+
   -  Calculator
+
+    <img width="100%" alt="Calculation Area screenshot" src="assets/md-images/calculation-area.jpg">
+
+    <img width="100%" alt="Calculation Area screenshot with inputs" src="assets/md-images/calculation-area-with-inputs.jpg">
+
+    <img width="100%" alt="Start over button screenshot" src="assets/md-images/navigation.jpg">
+
+
   -  Results Area
+
+    <img width="100%" alt="Results screenshot" src="assets/md-images/results-area.jpg">
+
+
   -  Visualization Area
+
+    <img width="100%" alt="Pie chart" src="assets/md-images/inputs-visualized.jpg">
+
+
   -  (Contact Thank you for Contacting Page)
   -  Footer
   -  404 Error Page
@@ -74,7 +102,7 @@ Features include:
   -  Design Scope
      -  Scribbles and Wireframes
 
-  <img width="70%" alt="wireframe" src="assets/Mom-Calculator-wireframe-Website-UI-Prototype.png">
+  <img width="70%" alt="wireframe" src="assets/wireframes/Mom-Calculator-wireframe-Website-UI-Prototype.png">
 
      -  Colours
 
