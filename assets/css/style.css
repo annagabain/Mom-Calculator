@@ -118,7 +118,7 @@ table {
 .grid-container>div,
 #grid-container-new>div>div {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr 0.5fr;
     justify-content: space-evenly;
     text-align: center;
 }

@@ -283,7 +283,7 @@ function drawChart() {
     let options = {
         title: 'Life Expenses Budgeting Pie Chart',
         // change piechart size here
-        width: 400,
+        width: 320,
         height: 300,
 
         slices: {
