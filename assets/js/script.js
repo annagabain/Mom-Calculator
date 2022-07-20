@@ -31,7 +31,7 @@ for (index = 0; index < showAboutInfo.length; index++) {
 // This code I took and modified from: https://www.ceos3c.com/javascript/store-user-input-in-a-variable-with-javascript/#:~:text=The%20JavaScript%20File,-The%20JavaScript%20part&text=To%20be%20able%20to%20store,input%20from%20the%20input%20form.
 
 // Great the user by name
-function greetByUsername(){
+function greetByUsername() {
     // clears the submit name area after the name has been given or calculation fired
     let submitUsername = document.getElementById("submitUsername");
     submitUsername.style.display = 'none';
@@ -131,7 +131,47 @@ function costsTimesCounts() {
     };
 
     return total;
+};
+/**
+Is creating a data Array for visualisation and is called upon calling the drawChart function 
+ */
+function visArrayData() {
+
+    let ActualArrayData = [];
+    let categories = document.getElementsByClassName('category');
+    let costs = document.getElementsByClassName('cost');
+    let counts = document.getElementsByClassName('count');
+
+    for (let row = 0; row < categories.length; row++) {
+        let category = categories[row].value;
+        let cost = costs[row].value;
+        let count = counts[row].value;
+
+        ActualArrayData.push([category, parseInt(cost * count)]);
+    }
+
+    return ActualArrayData;
+};
+/**
+Make a table aout of user input data
+Source code: https://stackoverflow.com/questions/15164655/generate-html-table-from-2d-javascript-array
+*/
+function makeTableHTML(myArray) {
+
+    let result = "<table border=0><td><b>Expenses on:</b></td><td><b>Cost in € </b></td>";
+    for (let i = 0; i < myArray.length; i++) {
+        result += "<tr>";
+        for (let j = 0; j < myArray[i].length; j++) {
+            result += "<td>" + myArray[i][j] + "</td>";
+        }
+        result += "</tr>";
+    }
+    result += "</table>";
+
+    return result;
 }
+
+console.log(makeTableHTML(visArrayData()))
 
 
 // Combined with the costsTimesCounts functiom shows the total expenses calculation
@@ -143,12 +183,16 @@ function calculateTotal() {
     } else {
         hideCalculationArea.style.display = "none";
     };
-    
+
     // clears the submit name area after the name has been given or calculation fired
     let submitUsername = document.getElementById("submitUsername");
     submitUsername.style.display = 'none';
 
-    // writes the budget to the document for further evaluation
+    // writes the user input generated data table to the document
+    let visArrayDataToTable = makeTableHTML(visArrayData());
+    document.getElementById('dataTable').innerHTML = (`${visArrayDataToTable}`);
+
+    // writes the budget to the document
     let momBudget = document.getElementById("budget").value;
     document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`);
 
@@ -158,7 +202,7 @@ function calculateTotal() {
     let balance = confirmBudget() - total;
     document.getElementById('yourBalance').innerHTML = ('This month\'s balance: ') + formatter.format(Number(balance));
 
-  
+
     balanceStatus();
 
     return total;
@@ -209,27 +253,6 @@ function balanceStatus() {
     }
 
 };
-
-/**
-Is creating a data Array for visualisation and is called upon calling the drawChart function 
- */
-function visArrayData() {
-
-    let ActualArrayData = [];
-    let categories = document.getElementsByClassName('category');
-    let costs = document.getElementsByClassName('cost');
-    let counts = document.getElementsByClassName('count');
-
-    for (let row = 0; row < categories.length; row++) {
-        let category = categories[row].value;
-        let cost = costs[row].value;
-        let count = counts[row].value;
-
-        ActualArrayData.push([category, parseInt(cost * count)]);
-    }
-
-    return ActualArrayData;
-}
 
 
 

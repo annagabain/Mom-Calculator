@@ -91,14 +91,14 @@ img,
 }
 
 
-#calculation-area {
+#calculation-area, table {
     padding: 50px;
     background-color: #D8CBC4;
     display: flexbox;
     justify-content: space-evenly;
     text-align: center;
 }
-#hide-calculation-area{
+#hide-calculation-area, table{
     border-radius: 5px;
     padding: 20px;
     background-color:#d3cdc9;
@@ -106,13 +106,19 @@ img,
 
 }
 
+table {
+    width: 100%;
+    text-align: left;
+}
+
+
 .grid-container>div,
 #grid-container-new>div>div {
     display: grid;
     text-align: center;
-    grid-template-columns: auto auto auto auto;
+    /* grid-template-columns: auto auto auto auto; */
     grid-template-columns: 1.5fr 1fr 1fr 0.5fr;
-    display: flexbox;
+    /* display: flexbox; */
     justify-content: space-evenly;
     text-align: center;
 }
@@ -242,12 +248,12 @@ button {
 
 
 
-/* #pieChart {
+#pieChart {
     display: flex;
     justify-content: center;
     padding-top: 50px;
-    width: 250px;
-} */
+    width: 600px;
+}
 
 
 footer {
