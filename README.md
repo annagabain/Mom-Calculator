@@ -61,26 +61,27 @@ Features include:
   -  Username
 
   <img width="100%" alt="Submit username screenshot" src="assets/md-images/ask-name.jpg">
-  
+
   <img width="100%" alt="Username screenshot" src="assets/md-images/address-by-name.jpg">
 
   -  Calculator
 
-    <img width="100%" alt="Calculation Area screenshot" src="assets/md-images/calculation-area.jpg">
+  <img width="100%" alt="Calculation Area screenshot" src="assets/md-images/calculation-area.jpg">
 
-    <img width="100%" alt="Calculation Area screenshot with inputs" src="assets/md-images/calculation-area-with-inputs.jpg">
 
-    <img width="100%" alt="Start over button screenshot" src="assets/md-images/navigation.jpg">
+  <img width="100%" alt="Calculation Area screenshot with inputs" src="assets/md-images/calculation-area-with-inputs.jpg">
+
+  <img width="100%" alt="Start over button screenshot" src="assets/md-images/navigation.jpg">
 
 
   -  Results Area
 
-    <img width="100%" alt="Results screenshot" src="assets/md-images/results-area.jpg">
+  <img width="100%" alt="Results screenshot" src="assets/md-images/results-area.jpg">
 
 
   -  Visualization Area
 
-    <img width="100%" alt="Pie chart" src="assets/md-images/inputs-visualized.jpg">
+  <img width="100%" alt="Pie chart" src="assets/md-images/inputs-visualized.jpg">
 
 
   -  (Contact Thank you for Contacting Page)
