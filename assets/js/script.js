@@ -128,9 +128,6 @@ function categoryAdded() {
     newRoundButton.addEventListener('click', function () {
         gridContainerNew.removeChild(newDiv)
     });
-
-
-    // });
 };
 
 
@@ -149,12 +146,9 @@ function costsTimesCounts() {
     for (let row = 0; row < costs.length; row++) {
 
         let cost = costs[row].value;
-        // console.log('cost ' + cost)
-
         let count = counts[row].value;
-        // console.log('count ' + count)
 
-        console.log(total += cost * count);
+        // console.log(total += cost * count);
 
         console.log('TOTAL ' + total);
 
@@ -168,11 +162,11 @@ function costsTimesCounts() {
 function calculateTotal() {
 
 
-    let x = document.getElementById("hide-calculation-area");
-    if (x.style.display === "none") {
-        x.style.display = "block";
+    let hideCalculationArea = document.getElementById("hide-calculation-area");
+    if (hideCalculationArea.style.display === "none") {
+        hideCalculationArea.style.display = "block";
     } else {
-        x.style.display = "none";
+        hideCalculationArea.style.display = "none";
     }
 
 
@@ -308,28 +302,31 @@ function drawChart() {
         title: 'Life Expenses Budgeting Pie Chart',
 
         // change piechart size here
-        width: 500,
-        height: 500,
+        width: 350,
+        height: 350,
 
         slices: {
             0: {
-                color: '#9C9FA6'
-            },
-            1: {
                 color: '#0D0D0D'
             },
-            2: {
+            1: {
                 color: '#455359'
             },
-            3: {
+            2: {
                 color: '#6A4C39'
             },
+            3: {
+                color: '#D8CBC4'
+            },
             4: {
-                color: 'grey'
+                color: '#9C9FA6'
+            },
+            5: {
+                color: '#ebb3b2'
             }
         }
     };
 
-    let chart = new google.visualization.PieChart(document.getElementById('myChart'));
+    let chart = new google.visualization.PieChart(document.getElementById('pieChart'));
     chart.draw(data, options);
 };

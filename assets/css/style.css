@@ -236,19 +236,18 @@ button {
 
 #visualization-area,
 #description {
-    /* padding: 50px; */
     background-color: #ffffff;
-    /* display: flex; */
     justify-content: center;
 }
 
 
 
-#myChart {
+/* #pieChart {
     display: flex;
     justify-content: center;
     padding-top: 50px;
-}
+    width: 250px;
+} */
 
 
 footer {
