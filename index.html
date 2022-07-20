@@ -46,9 +46,11 @@
                     <h4>Here you can calculate your monthly/yearly expenses for the Whole Family.</h4>
                     This calculator is an easy-to-use tool to simplify budgeting tasks:
                     <br>
-                    1. Add your monthly budget.
+                    1. Submit your name (optional).
                     <br>
-                    2. Edit:
+                    2. Add your monthly budget.
+                    <br>
+                    3. Edit:
                     <br>
                     -your expense categories
                     <br>
@@ -56,13 +58,13 @@
                     <br>
                     -how many items were purchased (count)
                     <br>
-                    3. Add or delete categories, if you like
+                    4. Add or delete categories, if you like
                     <br>
-                    4. Click Calculate for caculation results summary
+                    5. Click Calculate for caculation results summary
                     <br>
-                    5. Toggle the Visualization pie-chart (optional)
+                    6. Toggle the Visualization pie-chart (optional)
                     <br>
-                    6. Start over with a new calculation
+                    7. Start over with a new calculation
                 </p>
 
             </div>
@@ -73,18 +75,23 @@
 
         <section id="calculation-area">
 
+            <div id="submitUsername">
+                <label for="username">What's your name?</label>
+                <br>
+                <br>
+                <input type="text" id="username" name="username" placeholder="eg. Jane Smith" required>
+                <br>
+                <br>
+                <button onclick="greetByUsername()">Submit</button>
+            </div>
+            <div id="helloUser">
 
-            <!-- WORK WITH USERNAME LATER -->
-            <!-- 
-            <label for="username">*Create a Username: </label>
+            </div>
+
             <br>
-            <input type="text" id="username" name="username" placeholder="Username" required>
-            <button onclick="greetWithAlert()">Create</button>
-
-            <br><br> -->
 
             <div id="hide-calculation-area">
-
+                <br>
                 <div id="submitMomBudget">
                     <label for="budget">* (Monthly) Budget in € </label>
                     <br>

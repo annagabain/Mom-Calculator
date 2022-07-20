@@ -157,7 +157,7 @@ button {
     color: #bdbdbe;
 }
 
-#budget {
+#budget, #username {
     width: 180px;
     height: 30px;
     font-size: 20px;

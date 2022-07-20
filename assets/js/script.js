@@ -1,4 +1,4 @@
-// Javascript for the calculator goes here
+// Javascript for the calculator functionality goes here
 
 
 // Converting the number into currency
@@ -9,56 +9,49 @@ let formatter = new Intl.NumberFormat('en-DE', {
 });
 formatter.format(1500); /* €1,500.00 */
 
-
 let toEuro = formatter.format(Number(document.getElementById("budget").value));
-console.log(toEuro);
 
 // Show About section
+let showAboutInfo = document.getElementsByClassName("showAboutInfo");
+let index;
 
-    let showAboutInfo = document.getElementsByClassName("showAboutInfo");
-    let index;
-
-    for (index = 0; index < showAboutInfo.length; index++) {
-        showAboutInfo[index].addEventListener("click", function () {
-            this.classList.toggle("active");
-            let content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        });
-    };
-
+for (index = 0; index < showAboutInfo.length; index++) {
+    showAboutInfo[index].addEventListener("click", function () {
+        this.classList.toggle("active");
+        let content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+};
 
 
-// This code I took and modified from 
-// https://www.ceos3c.com/javascript/store-user-input-in-a-variable-with-javascript/#:~:text=The%20JavaScript%20File,-The%20JavaScript%20part&text=To%20be%20able%20to%20store,input%20from%20the%20input%20form.
+// This code I took and modified from: https://www.ceos3c.com/javascript/store-user-input-in-a-variable-with-javascript/#:~:text=The%20JavaScript%20File,-The%20JavaScript%20part&text=To%20be%20able%20to%20store,input%20from%20the%20input%20form.
 
-// ADD LATER FOR USERNAME
-// function greetWithAlert(){
-//     let momName = document.getElementById("username").value;
-//     alert(`Hello ${momName}`)
-// }
+// Great the user by name
+function greetByUsername(){
+    // clears the submit name area after the name has been given or calculation fired
+    let submitUsername = document.getElementById("submitUsername");
+    submitUsername.style.display = 'none';
 
+    let momName = document.getElementById("username").value;
+    document.getElementById('helloUser').innerHTML = (`Hello ${momName}`);
+}
 
 
 function confirmBudget() {
-    // // clears the submit budget area after the budget has been given
-    // let momBudgetButton = document.getElementById("submitMomBudget")
-    // momBudgetButton.style.display = 'none';
 
     // writes the budget to the document for further evaluation
-
     let momBudget = document.getElementById("budget").value;
     document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`);
 
     return momBudget;
-}
+};
 
 
 /**
- * 
  *  Removes specific rows
  */
 
@@ -91,15 +84,10 @@ function rowFiveRemoved() {
 /**
  * New Category row is appended
  */
-
-
 // Code source: https://github.com/learn-webdevYT/Javascript-Beginner-Tutorials To-Do LIst
 function categoryAdded() {
 
-    // let addNewRowsButton = document.getElementById('addNewRows');
     let gridContainerNew = document.getElementById("grid-container-new");
-
-    // addNewRowsButton.addEventListener('click', function () {
 
     let newDiv = document.createElement("div");
     newDiv.innerHTML = `
@@ -112,26 +100,19 @@ function categoryAdded() {
 
     gridContainerNew.appendChild(newDiv);
 
-
     let newRoundButton = document.createElement("button");
     newRoundButton.classList.add('round')
     newRoundButton.innerText = '-';
-    // newDiv.appendChild(b);
 
     //find the last row and add a button to it
     let all_rows = document.querySelectorAll("#newRow")
     let last_row = all_rows[all_rows.length - 1]
     last_row.appendChild(newRoundButton);
 
-
-
     newRoundButton.addEventListener('click', function () {
         gridContainerNew.removeChild(newDiv)
     });
 };
-
-
-
 
 /**
  * This is the main function that calculates the sum of all the monthly costs
@@ -144,15 +125,10 @@ function costsTimesCounts() {
     let counts = document.getElementsByClassName('count');
 
     for (let row = 0; row < costs.length; row++) {
-
         let cost = costs[row].value;
         let count = counts[row].value;
-
-        // console.log(total += cost * count);
-
-        console.log('TOTAL ' + total);
-
-    }
+        total += cost * count;
+    };
 
     return total;
 }
@@ -161,35 +137,33 @@ function costsTimesCounts() {
 // Combined with the costsTimesCounts functiom shows the total expenses calculation
 function calculateTotal() {
 
-
     let hideCalculationArea = document.getElementById("hide-calculation-area");
     if (hideCalculationArea.style.display === "none") {
         hideCalculationArea.style.display = "block";
     } else {
         hideCalculationArea.style.display = "none";
-    }
-
+    };
+    
+    // clears the submit name area after the name has been given or calculation fired
+    let submitUsername = document.getElementById("submitUsername");
+    submitUsername.style.display = 'none';
 
     // writes the budget to the document for further evaluation
     let momBudget = document.getElementById("budget").value;
     document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`);
 
-
     let total = costsTimesCounts();
-    document.getElementById('totalCosts').innerHTML = ('Costs TOTAL : ').bold() + formatter.format(Number(total)).bold();
-
+    document.getElementById('totalCosts').innerHTML = ('Your TOTAL costs: ').bold() + formatter.format(Number(total)).bold();
 
     let balance = confirmBudget() - total;
-    document.getElementById('yourBalance').innerHTML = ('This month\'s balance: : ') + formatter.format(Number(balance));
+    document.getElementById('yourBalance').innerHTML = ('This month\'s balance: ') + formatter.format(Number(balance));
 
-
+  
     balanceStatus();
-
 
     return total;
 
-}
-
+};
 
 /**
  * Evaluates if the balance is positive or negative
@@ -199,13 +173,10 @@ function calculateTotal() {
 function balanceStatus() {
 
     // Removes old balance Status first before displaying the new
-    // Source code found on:
-    // https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
     let oldBalanceStatus = document.querySelector("#balanceStatus");
     while (oldBalanceStatus.firstChild) {
         oldBalanceStatus.removeChild(oldBalanceStatus.lastChild);
     }
-
 
     let newDiv = document.createElement("div");
     newDiv.innerHTML = `
@@ -217,12 +188,9 @@ function balanceStatus() {
     let balanceStatusNew = document.getElementById("balanceStatus");
     balanceStatusNew.appendChild(newDiv);
 
-
-
     let budget = confirmBudget();
     let total = costsTimesCounts();
     let balanceStatus = budget - total;
-
 
     if (budget < total) {
         //red
@@ -240,12 +208,11 @@ function balanceStatus() {
         document.getElementById('balanceStatus').innerHTML = (`Can't calcualate the balance status`);
     }
 
-}
+};
 
 /**
 Is creating a data Array for visualisation and is called upon calling the drawChart function 
  */
-
 function visArrayData() {
 
     let ActualArrayData = [];
@@ -288,10 +255,7 @@ function drawChart() {
 
 
 
-    // console.log(visArrayData())
-
-
-    var data = new google.visualization.DataTable();
+    let data = new google.visualization.DataTable();
     data.addColumn('string', 'Country');
     data.addColumn('number', 'Population');
     data.addRows(visArrayData());
