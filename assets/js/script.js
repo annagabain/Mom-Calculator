@@ -158,11 +158,11 @@ Source code: https://stackoverflow.com/questions/15164655/generate-html-table-fr
 */
 function makeTableHTML(myArray) {
 
-    let result = "<table border=0><td><b>Expenses on:</b></td><td><b>Cost in € </b></td>";
-    for (let i = 0; i < myArray.length; i++) {
+    let result = "<table border=0><th><b>Expenses on:</b></td><td><b>Cost in € </b></th>";
+    for (let tableRow = 0; tableRow < myArray.length; tableRow++) {
         result += "<tr>";
-        for (let j = 0; j < myArray[i].length; j++) {
-            result += "<td>" + myArray[i][j] + "</td>";
+        for (let tableCell = 0; tableCell < myArray[tableRow].length; tableCell++) {
+            result += "<td>" + myArray[tableRow][tableCell] + "</td>";
         }
         result += "</tr>";
     }
