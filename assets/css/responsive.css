@@ -17,21 +17,16 @@
         height: 100px;
     }
     h1 {
-        font-size: 2.2em;
+        font-size: 2.4em;
     }
     h2 {
         font-size: 0.8em;
-        line-height: 9;
-    }
-    h1,
-    h2 {
-        position: absolute;
+        line-height: 1;
     }
 
     img {
         width: 100px;
         height: 100px;
-        left: 75%;
     }
   }
 
@@ -45,7 +40,6 @@
     }
 
     #innerbody {
-
         padding: 5px;
         width: 100%;
     }
@@ -54,25 +48,19 @@
         height: 100px;
     }
 
-    h1,
-    h2 {
-        position: absolute;
-    }
-
     h1 {
         font-size: 2em;
     }
 
     h2 {
-        line-height: 9;
+        line-height: 1;
         font-size: 0.8em;
         font-weight: 300;
     }
 
     img {
-        width: 80px;
-        height: 80px;
-        left: 75%;
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -85,50 +73,43 @@
     
     body {
         margin: 0;
-        display: block;
+        /* display: block; */
     }
 
     #innerbody {
-
-        padding: 5px;
-        width: 100%;
+        padding: 25px 15px 0 15px;
     }
 
     header {
-        background-color: #455359;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 5px;
         height: 100px;
+        text-align: right;
     }
 
     h1,
     h2 {
-        position: absolute;
+        text-align: right;
+        padding-right: 15px;
+
     }
 
     h1 {
-        font-size: 1.4em;
+        font-size: 2.2em;
     }
 
     h2 {
-        line-height: 9;
-        font-size: 0.6em;
+        line-height: 2;
+        font-size: 0.8em;
         font-weight: 300;
     }
-
     img {
-        width: 80px;
-        height: 80px;
-        left: 75%;
+        width: 100px;
+        height: 100px;
     }
 
     #calculation-area {
         padding: 25px;
         background-color: #D8CBC4;
     }
-
 
     #grid-container-new>div>div,
     .grid-container {
@@ -144,9 +125,7 @@
     .grid-item {
         padding: 3px;
         text-align: center;
-        
     }
-
 
     #totalCosts {
         font-size: 1.2em;
@@ -156,14 +135,7 @@
         justify-content: center;
     }
 
-    /* #pieChart{
-        width: 250px;
-    } */
-
-}
-
-
-
+};
 
 /* 
     ##Device = Most of the Smartphones Mobiles (Portrait)
@@ -181,17 +153,14 @@
     }
 
     header {
-        background-color: #455359;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
         padding: 10px;
         height: 100px;
     }
 
     h1,
     h2 {
-        position: absolute;
+        text-align: right;
+        padding-right: 5px;
     }
 
     h1 {
@@ -199,7 +168,7 @@
     }
 
     h2 {
-        line-height: 9;
+        line-height: 2;
         font-size: 0.6em;
         font-weight: 300;
     }
