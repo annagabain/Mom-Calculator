@@ -91,17 +91,20 @@ img,
 }
 
 
-#calculation-area, table {
-    padding: 50px;
+#calculation-area,
+#results-area {
+    padding: 20px;
     background-color: #D8CBC4;
     display: flexbox;
     justify-content: space-evenly;
     text-align: center;
 }
-#hide-calculation-area, table{
+
+#hide-calculation-area,
+table {
     border-radius: 5px;
     padding: 20px;
-    background-color:#d3cdc9;
+    background-color: #d3cdc9;
     border: 1px solid #ada8a5;
 
 }
@@ -115,10 +118,7 @@ table {
 .grid-container>div,
 #grid-container-new>div>div {
     display: grid;
-    text-align: center;
-    /* grid-template-columns: auto auto auto auto; */
-    grid-template-columns: 1.5fr 1fr 1fr 0.5fr;
-    /* display: flexbox; */
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
     justify-content: space-evenly;
     text-align: center;
 }
@@ -127,24 +127,18 @@ table {
 .grid-item {
     padding: 5px;
 }
-input[type=text], input[type=number] {
+
+input[type=text],
+input[type=number] {
     border: 1px solid #ccc;
     border-radius: 20px;
     text-align: center;
-  }
+}
+
 #deleteLabel {
     text-align: left;
 }
 
-.round {
-    background-color: #6A4C39;
-    color: #FAF7F4;
-    letter-spacing: 2px;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-}
 
 button {
     font-family: 'Share Tech Mono', monospace;
@@ -154,7 +148,7 @@ button {
     font-size: 1em;
     border-radius: 5%;
     width: 120px;
-    height: 35px;
+    height: 39px;
     text-align: center;
 }
 
@@ -163,32 +157,33 @@ button {
     color: #bdbdbe;
 }
 
-#budget, #username {
+#budget,
+#username {
     width: 180px;
     height: 30px;
     font-size: 20px;
     font-weight: 600;
 }
 
-.category {
-    width: 120px;
+.category,
+.cost,
+.count,
+.round {
     height: 30px;
     border: 1.5px solid rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+
+.category {
+    width: 140px;
     font-size: 14px;
     color: #6A4C39;
     font-weight: 600;
 }
 
-.select {
-    width: 80px;
-    height: 25px;
-}
-
 .cost {
     width: 100px;
-    height: 25px;
-    text-align: right;
-    border: 1.5px solid rgba(0, 0, 0, 0.8);
     font-size: 16px;
     color: #6A4C39;
     font-weight: 600;
@@ -196,8 +191,13 @@ button {
 
 .count {
     width: 60px;
-    height: 25px;
-    border: 1.5px solid rgba(0, 0, 0, 0.8);
+}
+
+.round {
+    background-color: #6A4C39;
+    color: #FAF7F4;
+    border-radius: 50%;
+    width: 30px;
 }
 
 .more-rows-button {
@@ -238,21 +238,16 @@ button {
     color: blue;
 }
 
-
-
 #visualization-area,
 #description {
     background-color: #ffffff;
     justify-content: center;
 }
 
-
-
 #pieChart {
     display: flex;
     justify-content: center;
     padding-top: 50px;
-    width: 600px;
 }
 
 

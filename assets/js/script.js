@@ -273,24 +273,18 @@ function drawChart() {
         visualizationArea.style.display = "block";
     } else {
         visualizationArea.style.display = "none";
-    }
-
-
-
+    };
 
     let data = new google.visualization.DataTable();
-    data.addColumn('string', 'Country');
-    data.addColumn('number', 'Population');
+    data.addColumn('string', 'Category');
+    data.addColumn('number', 'Costs');
     data.addRows(visArrayData());
-
-
 
     let options = {
         title: 'Life Expenses Budgeting Pie Chart',
-
         // change piechart size here
-        width: 350,
-        height: 350,
+        width: 400,
+        height: 300,
 
         slices: {
             0: {

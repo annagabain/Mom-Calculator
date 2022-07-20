@@ -85,7 +85,6 @@
                 <button onclick="greetByUsername()">Submit</button>
             </div>
             <div id="helloUser">
-
             </div>
 
             <br>
@@ -179,30 +178,30 @@
                 <button id="calculate-total-button" onclick="calculateTotal()"> CALCULATE</button>
             </div>
 
+            <section id="results-area">
 
-            <div id="dataTable">
-                <!-- Costs TOTAL : xxx € -->
-                
-            </div>
-            <br>
-            <div id="totalCosts">
-                <!-- Costs TOTAL : xxx € -->
-            </div>
-            <br>
-            <div id="yourBudget">
-                <!-- Your Budget: xxx € -->
-            </div>
-            <br>
-            <div id="yourBalance">
-                <!-- <p>e.g. This month's balance: - 1000 €</p> -->
-            </div>
-            <br>
-            <div id="balanceStatus">
-                <!-- Red
+                <div id="dataTable">
+                    <!-- Costs TOTAL : xxx € -->
+                </div>
+                <br>
+                <div id="totalCosts">
+                    <!-- Costs TOTAL : xxx € -->
+                </div>
+                <br>
+                <div id="yourBudget">
+                    <!-- Your Budget: xxx € -->
+                </div>
+                <br>
+                <div id="yourBalance">
+                    <!-- <p>e.g. This month's balance: - 1000 €</p> -->
+                </div>
+                <br>
+                <div id="balanceStatus">
+                    <!-- Red
                     Green
                     Blue -->
-            </div>
-            <br>
+                </div>
+            </section>
 
             <button id="calculate-total-button" onclick="location.reload()"> StartOver</button>
 
@@ -211,11 +210,9 @@
         </section>
 
         <section id="visualization-area">
-            <!--Source code: https://www.w3schools.com/js/tryit.asp?filename=tryai_google_chart_pie -->
-
-            <div id="pieChart" style="width:100%; max-width:600px; height:400px;">
-            </div>
-            <!-- <div id="myChart" style="width:100%; max-width:600px; height:400px;"> -->
+             <!--Source code: https://www.w3schools.com/js/tryit.asp?filename=tryai_google_chart_pie -->
+            <!-- The pie chart lives inside this div -->
+            <div id="pieChart" style="width:100%; max-width:100%; height:350px;"></div>
         </section>
 
         <script src="assets/js/script.js"></script>
