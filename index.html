@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <head>
     <meta charset="UTF-8">
@@ -13,31 +12,29 @@
 
     <title>Mom Calculator</title>
 
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
     <!-- This css stylesheet will be responsible for the whole website's styling -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-
-
-
 </head>
 
 <body>
-    <section></section>
-
-    <section id="innerbody">
-
-
+    <div>
+        <!-- Dummy section to make the body grid work -->
+    </div>
+    <div id="innerbody">
         <header>
             <div>
                 <h1>Mom Calculator </h1>
                 <h2>Life Expenses Budgeting Tool</h2>
             </div>
             <div>
-                <img src="assets/images/web-pexels-karolina-grabowska-4959738.jpg" width=120>
+                <img src="assets/images/web-pexels-karolina-grabowska-4959738.jpg" alt="Baby hands on keyboard" width=120>
             </div>
         </header>
 
-        <section id="description">
+        <div id="description">
 
             <button type="button" class="showAboutInfo">How To Use ↓</button>
             <div class="content">
@@ -69,12 +66,9 @@
                 </p>
 
             </div>
+        </div>
 
-
-
-        </section>
-
-        <section id="calculation-area">
+        <div id="calculation-area">
 
             <div id="submitUsername">
                 <label for="username">What's your name?</label>
@@ -113,15 +107,15 @@
                     </div>
                     <!-- ROW 2 index-1 -->
                     <div id="row1">
-                        <div class="grid-item" class="food"> <input type="text" id="food" name="text" class="category"
+                        <div class="grid-item"> <input type="text" id="food" name="text" class="category"
                                 value="Food">
                         </div>
-                        <div class="grid-item" class="food"><input type="number" id="food-cost" class="cost" name="cost"
+                        <div class="grid-item"><input type="number" id="food-cost" class="cost" name="cost"
                                 placeholder="eg. 1200" value="" required></div>
-                        <div class="grid-item" class="food"><input type="number" class="count" name="count"
+                        <div class="grid-item"><input type="number" class="count" name="count"
                                 placeholder="1" value="1">
                         </div>
-                        <button class="round" class="food" onclick="rowOneRemoved()"> - </button>
+                        <button class="round" onclick="rowOneRemoved()"> - </button>
                     </div>
                     <!-- ROW 3 index-2-->
                     <div id="row2">
@@ -162,8 +156,7 @@
                                 placeholder="Anything else?..." value=""></div>
                         <div class="grid-item"><input type="number" name="cost" class="cost" placeholder="eg. 500"
                                 value="" required></div>
-                        <div class="grid-item"><input type="number" class="count" name="count" class="sub-category"
-                                placeholder="1" value="1"></div>
+                        <div class="grid-item"><input type="number" class="count" name="count" placeholder="1" value="1"></div>
                         <button class="round" onclick="rowFiveRemoved()"> - </button>
                     </div>
 
@@ -179,8 +172,7 @@
                 <button id="calculate-total-button" onclick="calculateTotal()"> CALCULATE</button>
             </div>
 
-            <section id="results-area">
-
+            <div>
                 <div id="dataTable">
                     <!-- Costs TOTAL : xxx € -->
                 </div>
@@ -202,25 +194,25 @@
                     Green
                     Blue -->
                 </div>
-            </section>
+            </div>
 
-            <button id="calculate-total-button" onclick="location.reload()"> StartOver</button>
+            <button onclick="location.reload()"> StartOver</button>
 
             <!-- Toggle Visualization Area: -->
             <button id="visualize-button" onclick="drawChart()"> Visualize</button>
-        </section>
+        </div>
 
-        <section id="visualization-area">
+        <div id="visualization-area">
             <!--Source code: https://www.w3schools.com/js/tryit.asp?filename=tryai_google_chart_pie -->
             <!-- The pie chart lives inside this div -->
             <div id="pieChart" style="width:100%; max-width:100%; height:350px;"></div>
-        </section>
+        </div>
 
         <script src="assets/js/script.js"></script>
         <noscript>Your browser does not support JavaScript!</noscript>
         <footer> Anna Gabain © for Educational Purposes</footer>
 
-    </section>
+    </div>
 </body>
 
 </html>

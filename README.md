@@ -2,7 +2,9 @@
 
 ## Life Expenses Budgeting Tool for the Whole Family
 
-<img width="70%" alt="Calculator Scribble" src="assets/Mom-Calculator-wireframe-Website-UI-Prototype.png">
+<img width="70%" alt="Calculator Scribble" src="assets/md-images/responsivity.jpg">
+
+
 
 # Live View
 
@@ -69,6 +71,8 @@ Potential features to include:
   -  Mood Board
   -  Scribbles and Wireframes
 
+  <img width="70%" alt="Calculator Scribble" src="assets/Mom-Calculator-wireframe-Website-UI-Prototype.png">
+
   <img width="100%" alt="Calculator Scribble Desktop" src="assets/wireframes/Desktop.png">
 
   <img width="50%" alt="Calculator Scribble Tablet" src="assets/wireframes/Tablet.png">
@@ -85,7 +89,22 @@ Potential features to include:
 
   -  Validators
 
-<img width="100%" alt="Calculator Scribble Mobile" src="assets/md-images/jshint1.jpg">
+  JS
+
+<img width="100%" alt="Javascript validator" src="assets/md-images/jshint1.jpg">
+
+HTML
+<img width="100%" alt="Html validator" src="assets/md-images/html_validator.jpg">
+
+
+CSS
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
 
   -  Remaining Bugs
 

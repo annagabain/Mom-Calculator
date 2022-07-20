@@ -21,7 +21,6 @@ body {
     font-weight: 400;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-
 }
 
 #innerbody {
@@ -31,12 +30,8 @@ body {
 
 header {
     background-color: #455359;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-end; */
     padding: 25px;
     height: 120px;
-
     display: grid;
     grid-template-columns: 3fr 1fr;
     text-align: right;
@@ -60,7 +55,6 @@ h2 {
     font-weight: 300;
 }
 
-
 img,
 .medalions {
     border-radius: 50%;
@@ -76,7 +70,6 @@ img,
     outline: none;
     padding-right: 50px;
 }
-
 
 /* Style the showAboutInfo content. Note: hidden by default */
 .content {

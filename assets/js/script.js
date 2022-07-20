@@ -25,7 +25,7 @@ for (index = 0; index < showAboutInfo.length; index++) {
             content.style.display = "block";
         }
     });
-};
+}
 
 
 // This code I took and modified from: https://www.ceos3c.com/javascript/store-user-input-in-a-variable-with-javascript/#:~:text=The%20JavaScript%20File,-The%20JavaScript%20part&text=To%20be%20able%20to%20store,input%20from%20the%20input%20form.
@@ -40,7 +40,6 @@ function greetByUsername() {
     document.getElementById('helloUser').innerHTML = (`Hello ${momName}`);
 }
 
-
 function confirmBudget() {
 
     // writes the budget to the document for further evaluation
@@ -48,8 +47,7 @@ function confirmBudget() {
     document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`);
 
     return momBudget;
-};
-
+}
 
 /**
  *  Removes specific rows
@@ -58,28 +56,27 @@ function confirmBudget() {
 function rowOneRemoved() {
     let row = document.querySelector("#grid-container #row1");
     row.parentNode.removeChild(row)[1];
-};
+}
 
 function rowTwoRemoved() {
     let row = document.querySelector("#grid-container #row2");
     row.parentNode.removeChild(row)[2];
-};
+}
 
 function rowThreeRemoved() {
     let row = document.querySelector("#grid-container #row3");
     row.parentNode.removeChild(row)[3];
-};
+}
 
 function rowFourRemoved() {
     let row = document.querySelector("#grid-container #row4");
     row.parentNode.removeChild(row)[4];
-};
+}
 
 function rowFiveRemoved() {
     let row = document.querySelector("#grid-container #row5");
     row.parentNode.removeChild(row)[5];
-};
-
+}
 
 /**
  * New Category row is appended
@@ -101,18 +98,18 @@ function categoryAdded() {
     gridContainerNew.appendChild(newDiv);
 
     let newRoundButton = document.createElement("button");
-    newRoundButton.classList.add('round')
+    newRoundButton.classList.add('round');
     newRoundButton.innerText = '-';
 
     //find the last row and add a button to it
-    let all_rows = document.querySelectorAll("#newRow")
-    let last_row = all_rows[all_rows.length - 1]
+    let all_rows = document.querySelectorAll("#newRow");
+    let last_row = all_rows[all_rows.length - 1];
     last_row.appendChild(newRoundButton);
 
     newRoundButton.addEventListener('click', function () {
-        gridContainerNew.removeChild(newDiv)
+        gridContainerNew.removeChild(newDiv);
     });
-};
+}
 
 /**
  * This is the main function that calculates the sum of all the monthly costs
@@ -128,10 +125,11 @@ function costsTimesCounts() {
         let cost = costs[row].value;
         let count = counts[row].value;
         total += cost * count;
-    };
+    }
 
     return total;
-};
+}
+
 /**
 Is creating a data Array for visualisation and is called upon calling the drawChart function 
  */
@@ -151,7 +149,8 @@ function visArrayData() {
     }
 
     return ActualArrayData;
-};
+}
+
 /**
 Make a table aout of user input data
 Source code: https://stackoverflow.com/questions/15164655/generate-html-table-from-2d-javascript-array
@@ -171,8 +170,7 @@ function makeTableHTML(myArray) {
     return result;
 }
 
-console.log(makeTableHTML(visArrayData()))
-
+// console.log(makeTableHTML(visArrayData()));
 
 // Combined with the costsTimesCounts functiom shows the total expenses calculation
 function calculateTotal() {
@@ -182,7 +180,7 @@ function calculateTotal() {
         hideCalculationArea.style.display = "block";
     } else {
         hideCalculationArea.style.display = "none";
-    };
+    }
 
     // clears the submit name area after the name has been given or calculation fired
     let submitUsername = document.getElementById("submitUsername");
@@ -202,12 +200,11 @@ function calculateTotal() {
     let balance = confirmBudget() - total;
     document.getElementById('yourBalance').innerHTML = ('This month\'s balance: ') + formatter.format(Number(balance));
 
-
     balanceStatus();
 
     return total;
 
-};
+}
 
 /**
  * Evaluates if the balance is positive or negative
@@ -252,18 +249,13 @@ function balanceStatus() {
         document.getElementById('balanceStatus').innerHTML = (`Can't calcualate the balance status`);
     }
 
-};
-
-
+}
 
 // VISUALIZATION through Google charts
-
-
 google.charts.load('current', {
     'packages': ['corechart']
 });
 google.charts.setOnLoadCallback(drawChart);
-
 
 function drawChart() {
 
@@ -273,7 +265,7 @@ function drawChart() {
         visualizationArea.style.display = "block";
     } else {
         visualizationArea.style.display = "none";
-    };
+    }
 
     let data = new google.visualization.DataTable();
     data.addColumn('string', 'Category');
@@ -310,4 +302,4 @@ function drawChart() {
 
     let chart = new google.visualization.PieChart(document.getElementById('pieChart'));
     chart.draw(data, options);
-};
+}
