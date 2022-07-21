@@ -12,6 +12,7 @@ formatter.format(1500); /* €1,500.00 */
 let toEuro = formatter.format(Number(document.getElementById("budget").value));
 
 // Show About section
+//This section is a guidance on how to use the calculator, is activated on click
 let showAboutInfo = document.getElementsByClassName("showAboutInfo");
 let index;
 
@@ -50,7 +51,7 @@ function confirmBudget() {
 }
 
 /**
- *  Removes specific rows
+ *  Removes specified corresponding row from the default set
  */
 
 function rowOneRemoved() {
@@ -81,7 +82,7 @@ function rowFiveRemoved() {
 /**
  * New Category row is appended
  */
-// Code source: https://github.com/learn-webdevYT/Javascript-Beginner-Tutorials To-Do LIst
+// Code source and inspiration: https://github.com/learn-webdevYT/Javascript-Beginner-Tutorials To-Do LIst
 function categoryAdded() {
 
     let gridContainerNew = document.getElementById("grid-container-new");
@@ -114,7 +115,7 @@ function categoryAdded() {
 /**
  * This is the main function that calculates the sum of all the monthly costs
  */
-//Calculates the costs multiplied by counts in the same row and adds all the rows
+//Calculates the costs multiplied by counts in the same row and adds all the rows together
 function costsTimesCounts() {
 
     let total = 0;
@@ -131,7 +132,7 @@ function costsTimesCounts() {
 }
 
 /**
-Is creating a data Array for visualisation and is called upon calling the drawChart function 
+Is creating a data Array for visualisation and is called inside the drawChart function 
  */
 function visArrayData() {
 
@@ -152,7 +153,7 @@ function visArrayData() {
 }
 
 /**
-Make a table aout of user input data
+Make a table of user input data, this table will be displayed obove the calculation results area
 Source code: https://stackoverflow.com/questions/15164655/generate-html-table-from-2d-javascript-array
 */
 function makeTableHTML(myArray) {
@@ -192,9 +193,11 @@ function calculateTotal() {
     let momBudget = document.getElementById("budget").value;
     document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))} <br><br>`);
 
+    // writes the total costs to the document
     let total = costsTimesCounts();
     document.getElementById('totalCosts').innerHTML = ('Your TOTAL costs: ').bold() + formatter.format(Number(total)).bold();
 
+    // writes the balance (costs deducted from budget) to the document
     let balance = confirmBudget() - total;
     document.getElementById('yourBalance').innerHTML = ('This month\'s balance: ') + formatter.format(Number(balance));
 
