@@ -170,8 +170,6 @@ function makeTableHTML(myArray) {
     return result;
 }
 
-// console.log(makeTableHTML(visArrayData()));
-
 // Combined with the costsTimesCounts functiom shows the total expenses calculation
 function calculateTotal() {
 
@@ -181,6 +179,9 @@ function calculateTotal() {
     } else {
         hideCalculationArea.style.display = "none";
     }
+
+    let hideContactArea = document.getElementById("contactUs");
+    hideContactArea.style.display = 'none';
 
     // clears the submit name area after the name has been given or calculation fired
     let submitUsername = document.getElementById("submitUsername");
@@ -192,7 +193,7 @@ function calculateTotal() {
 
     // writes the budget to the document
     let momBudget = document.getElementById("budget").value;
-    document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`);
+    document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))} <br><br>`);
 
     let total = costsTimesCounts();
     document.getElementById('totalCosts').innerHTML = ('Your TOTAL costs: ').bold() + formatter.format(Number(total)).bold();
@@ -235,18 +236,18 @@ function balanceStatus() {
 
     if (budget < total) {
         //red
-        document.getElementById('balanceStatusRed').innerHTML = (`Overspent € ${Math.abs(balanceStatus)}.00 this month`);
+        document.getElementById('balanceStatusRed').innerHTML = (`Overspent € ${Math.abs(balanceStatus)}.00 this month. <br><br>`);
     } else if (budget > total) {
         //green
-        document.getElementById('balanceStatusGreen').innerHTML = (`Saved € ${balanceStatus}.00 this month`);
+        document.getElementById('balanceStatusGreen').innerHTML = (`Saved € ${balanceStatus}.00 this month. <br><br>`);
 
     } else if (budget == total) {
         //blue
-        document.getElementById('balanceStatusBlue').innerHTML = (`No savings this month`);
+        document.getElementById('balanceStatusBlue').innerHTML = (`No savings this month. <br><br>`);
 
     } else {
         //error
-        document.getElementById('balanceStatus').innerHTML = (`Can't calcualate the balance status`);
+        document.getElementById('balanceStatus').innerHTML = (`Can't calcualate the balance status. <br><br>`);
     }
 
 }
@@ -318,4 +319,17 @@ for (goThrough = 0; goThrough < showContact.length; goThrough++) {
             contactContent.style.display = "block";
         }
     });
+}
+
+// Replaces the contact form with the thank you response
+function thankYouforContacting() {
+    // clears the contact form after the name has been given or calculation fired
+    let hideContactArea = document.getElementById("contact");
+    hideContactArea.style.display = 'none';
+
+    // Address by name, if known
+    let momName = document.getElementById("username").value;
+
+    // writes thank you for contacting
+    document.getElementById("contactUs").innerHTML = (`Thank you for contacting ${momName}!<br> We'll respond to you shortly.<br><br>`);
 }

@@ -214,10 +214,11 @@
         <div id="contactUs">
 
             <button type="button" class="showContact">Contact US ↓</button>
+
             <div class="content">
                 <div id="contact">
                     <!-- There are mandatory fields to make the form ready for submission -->
-                    <form action="form-response.html">
+                    <form action="javascript:void(0);">
 
                         <label for="email">E-mail</label>
                         <input type="email" id="email" name="email" placeholder="* Your E-mail.." required>
@@ -227,7 +228,7 @@
                             style="height:100px" required></textarea>
                             <br>
                             <div>
-                                <button id="contactSubmitbutton" value="Submit">Submit</button>
+                                <button id="contactSubmitbutton"  onclick="thankYouforContacting()" value="Submit">Submit</button>
                             </div>
                     </form>
                 </div>
