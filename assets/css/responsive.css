@@ -1,12 +1,4 @@
-/* All Device sizes used in this Page:
-    (min-width: 1281px) - default, works with the style.css, no additional changes needed here
-    (min-width: 1025px) and (max-width: 1280px)
-    (min-width: 768px) and (max-width: 1024px) portrait
-    (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
-    (min-width: 481px) and (max-width: 767px) small tablets and mobile landscape
-    (min-width: 320px) and (max-width: 480px) mobile portrait */
- 
-
+/* Adapting to diffirent device sizes
 
 /* 
     ##Device = Laptops, Desktops
@@ -23,7 +15,6 @@
         font-size: 0.8em;
         line-height: 1;
     }
-
     img {
         width: 100px;
         height: 100px;
@@ -39,26 +30,21 @@
         margin: 0;
         grid-template-columns: 1fr;
     }
-
     #innerbody {
         padding: 5px;
         width: 100%;
     }
-
     header {
         height: 100px;
     }
-
     h1 {
         font-size: 2em;
     }
-
     h2 {
         line-height: 1;
         font-size: 0.8em;
         font-weight: 300;
     }
-
     img {
         width: 100px;
         height: 100px;
@@ -69,33 +55,26 @@
     ##Device = Low Resolution Tablets, Mobiles (Landscape)
     ##Screen = B/w 481px to 767px
   */
-
   @media (min-width: 481px) and (max-width: 767px) {
-    
     body {
         margin: 0;
         grid-template-columns: 1fr;
     }
-
     #innerbody {
         padding: 25px 15px 0 15px;
     }
-
     header {
         height: 100px;
         text-align: right;
     }
-
     h1,
     h2 {
         text-align: right;
         padding-right: 15px;
     }
-
     h1 {
         font-size: 2.2em;
     }
-
     h2 {
         line-height: 2;
         font-size: 0.8em;
@@ -105,36 +84,29 @@
         width: 100px;
         height: 100px;
     }
-
     #calculation-area {
         padding: 25px;
         background-color: #D8CBC4;
     }
-
     #grid-container-new>div>div,
     .grid-container {
         width: 100%;
         padding: 5px;
         text-align: center;
     }
-
     .grid-container {
         padding: 10px;
     }
-
     .grid-item {
         padding: 3px;
         text-align: center;
     }
-
     #totalCosts {
         font-size: 1.2em;
     }
-
     #visualization-area {
         justify-content: center;
     }
-
 }
 
 /* 
@@ -146,29 +118,24 @@
         margin: 0;
         grid-template-columns: 1fr;
     }
-
     #innerbody {
         padding: 0px;
         width: 100%;
     }
-
     header {
         padding: 10px;
         height: 160px;
         display: block;
         text-align: center;
     }
-
     h1 {
         font-size: 2em;
     }
-
     h2 {
         line-height: 1;
         font-size: 0.8em;
         font-weight: 300;
     }
-
     img {
         width: 70px;
         height: 70px;
@@ -182,12 +149,10 @@
         font-size: 14px;
         font-weight: 600;
     }
-
     #calculation-area {
         padding: 5px;
         background-color: #D8CBC4;
     }
-
     #hide-calculation-area{
         padding: 5px 5px 5px 0px;   
     }
@@ -198,11 +163,9 @@
         text-align: center;
         grid-template-columns: 1.5fr 1fr 1fr 0.5fr;
     }
-
     .grid-container, #grid-container-new {
         padding: 0px;
     }
-
     .grid-item {
         padding: 3px;
         text-align: center;
@@ -211,7 +174,6 @@
         font-size: smaller;
         text-align: right;
     }
-
     .category {
         width: 100px;
         font-size: 12px;
@@ -235,13 +197,10 @@
         right: 20%;
         width: 140px;
     }
-
     #totalCosts {
         font-size: 1.2em;
     }
-
     #visualization-area {
         justify-content: center;
     }
-
 }
