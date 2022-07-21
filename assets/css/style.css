@@ -61,7 +61,8 @@ img,
 }
 
 /* Style the button that is used to open and close the showAboutInfo content */
-.showAboutInfo {
+.showAboutInfo,
+.showContact {
     height: 45px;
     width: 100%;
     border: none;
@@ -78,8 +79,9 @@ img,
     line-height: 1.5;
 }
 
-#description {
-    /* padding: 20px; */
+#description,
+#contactUs {
+    padding: 0;
     text-align: center;
 }
 
@@ -122,16 +124,33 @@ table {
 }
 
 input[type=text],
-input[type=number] {
+input[type=number],
+input[type=email] {
     border: 1px solid #ccc;
     border-radius: 20px;
     text-align: center;
+    height: 30px;
+}
+#contactUs {
+    padding: 0px;
+    background-color: #D8CBC4;
+}
+
+#contact>form {
+    /* display: grid;
+    grid-template-columns: 1fr; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+textarea {
+    border-style: none;
 }
 
 #deleteLabel {
     text-align: left;
 }
-
 
 button {
     font-family: 'Share Tech Mono', monospace;
@@ -153,7 +172,6 @@ button {
 #budget,
 #username {
     width: 180px;
-    height: 30px;
     font-size: 20px;
     font-weight: 600;
 }
@@ -162,7 +180,6 @@ button {
 .cost,
 .count,
 .round {
-    height: 30px;
     border: 1.5px solid rgba(0, 0, 0, 0.8);
     text-align: center;
 }

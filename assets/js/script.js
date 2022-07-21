@@ -303,3 +303,19 @@ function drawChart() {
     let chart = new google.visualization.PieChart(document.getElementById('pieChart'));
     chart.draw(data, options);
 }
+
+// Contact section
+let showContact = document.getElementsByClassName("showContact");
+let goThrough;
+
+for (goThrough = 0; goThrough < showContact.length; goThrough++) {
+    showContact[goThrough].addEventListener("click", function () {
+        this.classList.toggle("active");
+        let contactContent = this.nextElementSibling;
+        if (contactContent.style.display === "block") {
+            contactContent.style.display = "none";
+        } else {
+            contactContent.style.display = "block";
+        }
+    });
+}
