@@ -14,14 +14,14 @@
 
     <script src="https://www.gstatic.com/charts/loader.js"></script>
 
-    <!-- This css stylesheet will be responsible for the whole website's styling -->
+    <!-- The website's styling -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
 <body>
     <div>
-        <!-- Dummy section to make the body grid work -->
+        <!-- A section for the correct body grid display -->
     </div>
     <div id="innerbody">
         <header>
@@ -97,7 +97,6 @@
                 <br>
 
                 <!-- Basic source code for the grid: https://www.w3schools.com/css/css_grid.asp -->
-
                 <div id="grid-container" class="grid-container">
                     <!-- ROW 1 Labels-->
                     <div id="row">
@@ -174,27 +173,16 @@
             </div>
 
             <div>
-                <div id="dataTable">
-                    <!-- Costs TOTAL : xxx € -->
-                </div>
+                <!-- Dinamically added content: total costs, budget, balance -->
+                <div id="dataTable"></div>
                 <br>
-                <div id="totalCosts">
-                    <!-- Costs TOTAL : xxx € -->
-                </div>
+                <div id="totalCosts"></div>
                 <br>
-                <div id="yourBudget">
-                    <!-- Your Budget: xxx € -->
-                </div>
+                <div id="yourBudget"></div>
                 <br>
-                <div id="yourBalance">
-                    <!-- <p>e.g. This month's balance: - 1000 €</p> -->
-                </div>
+                <div id="yourBalance"></div>
                 <br>
-                <div id="balanceStatus">
-                    <!-- Red
-                    Green
-                    Blue -->
-                </div>
+                <div id="balanceStatus"></div>
             </div>
 
             <button onclick="location.reload()"> StartOver</button>
@@ -217,7 +205,6 @@
 
             <div class="content">
                 <div id="contact">
-                    <!-- There are mandatory fields to make the form ready for submission -->
                     <form action="javascript:void(0);">
 
                         <label for="email">E-mail</label>
