@@ -180,9 +180,6 @@ function calculateTotal() {
         hideCalculationArea.style.display = "none";
     }
 
-    let hideContactArea = document.getElementById("contactUs");
-    hideContactArea.style.display = 'none';
-
     // clears the submit name area after the name has been given or calculation fired
     let submitUsername = document.getElementById("submitUsername");
     submitUsername.style.display = 'none';

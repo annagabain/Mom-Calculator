@@ -131,6 +131,7 @@ input[type=email] {
     text-align: center;
     height: 30px;
 }
+
 #contactUs {
     padding: 0px;
     background-color: #D8CBC4;
@@ -144,6 +145,7 @@ input[type=email] {
     flex-direction: column;
     justify-content: center;
 }
+
 textarea {
     border-style: none;
 }
@@ -265,4 +267,17 @@ footer {
     background-color: #455359;
     color: #D8CBC4;
     font-size: small;
+    padding: 10px;
+}
+
+a:active,
+a:link,
+a:visited,
+a:active {
+    color: #D8CBC4;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #ffffff;
 }

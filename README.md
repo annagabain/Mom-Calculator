@@ -84,9 +84,19 @@ Features include:
   <img width="100%" alt="Pie chart" src="assets/md-images/inputs-visualized.jpg">
 
 
-  -  (Contact Thank you for Contacting Page)
+  -  Contact form and Thank you for Contacting Area
+
+   <img width="100%" alt="Contact Us screenshot" src="assets/md-images/contactUS.jpg">
+
+   <img width="100%" alt="Thank you for contacting screenshot" src="assets/md-images/thankYouForContacting.jpg">
+
   -  Footer
+
+   <img width="100%" alt="Footer screenshot" src="assets/md-images/footer.jpg">
+
   -  404 Error Page
+
+   <img width="100%" alt="Page not found screenshot" src="assets/md-images/pageNotFound.jpg">
 
 ### Development Stages
 
