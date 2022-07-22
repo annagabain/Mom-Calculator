@@ -142,8 +142,8 @@ Presented below initial prototype has mostly been preserved, with alteration in 
 
 As many users access websites on tablets and mobile devices, extra wireframes were created to ensure the calculator viability early on project.
 
-  <img width="50%" alt="Calculator Scribble Tablet" src="assets/wireframes/Tablet.png">
-  <img width="25%" alt="Calculator Scribble Mobile" src="assets/wireframes/Mobile.png">
+  <img width="40%" alt="Calculator Scribble Tablet" src="assets/wireframes/Tablet.png">
+  <img width="20%" alt="Calculator Scribble Mobile" src="assets/wireframes/Mobile.png">
 
 ####  Colours
 
@@ -176,15 +176,29 @@ Special attention was given to the calculator looking user friendly on a smalles
 
 ###  Validators
 
-JS
+JavaScript
+
+The last jshint testing Metrics output:
+
+
+- There are 18 functions in this file.
+
+- Function with the largest signature take 1 arguments, while the median is 0.
+
+- Largest function has 16 statements in it, while the median is 4.5.
+
+- The most complex function has a cyclomatic complexity value of 5 while the median is 1.
 
 <img width="100%" alt="Javascript validator" src="assets/md-images/jshint1.jpg">
 
-HTML
+
+HTML - passed all tests
+
 <img width="100%" alt="Html validator" src="assets/md-images/html_validator.jpg">
 
 
-CSS
+CSS -passed all tests
+
 <p>
     <a href="http://jigsaw.w3.org/css-validator/check/referer">
         <img style="border:0;width:88px;height:31px"
@@ -195,12 +209,18 @@ CSS
 
 ### LightHouse Report
 
+The report shows the best results in Performance, Search Engine Optimization and Best Practices. Acessibility, however has proven difficult to improve despite of numerous efforts due to the layout nature of the calculator where the form labels appeared alianated from the form inputs, i.e. were placed on the top of the calculation area to avoid redundancy and save space for the mobile device width.
+
 <img width="70%" alt="Light house report screenshot" src="assets/md-images/lighthouseReport.jpg">
 
 ###  Remaining Bugs
 
-  <img width="50%" alt="bug1" src="assets/md-images/bugs1.jpg">
+The functions inside the JavaScript code have been working flowlessly during numerous testing sessions. However, jshint released the following warnings.
+
   <img width="50%" alt="bug2" src="assets/md-images/bugs2.jpg">
+
+As mentioned above, several attemts to improve the Accessibility with labels created even more issues with labels, where the number of errors increased in contradiction to the expectation. A compromise was made to leave the viable result that is just a little bit lower (88) than the green indicator (90+).
+
   <img width="50%" alt="Attempts to improve accessibility with labels failed" src="assets/md-images/waveAccessibilityReport.jpg">
 
 :point_up_2: [Back to Contents](#contents) 
@@ -210,6 +230,7 @@ CSS
 
 ### GitHub Pages
 
+The project has been deployed to the Github version control system throughout the whole process - from the initial idea to submission. The website was published for live view with Github pages.
 https://annagabain.github.io/Mom-Calculator/index.html
 
 ## Sources & Credits
@@ -222,7 +243,7 @@ https://statsskuld.se/en/jobs/net-salary
 
 ### Tutorials
 
-https://www.youtube.com/watch?v=jV8B24rSN5o
+Grid layout creation: https://www.youtube.com/watch?v=jV8B24rSN5o
 
 ###   Images
 
