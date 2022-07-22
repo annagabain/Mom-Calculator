@@ -144,6 +144,10 @@ CSS
     </a>
 </p>
 
+LightHouse
+
+<img width="100%" alt="Html validator" src="assets/md-images/lighthouseReport.jpg">
+
   -  Remaining Bugs
 
   <img width="50%" alt="bug1" src="assets/md-images/bugs1.jpg">
