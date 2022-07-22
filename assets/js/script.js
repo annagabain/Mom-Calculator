@@ -298,6 +298,15 @@ function drawChart() {
             },
             5: {
                 color: '#ebb3b2'
+            },
+            6: {
+                color: '#D8CBC4'
+            },
+            7: {
+                color: '#9C9FA6'
+            },
+            8: {
+                color: '#455359'
             }
         }
     };
@@ -306,7 +315,10 @@ function drawChart() {
     chart.draw(data, options);
 }
 
-// Contact section
+ /**
+Toggles the Contact section similar to How to use section, is closed by default
+  * 
+  */
 let showContact = document.getElementsByClassName("showContact");
 let goThrough;
 
@@ -328,9 +340,9 @@ function thankYouforContacting() {
     let hideContactArea = document.getElementById("contact");
     hideContactArea.style.display = 'none';
 
-    // Address by name, if known
+    // adresses the user by name, if known
     let momName = document.getElementById("username").value;
 
-    // writes thank you for contacting
+    // writes thank you for contacting on the document page
     document.getElementById("contactUs").innerHTML = (`Thank you for contacting us ${momName}!<br> We'll respond to you shortly.<br><br>`);
 }
