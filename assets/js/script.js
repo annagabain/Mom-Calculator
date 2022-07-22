@@ -276,7 +276,7 @@ function drawChart() {
 
     let options = {
         title: 'Life Expenses Budgeting Pie Chart',
-        // change piechart size here
+        // change piechart size here, it does not adjast responsively, so the smallest screen size width is chosen to avoid distortion on mobiles
         width: 320,
         height: 300,
 
@@ -306,6 +306,12 @@ function drawChart() {
                 color: '#9C9FA6'
             },
             8: {
+                color: '#0D0D0D'
+            },
+            9: {
+                color: '#6A4C39'
+            },
+            10: {
                 color: '#455359'
             }
         }
