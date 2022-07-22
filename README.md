@@ -2,55 +2,42 @@
 
 ## Life Expenses Budgeting Tool for the Whole Family
 
+Mom Calculator is a website presenting an easy-to use budget calculation tool to family budget keepers. It aims to provide a clear overview on their monthly/yearly expenses to simplify budgeting tasks. Mom Calculator can be useful for any other type of periodic expense calculations as well.
+
+Mom Calculator is a fully-responsive Javascript application. Users can input, modify and manipulate numbers by adding and removing relevant expense categories. The visualisation and results sections represent easily digestible data representations that lead to insights and keeping track of the life costs.
+
+
 <img width="100%" alt="Mom Calculator website all devices" src="assets/md-images/responsivity.jpg">
 
 
 
 # Live View
 
+:point_down: Click on the link below for the live view: 
+
 https://annagabain.github.io/Mom-Calculator/index.html
-
-## Project Idea
-
-Build a life expenses Calculator
-External user’s goal:
-The site’s users want to calculate their monthly/yearly expenses.
-- The site’s users are interested in gaining insights into data relationships representing particular events or activities.
-
-Site owner's goal:
-
-The site’s goal is to provide a easy-to-use tool to simplify budgeting tasks.
-- The site’s goal is to provide easily digestible data representations that lead to user actionable insights.
-
-Features include:
-
-- The ability to manupulate numbers
-- Colours to support calculation outcome - balance green blue red 
-- User can create a username
-- Feedback - input results table and listing
-- Charting functionality to represent the data easily digestible manner - with google Pie Chart
-
-
-## Project To Do List
-
-- [x] LO1	Design an interactive Front-End web application using HTML and CSS and JavaScript based on the principles of user experience design, accessibility and responsivity
-
-- [x] LO2	Test a front-end web application through the development, implementation and deployment stages
-
-- [x] LO3	Deploy a Front-End web application to a Cloud platform
-
-- [x] LO4	Maximise future maintainability through documentation, code structure and organisation
-
-- [x] LO5	Demonstrate and document the development process through a version control system such as GitHub
-
-- [x] LO6	Implement Front-End interactivity, using core JavaScript, JavaScript libraries or frameworks
-
 
 
 ## Contents:
+- [Features](#features)
+- [Development Stages](#development-stages)
+- [Accessibility and Responsivity](#accessibility-and-responsivity)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Sources & Credits](#sources--credits)
+- [Acknowledgemts](#acknowledgemts)
 
-### Features
-  -  Title
+
+## Features
+
+### Features Overview
+
+- User can create a username
+- The ability to manupulate numbers
+- Feedback - input results table and listing
+- Colours to support calculation outcome - balance green blue red 
+- Pie Chart to represent the data in easily digestible manner
+  -  Heading
 
   <img width="100%" alt="Title screenshot" src="assets/md-images/title.jpg">
 
@@ -76,10 +63,10 @@ Features include:
 
   -  Visualization Area
 
-  <img width="100%" alt="Pie chart" src="assets/md-images/pieChart.jpg">
+  <img width="80%" alt="Pie chart" src="assets/md-images/pieChart.jpg">
 
 
-    -  Results Area
+  -  Results Area
 
   <img width="100%" alt="Results screenshot" src="assets/md-images/results-area.jpg">
 
@@ -117,8 +104,13 @@ Features include:
 
      -  Colours
 
+     Taken from the previous project: https://github.com/annagabain/Mom-Lifehacks
 
-### Accessibility and responsivity
+  <img width="100%" alt="Project colours" src="assets/md-images/mom_lifehacks_color_pallette3.png">
+
+
+
+## Accessibility and responsivity
 
   -  Accessibility
 
@@ -128,7 +120,7 @@ Features include:
 
 <img width="100%" alt="Device toolbar screenshot" src="assets/md-images/responsivitySmallestSize.jpg">
 
-### Testing
+## Testing
 
   -  Validators
 
@@ -160,13 +152,13 @@ LightHouse Report
   <img width="50%" alt="Attempts to improve accessibility with labels failed" src="assets/md-images/waveAccessibilityReport.jpg">
 
 
-### Deployment to GitHub
+## Deployment
 
 - GitHub Pages
 
 https://annagabain.github.io/Mom-Calculator/index.html
 
-### Sources & Credits
+## Sources & Credits
 
 -   Idea Inspiration
 
@@ -184,7 +176,7 @@ Baby hands on kewboard: pexels-karolina-grabowska-4959738
 
 -   Tools
 
-### Acknowledgemts
+## Acknowledgemts
 
 Jakob Lövhall - for guiding to detect the query selectors necessary for the main functions
 
