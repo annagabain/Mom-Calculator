@@ -37,21 +37,22 @@ https://annagabain.github.io/Mom-Calculator/index.html
 - Feedback - input results table and listing
 - Colours to support calculation outcome - balance green blue red 
 - Pie Chart to represent the data in easily digestible manner
-  -  Heading
+
+###  Heading
 
   <img width="100%" alt="Title screenshot" src="assets/md-images/title.jpg">
 
-  -  How to Use
+###  How to Use
 
   <img width="100%" alt="How to use screenshot" src="assets/md-images/howToUse.jpg">
 
-  -  Username
+###  Username
 
   <img width="100%" alt="Submit username screenshot" src="assets/md-images/ask-name.jpg">
 
   <img width="100%" alt="Username screenshot" src="assets/md-images/address-by-name.jpg">
 
-  -  Calculator
+###  Calculator
 
   <img width="100%" alt="Calculation Area screenshot" src="assets/md-images/calculation-area.jpg">
 
@@ -60,71 +61,79 @@ https://annagabain.github.io/Mom-Calculator/index.html
 
   <img width="100%" alt="Start over button screenshot" src="assets/md-images/navigation.jpg">
 
+:point_up_2: [Back to Contents](#contents) 
 
-  -  Visualization Area
+
+###  Visualization Area
 
   <img width="80%" alt="Pie chart" src="assets/md-images/pieChart.jpg">
 
 
-  -  Results Area
+###  Results Area
 
   <img width="100%" alt="Results screenshot" src="assets/md-images/results-area.jpg">
 
 
-  -  Contact form and Thank you for Contacting Area
+###  Contact form and Thank you for Contacting Area
 
    <img width="100%" alt="Contact Us screenshot" src="assets/md-images/contactUS.jpg">
 
    <img width="100%" alt="Thank you for contacting screenshot" src="assets/md-images/thankYouForContacting.jpg">
 
-  -  Footer
+###  Footer
 
    <img width="100%" alt="Footer screenshot" src="assets/md-images/footer.jpg">
 
-  -  404 Error Page
+###  404 Error Page
 
    <img width="100%" alt="Page not found screenshot" src="assets/md-images/pageNotFound.jpg">
 
-### Development Stages
+:point_up_2: [Back to Contents](#contents) 
 
-  -  Planning
+
+## Development Stages
+
+###  Planning
 
   <img width="100%" alt="Calculator Scribble Desktop" src="assets/wireframes/Desktop.png">
 
-  -  Layout Creation
+###  Layout Creation
 
  <img width="50%" alt="Calculator Scribble Tablet" src="assets/wireframes/Tablet.png">
   <img width="25%" alt="Calculator Scribble Mobile" src="assets/wireframes/Mobile.png">
-  -  User Experience and User Interface Design UX and UI
 
-  -  Design Scope
-     -  Scribbles and Wireframes
+
+###  User Experience and User Interface Design UX and UI
+
+    -   Scribbles and Wireframes
 
   <img width="70%" alt="wireframe" src="assets/wireframes/Mom-Calculator-wireframe-Website-UI-Prototype.png">
 
-     -  Colours
+    -  Colours
 
      Taken from the previous project: https://github.com/annagabain/Mom-Lifehacks
 
   <img width="100%" alt="Project colours" src="assets/md-images/mom_lifehacks_color_pallette3.png">
 
 
+:point_up_2: [Back to Contents](#contents) 
+
 
 ## Accessibility and responsivity
 
-  -  Accessibility
+###  Accessibility
 
   <img width="50%" alt="Accessibiity Report Screenshot" src="assets/md-images/waveAccessibilityReportImproved.jpg">
 
-  -  Responsivity
+###  Responsivity
 
 <img width="100%" alt="Device toolbar screenshot" src="assets/md-images/responsivitySmallestSize.jpg">
 
 ## Testing
 
-  -  Validators
+###  Validators
 
-  JS
+JS
 
 <img width="100%" alt="Javascript validator" src="assets/md-images/jshint1.jpg">
 
@@ -141,40 +150,41 @@ CSS
     </a>
 </p>
 
-LightHouse Report
+### LightHouse Report
 
 <img width="100%" alt="Html validator" src="assets/md-images/lighthouseReport.jpg">
 
-  -  Remaining Bugs
+###  Remaining Bugs
 
   <img width="50%" alt="bug1" src="assets/md-images/bugs1.jpg">
   <img width="50%" alt="bug2" src="assets/md-images/bugs2.jpg">
   <img width="50%" alt="Attempts to improve accessibility with labels failed" src="assets/md-images/waveAccessibilityReport.jpg">
 
+:point_up_2: [Back to Contents](#contents) 
+
 
 ## Deployment
 
-- GitHub Pages
+### GitHub Pages
 
 https://annagabain.github.io/Mom-Calculator/index.html
 
 ## Sources & Credits
 
--   Idea Inspiration
+###   Idea Inspiration
 
 https://www.brutto-netto-rechner.info/
 
 https://statsskuld.se/en/jobs/net-salary
 
-- Tutorials
+### Tutorials
 
 https://www.youtube.com/watch?v=jV8B24rSN5o
 
--   Images
+###   Images
 
 Baby hands on kewboard: pexels-karolina-grabowska-4959738
 
--   Tools
 
 ## Acknowledgemts
 
@@ -187,3 +197,5 @@ Jamie King - course collegue for helping with the project idea discussions and t
 David Reynolds - course collegue to check up on the project progress and share similar experiences with JS learning
 
 Fran Boyle - course collegue to inspire and discuss progress
+
+:point_up_2: [Back to Contents](#contents) 
