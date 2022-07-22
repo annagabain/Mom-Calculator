@@ -121,7 +121,12 @@ Features include:
 ### Accessibility and responsivity
 
   -  Accessibility
+
+  <img width="50%" alt="Accessibiity Report Screenshot" src="assets/md-images/waveAccessibilityReportImproved.jpg">
+
   -  Responsivity
+
+<img width="100%" alt="Device toolbar screenshot" src="assets/md-images/responsivitySmallestSize.jpg">
 
 ### Testing
 
@@ -144,7 +149,7 @@ CSS
     </a>
 </p>
 
-LightHouse
+LightHouse Report
 
 <img width="100%" alt="Html validator" src="assets/md-images/lighthouseReport.jpg">
 
@@ -152,6 +157,8 @@ LightHouse
 
   <img width="50%" alt="bug1" src="assets/md-images/bugs1.jpg">
   <img width="50%" alt="bug2" src="assets/md-images/bugs2.jpg">
+  <img width="50%" alt="Attempts to improve accessibility with labels failed" src="assets/md-images/waveAccessibilityReport.jpg">
+
 
 ### Deployment to GitHub
 
