@@ -74,14 +74,14 @@ Features include:
   <img width="100%" alt="Start over button screenshot" src="assets/md-images/navigation.jpg">
 
 
-  -  Results Area
-
-  <img width="100%" alt="Results screenshot" src="assets/md-images/results-area.jpg">
-
-
   -  Visualization Area
 
-  <img width="100%" alt="Pie chart" src="assets/md-images/inputs-visualized.jpg">
+  <img width="100%" alt="Pie chart" src="assets/md-images/pieChart.jpg">
+
+
+    -  Results Area
+
+  <img width="100%" alt="Results screenshot" src="assets/md-images/results-area.jpg">
 
 
   -  Contact form and Thank you for Contacting Area
