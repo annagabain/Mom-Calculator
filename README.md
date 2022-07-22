@@ -81,7 +81,7 @@ Upon user's input, the placeholder values are replaced with the real once and ch
 
 Visualization Area is toggled and opened onclick. It represents a pie chart with calculation input overall persentage. The pie chart shows what parts of the expense categories take up most of the budget. If toggled before the Calculate button, the user might wish to alterate the inputs based on the chart data.
 
-  <img width="80%" alt="Pie chart" src="assets/md-images/pieChart.jpg">
+  <img width="50%" alt="Pie chart" src="assets/md-images/pieChart.jpg">
 
 The pie chart is created with Google charts.
 https://developers.google.com/chart
@@ -122,23 +122,32 @@ Shows that something went wrong with seeing the website and makes sure the user 
 
 ###  Planning
 
-  <img width="100%" alt="Calculator Scribble Desktop" src="assets/wireframes/Desktop.png">
-
-###  Layout Creation
-
- <img width="50%" alt="Calculator Scribble Tablet" src="assets/wireframes/Tablet.png">
-  <img width="25%" alt="Calculator Scribble Mobile" src="assets/wireframes/Mobile.png">
-
+The project planning began with a research and inspirational ideas on Javascript projects, where creating a calculator appeared the most useful for the target user.
 
 ###  User Experience and User Interface Design UX and UI
 
-    -   Scribbles and Wireframes
+####  Scribbles and Wireframes
+
+ An initial scribble was created to outline the potential features and look of the application. This look has remained generally valid, with slight alterations during the development process. 
+
+A list of project-vital Javascript functions was created as well as the main visual areas identified.
+
+  <img width="100%" alt="Calculator Scribble Desktop" src="assets/wireframes/Desktop.png">
+
+Presented below initial prototype has mostly been preserved, with alteration in font family, calculator width as well as removing the unnecessary complexity with sub-categories
 
   <img width="70%" alt="wireframe" src="assets/wireframes/Mom-Calculator-wireframe-Website-UI-Prototype.png">
 
-    -  Colours
+###  Layout Creation
 
-     Taken from the previous project: https://github.com/annagabain/Mom-Lifehacks
+As many users access websites on tablets and mobile devices, extra wireframes were created to ensure the calculator viability early on project.
+
+  <img width="50%" alt="Calculator Scribble Tablet" src="assets/wireframes/Tablet.png">
+  <img width="25%" alt="Calculator Scribble Mobile" src="assets/wireframes/Mobile.png">
+
+####  Colours
+
+Colours and a general moodboeard has been simply taken from the author's previous HTML and CSS project as the focus of the present project is newly obtained Javascript knowledge: https://github.com/annagabain/Mom-Lifehacks
 
   <img width="100%" alt="Project colours" src="assets/md-images/mom_lifehacks_color_pallette3.png">
 
@@ -150,9 +159,13 @@ Shows that something went wrong with seeing the website and makes sure the user 
 
 ###  Accessibility
 
+Attempst were made to maintain the calculators accessibility by adding alt attributes and labels, where possible. There is, however room for improvement.
+
   <img width="50%" alt="Accessibiity Report Screenshot" src="assets/md-images/waveAccessibilityReportImproved.jpg">
 
 ###  Responsivity
+
+Special attention was given to the calculator looking user friendly on a smallest mobile device with 320 px width. The calculation area was adjusted to be responisve to most of the devices screen sizes.
 
 <img width="100%" alt="Device toolbar screenshot" src="assets/md-images/responsivitySmallestSize.jpg">
 
