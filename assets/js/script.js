@@ -1,13 +1,14 @@
 // Javascript for the calculator functionality goes here
 
+/**This function is used to display numbers in EURO currency format. For example it takes a number 1500 and displays it as €1,500
+ *  Code source: Converting the number into currency:  https://www.codegrepper.com/code-examples/javascript/javascript+currency+format+euro
+ */
 
-// Converting the number into currency
-// https://www.codegrepper.com/code-examples/javascript/javascript+currency+format+euro
 let formatter = new Intl.NumberFormat('en-DE', {
     style: 'currency',
     currency: 'EUR',
 });
-formatter.format(1500); /* €1,500.00 */
+formatter.format(1500);
 
 let toEuro = formatter.format(Number(document.getElementById("budget").value));
 
@@ -28,10 +29,10 @@ for (index = 0; index < showAboutInfo.length; index++) {
     });
 }
 
+/** This code I took and modified from: https://www.ceos3c.com/javascript/store-user-input-in-a-variable-with-javascript/#:~:text=The%20JavaScript%20File,-The%20JavaScript%20part&text=To%20be%20able%20to%20store,input%20from%20the%20input%20form.
+ * Great the user by name. This function is also used to thank the user personally for contacting us.
+ */
 
-// This code I took and modified from: https://www.ceos3c.com/javascript/store-user-input-in-a-variable-with-javascript/#:~:text=The%20JavaScript%20File,-The%20JavaScript%20part&text=To%20be%20able%20to%20store,input%20from%20the%20input%20form.
-
-// Great the user by name
 function greetByUsername() {
     // clears the submit name area after the name has been given or calculation fired
     let submitUsername = document.getElementById("submitUsername");
@@ -41,9 +42,9 @@ function greetByUsername() {
     document.getElementById('helloUser').innerHTML = (`Hello ${momName}`);
 }
 
+    // writes the budget to the document for further evaluation
 function confirmBudget() {
 
-    // writes the budget to the document for further evaluation
     let momBudget = document.getElementById("budget").value;
     document.getElementById('yourBudget').innerHTML = (`Your budget: ${formatter.format(Number(momBudget))}`);
 
@@ -331,5 +332,5 @@ function thankYouforContacting() {
     let momName = document.getElementById("username").value;
 
     // writes thank you for contacting
-    document.getElementById("contactUs").innerHTML = (`Thank you for contacting ${momName}!<br> We'll respond to you shortly.<br><br>`);
+    document.getElementById("contactUs").innerHTML = (`Thank you for contacting us ${momName}!<br> We'll respond to you shortly.<br><br>`);
 }
