@@ -174,6 +174,10 @@ Special attention was given to the calculator looking user friendly on a smalles
 
 ## Testing
 
+The calculator functionality has been tested throughout every stage of the development process. Besides the alert, console log and google development tools tests, every function was tested as a small code snippet before implementing inside the larger piece of code. Extra mini projects, such as a 'to-do list' were used to test the adding and removing of the user data input rows, making sure they work as expected. The calculator has been opened on browsers Chrome, Firefox, Edge and Safari for cross-browser performance. Special attention was given to the ability to perform a full calclulation in Safari browser on mobile phone.
+
+Friends and family members were asked to test the user-friendliness of the application and how intuitive it is. Changes were made accordingly. For example a table with calculation results was added to provide an overview of the user's input values. The google pie chart was reduced in size, so it could fit the smallest screen size and did not distort the buttons' position on the calculator.
+
 ###  Validators
 
 JavaScript
