@@ -55,6 +55,7 @@ h2 {
     font-weight: 300;
 }
 
+/* Logo image baby hands on keyboard */
 img,
 .medalions {
     border-radius: 50%;
@@ -94,6 +95,7 @@ img,
     text-align: center;
 }
 
+/* The grey area where the user input is replaced with the calculation results */
 #hide-calculation-area,
 table {
     border-radius: 5px;
@@ -107,6 +109,7 @@ table {
     text-align: left;
 }
 
+/* Lines for calculation input */
 .grid-container>div,
 #grid-container-new>div>div {
     display: grid;
@@ -143,6 +146,7 @@ textarea {
     border-style: none;
 }
 
+/* the label above round buttons to visually line up with them */
 #deleteLabel {
     text-align: left;
 }
@@ -159,6 +163,7 @@ button {
     text-align: center;
 }
 
+/* text that holds a dummy value to hint the user on what to input */
 ::placeholder {
     color: #bdbdbe;
 }
@@ -260,6 +265,7 @@ footer {
     padding: 10px;
 }
 
+/* for links in the footer to look unified with the overall design */
 a:active,
 a:link,
 a:visited,
