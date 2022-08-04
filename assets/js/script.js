@@ -345,6 +345,7 @@ function drawChart() {
 Toggles the Contact section similar to How to use section, is closed by default
   * 
   */
+
 let showContact = document.getElementsByClassName("showContact");
 let goThrough;
 
@@ -361,6 +362,7 @@ for (goThrough = 0; goThrough < showContact.length; goThrough++) {
 }
 
 // Replaces the contact form with the thank you response
+
 function thankYouforContacting() {
     // clears the contact form after the name has been given or calculation fired
     let hideContactArea = document.getElementById("contact");
@@ -371,4 +373,27 @@ function thankYouforContacting() {
 
     // writes thank you for contacting on the document page
     document.getElementById("contactUs").innerHTML = (`Thank you for contacting us ${momName}!<br> We'll respond to you shortly.<br><br>`);
+}
+
+// Makes sure the user does not send an empty message
+
+function validateForm() {
+    let subject = document.forms["myForm"]["subject"].value;
+    let email = document.forms["myForm"]["email"].value;
+
+    //  Code source: https://www.javatpoint.com/javascript-form-validation
+    // The if statement is checking if the user's input email is correct
+    let atposition = email.indexOf("@");
+    let dotposition = email.lastIndexOf(".");
+    if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email.length) {
+        alert("Please enter a valid e-mail address");
+        return false;
+        // Making sure the message (text area) is not empty
+    } else if (subject == "") {
+        alert(`What is your message or comment?`);
+        return false;
+        // Letting the user know the message has been sent successfully (dummy message as the contact form is not connected to a database yet)
+    } else {
+        thankYouforContacting()
+    }
 }

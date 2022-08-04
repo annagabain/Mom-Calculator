@@ -41,27 +41,27 @@
             <div class="content">
 
                 <h3>Calculate expenses for the Whole Family.</h4>
-                <p>
-                    1. Submit your name (optional).
-                    <br>
-                    2. Add your monthly budget.
-                    <br>
-                    3. Edit:
-                    <br>
-                    - your expense categories
-                    <br>
-                    - costs
-                    <br>
-                    - how many items were purchased (count).
-                    <br>
-                    4. Add (More Rows button) or delete (Delete button) categories, if you like.
-                    <br>
-                    5. Click Calculate for results summary.
-                    <br>
-                    6. Toggle the Visualization pie-chart (optional).
-                    <br>
-                    7. Start over with a new calculation.
-                </p>
+                    <p>
+                        1. Submit your name (optional).
+                        <br>
+                        2. Add your monthly budget.
+                        <br>
+                        3. Edit:
+                        <br>
+                        - your expense categories
+                        <br>
+                        - costs
+                        <br>
+                        - how many items were purchased (count).
+                        <br>
+                        4. Add (More Rows button) or delete (Delete button) categories, if you like.
+                        <br>
+                        5. Click Calculate for results summary.
+                        <br>
+                        6. Toggle the Visualization pie-chart (optional).
+                        <br>
+                        7. Start over with a new calculation.
+                    </p>
 
             </div>
         </div>
@@ -106,8 +106,8 @@
                     <div id="row1">
                         <div class="grid-item"><input type="text" name="text" class="category" value="Food">
                         </div>
-                        <div class="grid-item"><input type="number" class="cost" name="cost"
-                                placeholder="eg. 1200" value="" required></div>
+                        <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 1200"
+                                value="" required></div>
                         <div class="grid-item"><input type="number" class="count" name="count" placeholder="1"
                                 value="1">
                         </div>
@@ -115,10 +115,9 @@
                     </div>
                     <!-- ROW 3 index-2-->
                     <div id="row2">
-                        <div class="grid-item"> <input type="text" name="text" class="category"
-                                value="Transport"></div>
-                        <div class="grid-item"><input type="number" class="cost" name="cost"
-                                placeholder="eg.200" value="" required></div>
+                        <div class="grid-item"> <input type="text" name="text" class="category" value="Transport"></div>
+                        <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg.200"
+                                value="" required></div>
                         <div class="grid-item"><input type="number" class="count" name="count" placeholder="1"
                                 value="1">
                         </div>
@@ -126,10 +125,10 @@
                     </div>
                     <!-- ROW 4 index-3 -->
                     <div id="row3">
-                        <div class="grid-item"> <input type="text" name="text" class="category"
-                                value="Accommodation"></div>
-                        <div class="grid-item"><input type="number" class="cost" name="cost"
-                                placeholder="eg. 500" value="" required></div>
+                        <div class="grid-item"> <input type="text" name="text" class="category" value="Accommodation">
+                        </div>
+                        <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 500"
+                                value="" required></div>
                         <div class="grid-item"><input type="number" class="count" name="count" placeholder="1"
                                 value="1">
                         </div>
@@ -137,10 +136,9 @@
                     </div>
                     <!-- ROW 5 index-4 -->
                     <div id="row4">
-                        <div class="grid-item"> <input type="text" name="text" class="category"
-                                value="Clothing"></div>
-                        <div class="grid-item"><input type="number" class="cost" name="cost"
-                                placeholder="eg. 700" value="" required></div>
+                        <div class="grid-item"> <input type="text" name="text" class="category" value="Clothing"></div>
+                        <div class="grid-item"><input type="number" class="cost" name="cost" placeholder="eg. 700"
+                                value="" required></div>
                         <div class="grid-item"><input type="number" class="count" name="count" placeholder="1"
                                 value="1">
                         </div>
@@ -202,7 +200,7 @@
 
             <div class="content">
                 <div id="contact">
-                    <form action="javascript:void(0);">
+                    <form name="myForm" action="javascript:void(0);">
 
                         <label for="email">E-mail</label>
                         <input type="email" id="email" name="email" placeholder="* Your E-mail.." required>
@@ -212,7 +210,7 @@
                             style="height:100px" required></textarea>
                         <br>
                         <div>
-                            <button id="contactSubmitbutton" onclick="thankYouforContacting()"
+                            <button id="contactSubmitbutton" onclick="return validateForm()"
                                 value="Submit">Submit</button>
                         </div>
                     </form>
@@ -226,7 +224,8 @@
         <footer>
             <p>Anna Gabain © for Educational Purposes
                 <br>
-                Read more about this project <a href="https://github.com/annagabain/Mom-Calculator" target="_blank">on GitHub</a>
+                Read more about this project <a href="https://github.com/annagabain/Mom-Calculator" target="_blank">on
+                    GitHub</a>
             </p>
         </footer>
 
