@@ -1,5 +1,3 @@
-// Javascript for the calculator functionality goes here
-
 /**This function is used to display numbers in EURO currency format. For example it takes a number 1500 and displays it as €1,500
  *  Code source: Converting the number into currency:  https://www.codegrepper.com/code-examples/javascript/javascript+currency+format+euro
  */
