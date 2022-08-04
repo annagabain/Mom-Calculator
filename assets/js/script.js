@@ -386,7 +386,7 @@ function validateForm() {
     let atposition = email.indexOf("@");
     let dotposition = email.lastIndexOf(".");
     if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= email.length) {
-        alert("Please enter a valid e-mail address");
+        alert(`Please enter a valid e-mail address, e.g. jane.smith@example.com`);
         return false;
         // Making sure the message (text area) is not empty
     } else if (subject == "") {
