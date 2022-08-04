@@ -174,7 +174,7 @@ Special attention was given to the calculator looking user friendly on a smalles
 
 ## Testing
 
-The calculator functionality has been tested throughout every stage of the development process. Besides the alert, console log and google development tools tests, every function was tested as a small code snippet before implementing inside the larger piece of code. Extra mini projects, such as a 'to-do list' were used to test the adding and removing of the user data input rows, making sure they work as expected. The calculator has been opened on browsers Chrome, Firefox, Edge and Safari for cross-browser performance. Special attention was given to the ability to perform a full calclulation in Safari browser on mobile phone.
+The calculator functionality has been tested throughout every stage of the development process. Besides the alert, console log and google development tools tests, every function was tested as a small code snippet before and after implementing inside the larger piece of code. Extra mini projects, such as a 'to-do list' were used to test the adding and removing of the user data input rows, making sure they work as expected. The calculator has been opened on browsers Chrome, Firefox, Edge and Safari for cross-browser performance. Special attention was given to the ability to perform a full calclulation in Safari browser on mobile phone.
 
 Friends and family members were asked to test the user-friendliness of the application and how intuitive it is. Changes were made accordingly. For example a table with calculation results was added to provide an overview of the user's input values. The google pie chart was reduced in size, so it could fit the smallest screen size and did not distort the buttons' position on the calculator.
 
@@ -266,6 +266,27 @@ CSS Validator: https://jigsaw.w3.org/css-validator/
 JavaScript Validator: https://jshint.com/
 
 Chrome Developer Tools
+
+### Sources
+
+https://fonts.googleapis.com/css2?family=Mulish&family=Open+Sans:wght@300;400&family=Share+Tech+Mono&display=swap  - google fonts
+
+https://www.w3schools.com/js/tryit.asp?filename=tryai_google_chart_pie
+
+https://www.w3schools.com/css/css_grid.asp
+
+https://www.codegrepper.com/code-examples/javascript/javascript+currency+format+euro
+
+https://www.ceos3c.com/javascript/store-user-input-in-a-variable-with-javascript/#:~:text=The%20JavaScript%20File,-The%20JavaScript%20part&text=To%20be%20able%20to%20store,input%20from%20the%20input%20form.
+
+https://github.com/learn-webdevYT/Javascript-Beginner-Tutorials - To-Do LIst
+
+https://stackoverflow.com/questions/15164655/generate-html-table-from-2d-javascript-array
+
+https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+
+https://www.javatpoint.com/javascript-form-validation
+
 
 ## Acknowledgemts
 
