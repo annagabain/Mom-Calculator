@@ -6,12 +6,11 @@ let formatter = new Intl.NumberFormat('en-DE', {
     style: 'currency',
     currency: 'EUR',
 });
-formatter.format(1500);
-
-let toEuro = formatter.format(Number(document.getElementById("budget").value));
+formatter.format();
 
 // Show About section
 //This section is a guidance on how to use the calculator, is activated on click
+
 let showAboutInfo = document.getElementsByClassName("showAboutInfo");
 let index;
 
@@ -32,6 +31,7 @@ for (index = 0; index < showAboutInfo.length; index++) {
  */
 
 function greetByUsername() {
+
     // clears the submit name area after the name has been given or calculation fired
     let submitUsername = document.getElementById("submitUsername");
     submitUsername.style.display = 'none';
@@ -40,7 +40,7 @@ function greetByUsername() {
     document.getElementById('helloUser').innerHTML = (`Hello ${momName}`);
 }
 
-    // writes the budget to the document for further evaluation
+// writes the budget to the document for further evaluation
 function confirmBudget() {
 
     let momBudget = document.getElementById("budget").value;
@@ -82,6 +82,7 @@ function rowFiveRemoved() {
  * New Category row is appended
  */
 // Code source and inspiration: https://github.com/learn-webdevYT/Javascript-Beginner-Tutorials To-Do LIst
+
 function categoryAdded() {
 
     let gridContainerNew = document.getElementById("grid-container-new");
@@ -92,7 +93,6 @@ function categoryAdded() {
         <div class="grid-item grid-item-new"><input type="text" name="text" class="category" placeholder="Anything else?..." value=""></div>
         <div class="grid-item grid-item-new"><input type="number" name="cost" class="cost" placeholder="eg. 500" value="" required></div>
         <div class="grid-item grid-item-new"><input type="number" class="count" name="count" class="sub-category" placeholder="1" value="1"></div>  
-         
         </div>`;
 
     gridContainerNew.appendChild(newDiv);
@@ -113,8 +113,9 @@ function categoryAdded() {
 
 /**
  * This is the main function that calculates the sum of all the monthly costs
+ * Calculates the costs multiplied by counts in the same row and adds all the rows together
  */
-//Calculates the costs multiplied by counts in the same row and adds all the rows together
+
 function costsTimesCounts() {
 
     let total = 0;
@@ -133,6 +134,7 @@ function costsTimesCounts() {
 /**
 Is creating a data Array for visualisation and is called inside the drawChart function 
  */
+
 function visArrayData() {
 
     let ActualArrayData = [];
@@ -155,6 +157,7 @@ function visArrayData() {
 Make a table of user input data, this table will be displayed obove the calculation results area
 Source code: https://stackoverflow.com/questions/15164655/generate-html-table-from-2d-javascript-array
 */
+
 function makeTableHTML(myArray) {
 
     let result = "<table border=0><th><b>Expenses on:</b></td><td><b>Cost in € </b></th>";
@@ -211,6 +214,7 @@ function calculateTotal() {
  * 
  * This function is called inside the calculateTotal function along with the calculation of the total budget
  */
+
 function balanceStatus() {
 
     // Removes old balance Status first before displaying the new
@@ -252,11 +256,13 @@ function balanceStatus() {
 }
 
 // VISUALIZATION through Google charts
+
 google.charts.load('current', {
     'packages': ['corechart']
 });
 google.charts.setOnLoadCallback(drawChart);
 
+// Draws a pie chart in the visualization area that is opened by vizualize button
 function drawChart() {
 
     //Source for toggle and hide: https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
@@ -278,39 +284,55 @@ function drawChart() {
         width: 320,
         height: 300,
 
+        // the colours of slices in the pie chart are generated through google visualization tool and the css is embedded here as part of the options object
         slices: {
             0: {
-                color: '#0D0D0D'
+                // Brown
+                color: '#6A4C39'
             },
             1: {
+                // Sea Green
                 color: '#455359'
             },
             2: {
-                color: '#6A4C39'
-            },
-            3: {
+                // Mokka Beige
                 color: '#D8CBC4'
             },
-            4: {
+            3: {
+                // Grey
                 color: '#9C9FA6'
             },
+            4: {
+                // Black-Brown
+                color: '#0D0D0D'
+            },
             5: {
+                // Pink
                 color: '#ebb3b2'
             },
             6: {
-                color: '#D8CBC4'
-            },
-            7: {
-                color: '#9C9FA6'
-            },
-            8: {
-                color: '#0D0D0D'
-            },
-            9: {
+                // Brown
                 color: '#6A4C39'
             },
-            10: {
+            7: {
+                // Sea Green
                 color: '#455359'
+            },
+            8: {
+                // Mokka Beige
+                color: '#D8CBC4'
+            },
+            9: {
+                // Grey
+                color: '#9C9FA6'
+            },
+            10: {
+                // Black-Brown
+                color: '#0D0D0D'
+            },
+            11: {
+                // Pink
+                color: '#ebb3b2'
             }
         }
     };
@@ -319,7 +341,7 @@ function drawChart() {
     chart.draw(data, options);
 }
 
- /**
+/**
 Toggles the Contact section similar to How to use section, is closed by default
   * 
   */
